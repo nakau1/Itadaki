@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fly-5s-CAo">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Train Control View Controller-->
+        <scene sceneID="dfL-Yy-a7j">
+            <objects>
+                <viewController id="fly-5s-CAo" customClass="GameTrainControlViewController" customModule="Itadaki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ysw-UT-mFT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czv-Bs-0Ja">
+                                <rect key="frame" x="240" y="16" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="czv-Bs-0Ja" secondAttribute="height" multiplier="1:1" id="6HY-yl-EP8"/>
+                                </constraints>
+                                <state key="normal" title="進む"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapForwardButton" destination="fly-5s-CAo" eventType="touchUpInside" id="9hh-iC-giU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="bottom" secondItem="czv-Bs-0Ja" secondAttribute="bottom" constant="16" id="dp4-9Q-64b"/>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="top" secondItem="tTL-1g-ji6" secondAttribute="top" constant="16" id="vrW-01-iYe"/>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="trailing" secondItem="czv-Bs-0Ja" secondAttribute="trailing" constant="16" id="yUe-N8-0sF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tTL-1g-ji6"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="96"/>
+                    <connections>
+                        <outlet property="forwardButton" destination="czv-Bs-0Ja" id="va1-ja-DAA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqY-jZ-KgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487.5" y="72.887323943661968"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fly-5s-CAo">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Main View Controller-->
+        <scene sceneID="dfL-Yy-a7j">
+            <objects>
+                <viewController id="fly-5s-CAo" customClass="GameMainViewController" customModule="Itadaki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ysw-UT-mFT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADf-qR-YqO">
+                                <rect key="frame" x="0.0" y="20" width="320" height="64"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="bMH-qi-Ysm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vR-39-C5x">
+                                <rect key="frame" x="0.0" y="84" width="320" height="74"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.99607843139999996" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="Ufb-7y-TCR"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7z-nB-o2h" customClass="GameStationsView" customModule="Itadaki" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="162" width="320" height="326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEQ-XP-22Q" customClass="GameMainRailwayView" customModule="Itadaki" customModuleProvider="target">
+                                <rect key="frame" x="4" y="492" width="312" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京メトロ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scv-vH-lys">
+                                        <rect key="frame" x="48" y="12" width="256" height="12"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中央線・総武快速線" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eF-wC-8iN">
+                                        <rect key="frame" x="48" y="28" width="256" height="16"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tx7-oo-UVp">
+                                        <rect key="frame" x="8" y="20" width="32" height="32"/>
+                                        <color key="backgroundColor" red="0.5972993338" green="0.5972993338" blue="0.5972993338" alpha="0.5468214897" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tx7-oo-UVp" secondAttribute="height" multiplier="1:1" id="Lb5-HU-qpm"/>
+                                            <constraint firstAttribute="width" constant="32" id="WhI-Ac-nbO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="千葉・蘇我方面・秋葉原・水道橋行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZm-IN-OgV">
+                                        <rect key="frame" x="48" y="48" width="256" height="12"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                        <color key="textColor" red="0.17231794719999999" green="0.13931673820000001" blue="0.42380099830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7eF-wC-8iN" secondAttribute="trailing" constant="8" id="2LM-XZ-FZs"/>
+                                    <constraint firstItem="7eF-wC-8iN" firstAttribute="trailing" secondItem="scv-vH-lys" secondAttribute="trailing" id="QCW-MG-OKL"/>
+                                    <constraint firstItem="7eF-wC-8iN" firstAttribute="centerY" secondItem="nEQ-XP-22Q" secondAttribute="centerY" id="Sdw-19-25x"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="TeA-Yx-izV"/>
+                                    <constraint firstAttribute="height" constant="72" id="c0T-YL-08R"/>
+                                    <constraint firstItem="tx7-oo-UVp" firstAttribute="centerY" secondItem="nEQ-XP-22Q" secondAttribute="centerY" id="fCC-oJ-Gi4"/>
+                                    <constraint firstItem="7eF-wC-8iN" firstAttribute="leading" secondItem="scv-vH-lys" secondAttribute="leading" id="h6S-FH-f2z"/>
+                                    <constraint firstItem="uZm-IN-OgV" firstAttribute="top" secondItem="7eF-wC-8iN" secondAttribute="bottom" constant="4" id="hbI-3L-ulW"/>
+                                    <constraint firstItem="tx7-oo-UVp" firstAttribute="leading" secondItem="nEQ-XP-22Q" secondAttribute="leading" constant="8" id="lm5-gx-4FV"/>
+                                    <constraint firstItem="uZm-IN-OgV" firstAttribute="leading" secondItem="scv-vH-lys" secondAttribute="leading" id="oHi-wb-e48"/>
+                                    <constraint firstItem="7eF-wC-8iN" firstAttribute="top" secondItem="scv-vH-lys" secondAttribute="bottom" constant="4" id="pN8-tg-rdf"/>
+                                    <constraint firstItem="7eF-wC-8iN" firstAttribute="leading" secondItem="tx7-oo-UVp" secondAttribute="trailing" constant="8" id="q34-kV-EpP"/>
+                                    <constraint firstItem="uZm-IN-OgV" firstAttribute="trailing" secondItem="scv-vH-lys" secondAttribute="trailing" id="xkX-kp-TFP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="companyLabel" destination="scv-vH-lys" id="YlD-7H-FRP"/>
+                                    <outlet property="destinationLabel" destination="uZm-IN-OgV" id="f6M-o9-6du"/>
+                                    <outlet property="nameLabel" destination="7eF-wC-8iN" id="SbJ-N7-j2G"/>
+                                    <outlet property="symbolImageView" destination="tx7-oo-UVp" id="vNq-fj-5YU"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nEQ-XP-22Q" firstAttribute="top" secondItem="v7z-nB-o2h" secondAttribute="bottom" constant="4" id="A6P-nQ-ekz"/>
+                            <constraint firstItem="nEQ-XP-22Q" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" constant="4" id="E0Y-pc-10W"/>
+                            <constraint firstItem="9vR-39-C5x" firstAttribute="trailing" secondItem="tTL-1g-ji6" secondAttribute="trailing" id="EEl-fA-cVS"/>
+                            <constraint firstItem="ADf-qR-YqO" firstAttribute="top" secondItem="tTL-1g-ji6" secondAttribute="top" id="Nd0-0K-1jy"/>
+                            <constraint firstItem="v7z-nB-o2h" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" id="VTw-wf-6qb"/>
+                            <constraint firstItem="9vR-39-C5x" firstAttribute="top" secondItem="ADf-qR-YqO" secondAttribute="bottom" id="XQ2-4S-Bkd"/>
+                            <constraint firstItem="v7z-nB-o2h" firstAttribute="top" secondItem="9vR-39-C5x" secondAttribute="bottom" constant="4" id="Y9Z-K8-wfZ"/>
+                            <constraint firstItem="9vR-39-C5x" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" id="oZk-q6-f6y"/>
+                            <constraint firstItem="ADf-qR-YqO" firstAttribute="trailing" secondItem="tTL-1g-ji6" secondAttribute="trailing" id="oz7-mS-jyQ"/>
+                            <constraint firstItem="v7z-nB-o2h" firstAttribute="trailing" secondItem="tTL-1g-ji6" secondAttribute="trailing" id="pUZ-CA-25h"/>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="bottom" secondItem="nEQ-XP-22Q" secondAttribute="bottom" constant="4" id="rg7-CH-SiO"/>
+                            <constraint firstItem="ADf-qR-YqO" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" id="tv0-bB-qf3"/>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="trailing" secondItem="nEQ-XP-22Q" secondAttribute="trailing" constant="4" id="wTv-sM-IyF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tTL-1g-ji6"/>
+                    </view>
+                    <connections>
+                        <outlet property="railwayView" destination="nEQ-XP-22Q" id="Jsn-VM-n7r"/>
+                        <outlet property="stationsView" destination="v7z-nB-o2h" id="UIo-MH-6jm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqY-jZ-KgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487.5" y="72.887323943661968"/>
+        </scene>
+    </scenes>
+</document>
