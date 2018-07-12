@@ -4,15 +4,15 @@
 // =============================================================================
 import UIKit
 
-protocol WallpaperAdapterDelegate: class {
+protocol GameTransferSelectAdapterDelegate: class {
     
 }
 
-class WallpaperAdapter: NSObject, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class GameTransferSelectAdapter: NSObject, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
-    weak var delegate: WallpaperAdapterDelegate!
+    weak var delegate: GameTransferSelectAdapterDelegate!
     
-    init(delegate: WallpaperAdapterDelegate) {
+    init(delegate: GameTransferSelectAdapterDelegate) {
         super.init()
         self.delegate = delegate
     }
@@ -22,12 +22,12 @@ class WallpaperAdapter: NSObject, UICollectionViewDelegateFlowLayout, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! WallpaperAdapterCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GameTransferSelectAdapterCell
         
         return cell
     }
 }
 
-class WallpaperAdapterCell: UICollectionViewCell {
+class GameTransferSelectAdapterCell: UICollectionViewCell {
     
 }

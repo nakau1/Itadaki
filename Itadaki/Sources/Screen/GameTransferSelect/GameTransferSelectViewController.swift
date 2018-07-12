@@ -4,15 +4,15 @@
 // =============================================================================
 import UIKit
 
-class WallpaperViewController: UIViewController {
+class GameTransferSelectViewController: UIViewController {
     
-    private var presenter: WallpaperPresentable!
-    private var adapter: WallpaperAdapter!
+    private var presenter: GameTransferSelectPresentable!
+    private var adapter: GameTransferSelectAdapter!
     
     class func create() -> UIViewController {
         let vc = instantiate(self)
-        vc.presenter = WallpaperPresenter(view: vc)
-        vc.adapter = WallpaperAdapter(delegate: vc)
+        vc.presenter = GameTransferSelectPresenter(view: vc)
+        vc.adapter = GameTransferSelectAdapter(delegate: vc)
         return vc
     }
     
@@ -21,10 +21,10 @@ class WallpaperViewController: UIViewController {
     }
 }
 
-extension WallpaperViewController: WallpaperViewable {
+extension GameTransferSelectViewController: GameTransferSelectViewable {
     
 }
 
-extension WallpaperViewController: WallpaperAdapterDelegate {
+extension GameTransferSelectViewController: GameTransferSelectAdapterDelegate {
     
 }

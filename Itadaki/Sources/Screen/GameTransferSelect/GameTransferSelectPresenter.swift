@@ -4,19 +4,19 @@
 // =============================================================================
 import UIKit
 
-protocol WallpaperPresentable: class {
+protocol GameTransferSelectPresentable: class {
     
 }
 
-protocol WallpaperViewable: class {
+protocol GameTransferSelectViewable: class {
     
 }
 
-class WallpaperPresenter: WallpaperPresentable {
+class GameTransferSelectPresenter: GameTransferSelectPresentable {
     
-    weak var view: WallpaperViewable!
+    weak var view: GameTransferSelectViewable!
     
-    init(view: WallpaperViewable) {
+    init(view: GameTransferSelectViewable) {
         self.view = view
     }
 }
