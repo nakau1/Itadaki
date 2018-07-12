@@ -6,6 +6,42 @@ import Foundation
 
 extension NSPredicate {
     
+    static var empty: NSPredicate {
+        return NSPredicate(value: true)
+    }
+    
+    static var dead: NSPredicate {
+        return NSPredicate(value: false)
+    }
+    
+    static func compounded(_ type: NSCompoundPredicate.LogicalType = .and, _ predicates: [NSPredicate]) -> NSPredicate {
+        switch type {
+        case .and: return NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        case .or:  return NSCompoundPredicate(orPredicateWithSubpredicates:  predicates)
+        case .not: return NSCompoundPredicate(notPredicateWithSubpredicate:  compounded(.and, predicates))
+        }
+    }
+    
+    func and(_ predicate: NSPredicate) -> NSPredicate {
+        return self.compound([predicate], type: .and)
+    }
+    
+    func or(_ predicate: NSPredicate) -> NSPredicate {
+        return self.compound([predicate], type: .or)
+    }
+    
+    func not(_ predicate: NSPredicate) -> NSPredicate {
+        return self.compound([predicate], type: .not)
+    }
+    
+    func compound(_ predicates: [NSPredicate], type: NSCompoundPredicate.LogicalType = .and) -> NSPredicate {
+        var p = predicates; p.insert(self, at: 0)
+        return NSPredicate.compounded(type, p)
+    }
+}
+
+extension NSPredicate {
+    
     convenience init(_ property: String, equal value: Any) {
         self.init(expression: property, "=", value)
     }
@@ -75,35 +111,6 @@ extension NSPredicate {
             self.init(format: format, argumentArray: args)
         } else {
             self.init(value: true)
-        }
-    }
-    
-    static var empty: NSPredicate {
-        return NSPredicate(value: true)
-    }
-    
-    static var dead: NSPredicate {
-        return NSPredicate(value: false)
-    }
-    
-    func and(_ predicate: NSPredicate) -> NSPredicate {
-        return self.compound([predicate], type: .and)
-    }
-    
-    func or(_ predicate: NSPredicate) -> NSPredicate {
-        return self.compound([predicate], type: .or)
-    }
-    
-    func not(_ predicate: NSPredicate) -> NSPredicate {
-        return self.compound([predicate], type: .not)
-    }
-    
-    func compound(_ predicates: [NSPredicate], type: NSCompoundPredicate.LogicalType = .and) -> NSPredicate {
-        var p = predicates; p.insert(self, at: 0)
-        switch type {
-        case .and: return NSCompoundPredicate(andPredicateWithSubpredicates: p)
-        case .or:  return NSCompoundPredicate(orPredicateWithSubpredicates:  p)
-        case .not: return NSCompoundPredicate(notPredicateWithSubpredicate:  self.compound(p))
         }
     }
 }

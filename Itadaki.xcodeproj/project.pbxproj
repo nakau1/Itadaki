@@ -62,9 +62,6 @@
 		DBD3343520E964EA002128FF /* GameStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343420E964EA002128FF /* GameStationView.swift */; };
 		DBD3343920E96BAE002128FF /* RailwayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343820E96BAE002128FF /* RailwayManager.swift */; };
 		E423A28520F3952F00008B39 /* RealmSwift.List+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift.List+App.swift */; };
-		E423A28A20F3994B00008B39 /* RailwayQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28720F3994B00008B39 /* RailwayQuery.swift */; };
-		E423A28B20F3994B00008B39 /* StationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28820F3994B00008B39 /* StationQuery.swift */; };
-		E423A28C20F3994B00008B39 /* TransferringQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28920F3994B00008B39 /* TransferringQuery.swift */; };
 		E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28E20F399D200008B39 /* TransferringRepository.swift */; };
 		E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28F20F399D200008B39 /* RailwayRepository.swift */; };
 		E423A29320F399D200008B39 /* StationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A29020F399D200008B39 /* StationRepository.swift */; };
@@ -165,9 +162,6 @@
 		DBD3343420E964EA002128FF /* GameStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationView.swift; sourceTree = "<group>"; };
 		DBD3343820E96BAE002128FF /* RailwayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayManager.swift; sourceTree = "<group>"; };
 		E423A28420F3952F00008B39 /* RealmSwift.List+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift.List+App.swift"; sourceTree = "<group>"; };
-		E423A28720F3994B00008B39 /* RailwayQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayQuery.swift; sourceTree = "<group>"; };
-		E423A28820F3994B00008B39 /* StationQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationQuery.swift; sourceTree = "<group>"; };
-		E423A28920F3994B00008B39 /* TransferringQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringQuery.swift; sourceTree = "<group>"; };
 		E423A28E20F399D200008B39 /* TransferringRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringRepository.swift; sourceTree = "<group>"; };
 		E423A28F20F399D200008B39 /* RailwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayRepository.swift; sourceTree = "<group>"; };
 		E423A29020F399D200008B39 /* StationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationRepository.swift; sourceTree = "<group>"; };
@@ -352,7 +346,6 @@
 			children = (
 				DB05538620B1E6260008DAD5 /* Entity */,
 				E423A28D20F399D200008B39 /* Repository */,
-				E423A28620F3994B00008B39 /* Query */,
 				DB05538220B1E6260008DAD5 /* Enum */,
 				DB05538E20B1E6260008DAD5 /* Manager */,
 				E443946E20EF8441008018BF /* DecodedEntity */,
@@ -486,16 +479,6 @@
 				DBD3342F20E95A02002128FF /* GameTrainControl.storyboard */,
 			);
 			path = Train;
-			sourceTree = "<group>";
-		};
-		E423A28620F3994B00008B39 /* Query */ = {
-			isa = PBXGroup;
-			children = (
-				E423A28720F3994B00008B39 /* RailwayQuery.swift */,
-				E423A28820F3994B00008B39 /* StationQuery.swift */,
-				E423A28920F3994B00008B39 /* TransferringQuery.swift */,
-			);
-			path = Query;
 			sourceTree = "<group>";
 		};
 		E423A28D20F399D200008B39 /* Repository */ = {
@@ -758,7 +741,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E423A28C20F3994B00008B39 /* TransferringQuery.swift in Sources */,
 				DB73174C20AB1D7000D49AF3 /* Dimension.swift in Sources */,
 				DB73174D20AB1D7000D49AF3 /* Definition.swift in Sources */,
 				DB7317AA20AB2FE200D49AF3 /* TopPresenter.swift in Sources */,
@@ -791,7 +773,6 @@
 				DB73510D20E21E8B00A04ACC /* Railway.swift in Sources */,
 				DB05539E20B1E6270008DAD5 /* File.swift in Sources */,
 				DB73176320AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift in Sources */,
-				E423A28A20F3994B00008B39 /* RailwayQuery.swift in Sources */,
 				DB73510F20E2238200A04ACC /* Migration.swift in Sources */,
 				DB73510B20E21C0800A04ACC /* Station.swift in Sources */,
 				E443947120EF8441008018BF /* DecodedStation.swift in Sources */,
@@ -822,7 +803,6 @@
 				DB73175D20AB1DAB00D49AF3 /* UIColor+App.swift in Sources */,
 				E4B73C1D20AEF95600A301FB /* UIView+App.swift in Sources */,
 				DB73175F20AB1DAB00D49AF3 /* DialogBehavior+App.swift in Sources */,
-				E423A28B20F3994B00008B39 /* StationQuery.swift in Sources */,
 				E443947220EF8441008018BF /* DecodedRailway.swift in Sources */,
 				DBD3343020E95A02002128FF /* GameTrainControlViewController.swift in Sources */,
 			);
