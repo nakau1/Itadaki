@@ -16,7 +16,7 @@ struct DecodedStation: Decodable {
     let nextStationNumber: String?
     
     enum Keys: String, CodingKey {
-        case number
+        case number = "no"
         case name
         case roman
         case alias
