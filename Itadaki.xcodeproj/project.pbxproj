@@ -62,6 +62,8 @@
 		E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28E20F399D200008B39 /* TransferringRepository.swift */; };
 		E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28F20F399D200008B39 /* RailwayRepository.swift */; };
 		E423A29320F399D200008B39 /* StationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A29020F399D200008B39 /* StationRepository.swift */; };
+		E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424EE5D20F7680500FB44E9 /* MainControlViewController.swift */; };
+		E424EE6020F7680600FB44E9 /* MainContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424EE5E20F7680600FB44E9 /* MainContentsViewController.swift */; };
 		E426B6E320BBA96900F54FF9 /* DestinationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426B6E220BBA96900F54FF9 /* DestinationDirection.swift */; };
 		E4428AC720B647D300704862 /* UIImage+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4428AC620B647D300704862 /* UIImage+App.swift */; };
 		E443947120EF8441008018BF /* DecodedStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443946F20EF8441008018BF /* DecodedStation.swift */; };
@@ -163,6 +165,8 @@
 		E423A28E20F399D200008B39 /* TransferringRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringRepository.swift; sourceTree = "<group>"; };
 		E423A28F20F399D200008B39 /* RailwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayRepository.swift; sourceTree = "<group>"; };
 		E423A29020F399D200008B39 /* StationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationRepository.swift; sourceTree = "<group>"; };
+		E424EE5D20F7680500FB44E9 /* MainControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainControlViewController.swift; sourceTree = "<group>"; };
+		E424EE5E20F7680600FB44E9 /* MainContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContentsViewController.swift; sourceTree = "<group>"; };
 		E426B6E220BBA96900F54FF9 /* DestinationDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationDirection.swift; sourceTree = "<group>"; };
 		E4428AC620B647D300704862 /* UIImage+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+App.swift"; sourceTree = "<group>"; };
 		E443946F20EF8441008018BF /* DecodedStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodedStation.swift; sourceTree = "<group>"; };
@@ -450,6 +454,8 @@
 			isa = PBXGroup;
 			children = (
 				DBD3342620E952E7002128FF /* Main.storyboard */,
+				E424EE5E20F7680600FB44E9 /* MainContentsViewController.swift */,
+				E424EE5D20F7680500FB44E9 /* MainControlViewController.swift */,
 				DBD3342520E952E7002128FF /* MainPresenter.swift */,
 				DBD3342420E952E7002128FF /* MainViewController.swift */,
 			);
@@ -791,6 +797,7 @@
 				DBD3340620E7E5C8002128FF /* GameMainPresenter.swift in Sources */,
 				DB73511120E238A300A04ACC /* Transferring.swift in Sources */,
 				E4B73C1F20AEFCCA00A301FB /* UIButton+App.swift in Sources */,
+				E424EE6020F7680600FB44E9 /* MainContentsViewController.swift in Sources */,
 				DB73177620AB255C00D49AF3 /* Notificatable.swift in Sources */,
 				DB7317A120AB2CE600D49AF3 /* LaunchPresenter.swift in Sources */,
 				E423A29320F399D200008B39 /* StationRepository.swift in Sources */,
@@ -798,6 +805,7 @@
 				DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */,
 				E492776520F6DCF8007F6460 /* GameMainRailwayView.swift in Sources */,
 				DB7317AC20AB2FE200D49AF3 /* TopViewController.swift in Sources */,
+				E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */,
 				DBD3340320E7E5C8002128FF /* GameMainViewController.swift in Sources */,
 				DB73175320AB1D9B00D49AF3 /* DialogRiseupBehavior.swift in Sources */,
 				DB73173D20AB192900D49AF3 /* Dialog.swift in Sources */,

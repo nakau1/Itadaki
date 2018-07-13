@@ -4,7 +4,7 @@
 // =============================================================================
 import UIKit
 
-class GameMainViewController: UILayoutViewController, Notificatable {
+class GameMainViewController: MainContentsViewController, Notificatable {
     
     private var presenter: GameMainPresentable!
     
@@ -13,7 +13,7 @@ class GameMainViewController: UILayoutViewController, Notificatable {
     
     private var direction = DestinationDirection.ascending
     
-    class func create() -> UIViewController {
+    class func create() -> MainContentsViewController {
         let vc = instantiate(self)
         vc.presenter = GameMainPresenter(view: vc)
         return vc

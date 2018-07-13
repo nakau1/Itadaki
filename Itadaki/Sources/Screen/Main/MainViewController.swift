@@ -4,15 +4,17 @@
 // =============================================================================
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UILayoutViewController {
+    
+    private let animationDuration: TimeInterval = 0.2
     
     private var presenter: MainPresentable!
     
     @IBOutlet private weak var areaContents: UIView!
     @IBOutlet private weak var areaControl: UIView!
     
-    private var contentsController: UIViewController!
-    private var controlController: UIViewController!
+    private var contentsControllers = [MainContentsViewController]()
+    private var controlControllers = [MainControlViewController]()
     
     private var contentsFrame: CGRect!
     private var controlFrame: CGRect!
@@ -23,32 +25,70 @@ class MainViewController: UIViewController {
         return vc
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        if contentsFrame == nil {
-            contentsFrame = areaContents.bounds
-            changeContents(GameMainViewController.create())
-        }
-        if controlFrame == nil {
-            controlFrame = areaControl.bounds
-            changeControl(GameTrainControlViewController.create())
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        push(contents: GameMainViewController.create(), animate: false)
+        push(control: GameTrainControlViewController.create(), animate: false)
     }
     
-    func changeContents(_ contentsController: UIViewController) {
-        self.contentsController = contentsController
-        areaContents.addSubview(contentsController.view)
-        contentsController.view.frame = contentsFrame
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        contentsFrame = areaContents.bounds
+        controlFrame = areaControl.bounds
+        presentPushedControllers()
     }
     
-    func changeControl(_ controlController: UIViewController) {
-        self.controlController = controlController
-        areaControl.addSubview(controlController.view)
-        controlController.view.frame = controlFrame
+    func push(contents controller: MainContentsViewController, animate: Bool = true) {
+        controller.main = self
+        contentsControllers.append(controller)
+        
+        if contentsFrame == nil { return }
+        
+        controller.view.frame = contentsFrame
+        if animate {
+            controller.view.alpha = 0
+        }
+        
+        controller.view.parent = areaContents
+        if animate {
+            UIView.animate(withDuration: animationDuration) {
+                controller.view.alpha = 1
+            }
+        }
+    }
+    
+    func push(control controller: MainControlViewController, animate: Bool = true) {
+        controller.main = self
+        controlControllers.append(controller)
+        
+        if controlFrame == nil { return }
+        
+        controller.view.frame = controlFrame
+        if animate {
+            controller.view.alpha = 0
+        }
+        
+        controller.view.parent = areaControl
+        if animate {
+            UIView.animate(withDuration: animationDuration) {
+                controller.view.alpha = 1
+            }
+        }
+    }
+    
+    private func presentPushedControllers() {
+        contentsControllers.forEach { controller in
+            if controller.view.parent == nil {
+                controller.view.frame = contentsFrame
+                controller.view.parent = areaContents
+            }
+        }
+        controlControllers.forEach { controller in
+            if controller.view.parent == nil {
+                controller.view.frame = controlFrame
+                controller.view.parent = areaControl
+            }
+        }
     }
 }
 

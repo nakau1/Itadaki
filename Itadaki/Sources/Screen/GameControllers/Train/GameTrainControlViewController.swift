@@ -4,11 +4,11 @@
 // =============================================================================
 import UIKit
 
-class GameTrainControlViewController: UIViewController, Notificatable {
+class GameTrainControlViewController: MainControlViewController, Notificatable {
     
     @IBOutlet private weak var forwardButton: UIButton!
     
-    class func create() -> UIViewController {
+    class func create() -> MainControlViewController {
         let vc = instantiate(self)
         return vc
     }
