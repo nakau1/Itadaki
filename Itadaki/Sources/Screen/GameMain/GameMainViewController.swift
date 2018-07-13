@@ -25,6 +25,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
         stationsView.delegate = self
         
         observeNotification(.CommandForward, when: #selector(didCommandForward))
+        observeNotification(.CommandTransfer, when: #selector(didCommandTransfer))
     }
     
     override func viewDidLayout() {
@@ -37,6 +38,10 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     
     @objc private func didCommandForward() {
         stationsView.move()
+    }
+    
+    @objc private func didCommandTransfer() {
+        main.push(contents: GameTransferSelectViewController.create())
     }
 }
 

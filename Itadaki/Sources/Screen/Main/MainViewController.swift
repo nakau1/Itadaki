@@ -6,7 +6,7 @@ import UIKit
 
 class MainViewController: UILayoutViewController {
     
-    private let animationDuration: TimeInterval = 0.2
+    private let animationDuration: TimeInterval = 0.1
     
     private var presenter: MainPresentable!
     

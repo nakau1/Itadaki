@@ -7,6 +7,7 @@ import UIKit
 class GameTrainControlViewController: MainControlViewController, Notificatable {
     
     @IBOutlet private weak var forwardButton: UIButton!
+    @IBOutlet private weak var transferButton: UIButton!
     
     class func create() -> MainControlViewController {
         let vc = instantiate(self)
@@ -21,6 +22,10 @@ class GameTrainControlViewController: MainControlViewController, Notificatable {
     
     @IBAction private func didTapForwardButton() {
         postNotification(.CommandForward)
+    }
+    
+    @IBAction private func didTapTransferButton() {
+        postNotification(.CommandTransfer)
     }
     
     @objc private func willStationMove() {

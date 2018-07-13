@@ -7,6 +7,7 @@ import UIKit
 extension Notification.Name {
     
     static let CommandForward = Notification.Name("CommandForward")
+    static let CommandTransfer = Notification.Name("CommandTransfer")
     
     static let WillStationMove = Notification.Name("WillStationMove")
     static let DidStationMove = Notification.Name("DidStationMove")

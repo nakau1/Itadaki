@@ -4,12 +4,12 @@
 // =============================================================================
 import UIKit
 
-class GameTransferSelectViewController: UIViewController {
+class GameTransferSelectViewController: MainContentsViewController {
     
     private var presenter: GameTransferSelectPresentable!
     private var adapter: GameTransferSelectAdapter!
     
-    class func create() -> UIViewController {
+    class func create() -> MainContentsViewController {
         let vc = instantiate(self)
         vc.presenter = GameTransferSelectPresenter(view: vc)
         vc.adapter = GameTransferSelectAdapter(delegate: vc)
