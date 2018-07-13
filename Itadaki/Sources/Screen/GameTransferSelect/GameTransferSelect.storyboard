@@ -17,13 +17,129 @@
                     <view key="view" contentMode="scaleToFill" id="Ysw-UT-mFT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rga-00-dVi">
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="122" id="DcY-Nk-806" customClass="GameTransferSelectAdapterCell" customModule="Itadaki" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="122"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DcY-Nk-806" id="YIi-Hr-pia">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqe-uj-Vmg" customClass="GameMainRailwayView" customModule="Itadaki" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京メトロ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVF-2d-Pt9">
+                                                            <rect key="frame" x="64" y="12" width="295" height="12"/>
+                                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中央線・総武快速線" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LED-61-oEm">
+                                                            <rect key="frame" x="64" y="28" width="295" height="16"/>
+                                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pit-c1-FNy">
+                                                            <rect key="frame" x="16" y="20" width="32" height="32"/>
+                                                            <color key="backgroundColor" red="0.5972993338" green="0.5972993338" blue="0.5972993338" alpha="0.5468214897" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="79F-2I-HLj"/>
+                                                                <constraint firstAttribute="width" constant="32" id="MEm-8e-51I"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="千葉・蘇我方面・秋葉原・水道橋行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEf-4R-xD4">
+                                                            <rect key="frame" x="64" y="48" width="295" height="12"/>
+                                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                                            <color key="textColor" red="0.17231794719999999" green="0.13931673820000001" blue="0.42380099830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="FEf-4R-xD4" firstAttribute="top" secondItem="LED-61-oEm" secondAttribute="bottom" constant="4" id="27g-QF-Sc6"/>
+                                                        <constraint firstItem="pit-c1-FNy" firstAttribute="leading" secondItem="vqe-uj-Vmg" secondAttribute="leading" constant="16" id="2yz-NA-jjN"/>
+                                                        <constraint firstItem="LED-61-oEm" firstAttribute="centerY" secondItem="pit-c1-FNy" secondAttribute="centerY" id="3Cj-vf-eeW"/>
+                                                        <constraint firstItem="LED-61-oEm" firstAttribute="leading" secondItem="pit-c1-FNy" secondAttribute="trailing" constant="16" id="BEK-SG-HrF"/>
+                                                        <constraint firstItem="FEf-4R-xD4" firstAttribute="leading" secondItem="LED-61-oEm" secondAttribute="leading" id="FG1-td-Yzg"/>
+                                                        <constraint firstItem="yVF-2d-Pt9" firstAttribute="leading" secondItem="LED-61-oEm" secondAttribute="leading" id="JvS-lZ-TOo"/>
+                                                        <constraint firstItem="pit-c1-FNy" firstAttribute="top" secondItem="vqe-uj-Vmg" secondAttribute="top" constant="20" id="L6X-Fj-zI5"/>
+                                                        <constraint firstAttribute="height" constant="72" id="OAT-io-tfr"/>
+                                                        <constraint firstAttribute="trailing" secondItem="LED-61-oEm" secondAttribute="trailing" constant="16" id="RdS-SB-riL"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pit-c1-FNy" secondAttribute="bottom" constant="20" id="TKk-Z5-KzN"/>
+                                                        <constraint firstItem="LED-61-oEm" firstAttribute="top" secondItem="yVF-2d-Pt9" secondAttribute="bottom" constant="4" id="TY6-TD-Lnm"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="gGf-M9-gpJ"/>
+                                                        <constraint firstItem="FEf-4R-xD4" firstAttribute="trailing" secondItem="LED-61-oEm" secondAttribute="trailing" id="qoz-Vy-sYM"/>
+                                                        <constraint firstItem="yVF-2d-Pt9" firstAttribute="trailing" secondItem="LED-61-oEm" secondAttribute="trailing" id="tdh-tK-50e"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="companyLabel" destination="yVF-2d-Pt9" id="n5W-CU-tQr"/>
+                                                        <outlet property="destinationLabel" destination="FEf-4R-xD4" id="9PR-ro-2bq"/>
+                                                        <outlet property="nameLabel" destination="LED-61-oEm" id="4Xa-jl-1OD"/>
+                                                        <outlet property="symbolImageView" destination="pit-c1-FNy" id="VM9-Gj-nM9"/>
+                                                    </connections>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="vqe-uj-Vmg" secondAttribute="trailing" id="EK6-Xf-iBA"/>
+                                                <constraint firstItem="vqe-uj-Vmg" firstAttribute="leading" secondItem="YIi-Hr-pia" secondAttribute="leading" id="S60-ub-yeQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="vqe-uj-Vmg" secondAttribute="bottom" id="XSY-jY-BVb"/>
+                                                <constraint firstItem="vqe-uj-Vmg" firstAttribute="top" secondItem="YIi-Hr-pia" secondAttribute="top" id="s4p-3k-hJR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vJA-lw-trB" id="Kdh-mv-YEu"/>
+                                    <outlet property="delegate" destination="vJA-lw-trB" id="Vhy-wd-oGT"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UX-Ud-gkF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="74"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.99607843139999996" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="VJF-M3-LRM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rga-00-dVi" firstAttribute="top" secondItem="5UX-Ud-gkF" secondAttribute="bottom" id="211-Xx-n31"/>
+                            <constraint firstItem="rga-00-dVi" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" id="2he-At-NwA"/>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="trailing" secondItem="rga-00-dVi" secondAttribute="trailing" id="EGD-Fa-6VN"/>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="trailing" secondItem="5UX-Ud-gkF" secondAttribute="trailing" id="LCn-uv-0kB"/>
+                            <constraint firstItem="5UX-Ud-gkF" firstAttribute="top" secondItem="tTL-1g-ji6" secondAttribute="top" id="Nd9-ki-bVQ"/>
+                            <constraint firstItem="5UX-Ud-gkF" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" id="cr0-RA-WWn"/>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="bottom" secondItem="rga-00-dVi" secondAttribute="bottom" id="s6F-Ob-ad7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tTL-1g-ji6"/>
                     </view>
+                    <connections>
+                        <outlet property="adapter" destination="vJA-lw-trB" id="xfp-uN-l4y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqY-jZ-KgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="vJA-lw-trB" customClass="GameTransferSelectAdapter" customModule="Itadaki" customModuleProvider="target">
+                    <connections>
+                        <outlet property="tableView" destination="rga-00-dVi" id="buX-iS-ECo"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="-111" y="73"/>
+            <point key="canvasLocation" x="-498.39999999999998" y="86.806596701649184"/>
         </scene>
     </scenes>
 </document>

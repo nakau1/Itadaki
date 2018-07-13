@@ -8,26 +8,23 @@ protocol GameTransferSelectAdapterDelegate: class {
     
 }
 
-class GameTransferSelectAdapter: NSObject, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class GameTransferSelectAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     weak var delegate: GameTransferSelectAdapterDelegate!
     
-    init(delegate: GameTransferSelectAdapterDelegate) {
-        super.init()
-        self.delegate = delegate
-    }
+    @IBOutlet private weak var tableView: UITableView!
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GameTransferSelectAdapterCell
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GameTransferSelectAdapterCell
         
         return cell
     }
 }
 
-class GameTransferSelectAdapterCell: UICollectionViewCell {
+class GameTransferSelectAdapterCell: UITableViewCell {
     
 }
