@@ -28,7 +28,7 @@ class GameStationView: UICustomView {
             
             stationNumberImageView.image = station.numberingImage
             
-            [topLine, bottomLine, stationNumberImageView].forEach { (view: UIView) in
+            [topLine, bottomLine].forEach { (view: UIView) in
                 view.backgroundColor = station.railway.color
             }
         }
