@@ -48,6 +48,10 @@ extension Station {
         return !transferrings.isEmpty
     }
     
+    var numberingImage: UIImage {
+        return NumberingImage().make(railway: railway, number: number)
+    }
+    
     func destination(direction: DestinationDirection) -> String {
         guard let destinationTransferring = TransferringRepository.destination(of: self, direction: direction) else {
             return ""

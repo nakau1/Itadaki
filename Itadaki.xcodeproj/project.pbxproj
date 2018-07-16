@@ -10,6 +10,7 @@
 		82EF94CEB7ABBA29451FFA96 /* Pods_ItadakiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94EBD6B9ACA52BC2DB6135F3 /* Pods_ItadakiTests.framework */; };
 		DB05539E20B1E6270008DAD5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05539120B1E6270008DAD5 /* File.swift */; };
 		DB0553A920B1E6850008DAD5 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0553A220B1E6850008DAD5 /* StationManager.swift */; };
+		DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D4B5320F75C24003A278F /* NumberingImage.swift */; };
 		DB73173D20AB192900D49AF3 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173720AB192900D49AF3 /* Dialog.swift */; };
 		DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173C20AB192900D49AF3 /* AppDelegate.swift */; };
 		DB73174820AB1D7000D49AF3 /* Definition+Railway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174020AB1D7000D49AF3 /* Definition+Railway.swift */; };
@@ -107,6 +108,7 @@
 		D91675FE35FA4DFA2258BDA8 /* Pods-Itadaki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itadaki.release.xcconfig"; path = "Pods/Target Support Files/Pods-Itadaki/Pods-Itadaki.release.xcconfig"; sourceTree = "<group>"; };
 		DB05539120B1E6270008DAD5 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		DB0553A220B1E6850008DAD5 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
+		DB0D4B5320F75C24003A278F /* NumberingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberingImage.swift; sourceTree = "<group>"; };
 		DB73173720AB192900D49AF3 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		DB73173C20AB192900D49AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB73174020AB1D7000D49AF3 /* Definition+Railway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Definition+Railway.swift"; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				DB05538E20B1E6260008DAD5 /* Manager */,
 				E443946E20EF8441008018BF /* DecodedEntity */,
 				DB05539120B1E6270008DAD5 /* File.swift */,
+				DB0D4B5320F75C24003A278F /* NumberingImage.swift */,
 				DB73510E20E2238200A04ACC /* Migration.swift */,
 			);
 			path = Model;
@@ -748,6 +751,7 @@
 				DBD3342820E952E7002128FF /* MainViewController.swift in Sources */,
 				E4B6D2FA20E5BF1600354CC3 /* Player.swift in Sources */,
 				E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */,
+				DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */,
 				DB0553A920B1E6850008DAD5 /* StationManager.swift in Sources */,
 				E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */,
 				DB7317D220AB39A300D49AF3 /* WallpaperViewController.swift in Sources */,
@@ -967,7 +971,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K75PB9VKYT;
+				DEVELOPMENT_TEAM = F5GAB67SL8;
 				INFOPLIST_FILE = Itadaki/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -987,7 +991,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K75PB9VKYT;
+				DEVELOPMENT_TEAM = F5GAB67SL8;
 				INFOPLIST_FILE = Itadaki/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (

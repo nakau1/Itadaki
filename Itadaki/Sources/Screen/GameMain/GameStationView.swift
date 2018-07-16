@@ -26,7 +26,9 @@ class GameStationView: UICustomView {
             topLine.isHidden = station.isFinalStation(direction)
             bottomLine.isHidden = station.isFirstStation(direction)
             
-            [topLine, bottomLine, stationNumberImageView].forEach { (view: UIView) in
+            stationNumberImageView.image = station.numberingImage
+            
+            [topLine, bottomLine].forEach { (view: UIView) in
                 view.backgroundColor = station.railway.color
             }
         }

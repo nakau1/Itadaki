@@ -61,6 +61,10 @@ extension Railway {
     var textColor: UIColor {
         return UIColor(colorCode: textColorCode)
     }
+    
+    var numberingImage: UIImage {
+        return NumberingImage().make(railway: self, number: nil)
+    }
 }
 
 //

@@ -58,7 +58,6 @@
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QiN-Le-tSu">
                     <rect key="frame" x="20" y="32" width="36" height="36"/>
-                    <color key="backgroundColor" red="0.61568627450000002" green="0.76862745099999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="36" id="Ks3-CP-fWn"/>
                         <constraint firstAttribute="height" constant="36" id="ZJ7-M1-1SE"/>

@@ -16,7 +16,7 @@ class GameMainRailwayView: UIView {
         companyLabel.text = railway.company.name
         nameLabel.text = railway.name
         destinationLabel.text = station.destination(direction: direction)
-        symbolImageView.backgroundColor = railway.color
+        symbolImageView.image = railway.numberingImage
     }
     
 //    /// 行先方向
