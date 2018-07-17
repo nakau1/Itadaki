@@ -4,7 +4,7 @@
 // =============================================================================
 import UIKit
 
-class GameTransferSelectViewController: MainContentsViewController {
+class GameTransferSelectViewController: MainContentsViewController, Notificatable {
     
     private var presenter: GameTransferSelectPresentable!
     private var station: Station!
@@ -27,6 +27,26 @@ class GameTransferSelectViewController: MainContentsViewController {
         super.viewDidLoad()
         adapter.delegate = self
         presenter.loadTransferrings(of: station)
+        
+        observeNotification(.CommandListSelect, when: #selector(didCommandListSelect(_:)))
+        observeNotification(.CommandListUp, when: #selector(didCommandListUp(_:)))
+        observeNotification(.CommandListDown, when: #selector(didCommandListDown(_:)))
+    }
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+    }
+    
+    @objc private func didCommandListSelect(_ notify: Notification) {
+        
+    }
+    
+    @objc private func didCommandListUp(_ notify: Notification) {
+        adapter.selectUp()
+    }
+    
+    @objc private func didCommandListDown(_ notify: Notification) {
+        adapter.selectDown()
     }
 }
 
