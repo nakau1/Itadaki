@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fly-5s-CAo">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game List Select Control View Controller-->
+        <scene sceneID="dfL-Yy-a7j">
+            <objects>
+                <viewController id="fly-5s-CAo" customClass="GameListSelectControlViewController" customModule="Itadaki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ysw-UT-mFT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czv-Bs-0Ja">
+                                <rect key="frame" x="238" y="16" width="66" height="64"/>
+                                <state key="normal" title="OK"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSelectButton" destination="fly-5s-CAo" eventType="touchUpInside" id="gBS-c0-2Pp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoM-N9-dAw">
+                                <rect key="frame" x="164" y="16" width="66" height="64"/>
+                                <state key="normal" title="↓"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapDownButton" destination="fly-5s-CAo" eventType="touchUpInside" id="bC3-JE-pDA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BX-iQ-8ML">
+                                <rect key="frame" x="90" y="16" width="66" height="64"/>
+                                <state key="normal" title="↑"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapUpButton" destination="fly-5s-CAo" eventType="touchUpInside" id="1iC-Ym-gKc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ro-PK-6nV">
+                                <rect key="frame" x="16" y="16" width="66" height="64"/>
+                                <state key="normal" title="✗"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapCancelButton" destination="fly-5s-CAo" eventType="touchUpInside" id="iDd-V4-5fo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="bottom" secondItem="9ro-PK-6nV" secondAttribute="bottom" id="1Y4-S2-dFg"/>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="leading" secondItem="HoM-N9-dAw" secondAttribute="trailing" constant="8" id="7Vn-uY-7Om"/>
+                            <constraint firstItem="HoM-N9-dAw" firstAttribute="leading" secondItem="2BX-iQ-8ML" secondAttribute="trailing" constant="8" id="7a3-9C-scW"/>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="top" secondItem="2BX-iQ-8ML" secondAttribute="top" id="FSV-RZ-p88"/>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="top" secondItem="9ro-PK-6nV" secondAttribute="top" id="Jg9-UV-d5e"/>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="width" secondItem="9ro-PK-6nV" secondAttribute="width" id="LjY-ge-pR0"/>
+                            <constraint firstItem="9ro-PK-6nV" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" constant="16" id="MzK-Mg-2dX"/>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="bottom" secondItem="HoM-N9-dAw" secondAttribute="bottom" id="OI0-yf-FLh"/>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="bottom" secondItem="czv-Bs-0Ja" secondAttribute="bottom" constant="16" id="dp4-9Q-64b"/>
+                            <constraint firstItem="2BX-iQ-8ML" firstAttribute="leading" secondItem="9ro-PK-6nV" secondAttribute="trailing" constant="8" id="jRL-lH-6hp"/>
+                            <constraint firstItem="2BX-iQ-8ML" firstAttribute="width" secondItem="9ro-PK-6nV" secondAttribute="width" id="uxT-Uk-Bo8"/>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="top" secondItem="tTL-1g-ji6" secondAttribute="top" constant="16" id="vrW-01-iYe"/>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="top" secondItem="HoM-N9-dAw" secondAttribute="top" id="wsZ-5Y-bkv"/>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="trailing" secondItem="czv-Bs-0Ja" secondAttribute="trailing" constant="16" id="yUe-N8-0sF"/>
+                            <constraint firstItem="HoM-N9-dAw" firstAttribute="width" secondItem="9ro-PK-6nV" secondAttribute="width" id="zoG-fl-672"/>
+                            <constraint firstItem="czv-Bs-0Ja" firstAttribute="bottom" secondItem="2BX-iQ-8ML" secondAttribute="bottom" id="zpZ-rW-IpH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tTL-1g-ji6"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="96"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="9ro-PK-6nV" id="aBB-u5-hgA"/>
+                        <outlet property="downButton" destination="HoM-N9-dAw" id="BGq-FN-Dv5"/>
+                        <outlet property="selectButton" destination="czv-Bs-0Ja" id="pV3-no-7og"/>
+                        <outlet property="upButton" destination="2BX-iQ-8ML" id="LaK-Jk-9BI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqY-jZ-KgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-881" y="17"/>
+        </scene>
+    </scenes>
+</document>

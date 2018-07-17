@@ -40,11 +40,35 @@
                                     <action selector="didTapForwardButton" destination="fly-5s-CAo" eventType="touchUpInside" id="9hh-iC-giU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYB-cM-i39">
+                                <rect key="frame" x="16" y="16" width="128" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WYB-cM-i39" secondAttribute="height" multiplier="2:1" id="08K-b3-NjW"/>
+                                </constraints>
+                                <state key="normal" title="乗り換え"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapTransferButton" destination="fly-5s-CAo" eventType="touchUpInside" id="jYk-1w-tQl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="bottom" secondItem="WYB-cM-i39" secondAttribute="bottom" constant="16" id="6X0-NR-OUG"/>
                             <constraint firstItem="tTL-1g-ji6" firstAttribute="bottom" secondItem="czv-Bs-0Ja" secondAttribute="bottom" constant="16" id="dp4-9Q-64b"/>
+                            <constraint firstItem="WYB-cM-i39" firstAttribute="top" secondItem="tTL-1g-ji6" secondAttribute="top" constant="16" id="kv0-Za-hzq"/>
                             <constraint firstItem="czv-Bs-0Ja" firstAttribute="top" secondItem="tTL-1g-ji6" secondAttribute="top" constant="16" id="vrW-01-iYe"/>
+                            <constraint firstItem="WYB-cM-i39" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" constant="16" id="xtg-OR-AR6"/>
                             <constraint firstItem="tTL-1g-ji6" firstAttribute="trailing" secondItem="czv-Bs-0Ja" secondAttribute="trailing" constant="16" id="yUe-N8-0sF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tTL-1g-ji6"/>
@@ -53,6 +77,7 @@
                     <size key="freeformSize" width="320" height="96"/>
                     <connections>
                         <outlet property="forwardButton" destination="czv-Bs-0Ja" id="va1-ja-DAA"/>
+                        <outlet property="transferButton" destination="WYB-cM-i39" id="lke-up-7IZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqY-jZ-KgT" userLabel="First Responder" sceneMemberID="firstResponder"/>

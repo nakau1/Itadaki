@@ -36,10 +36,6 @@
 		DB7317AB20AB2FE200D49AF3 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7317A820AB2FE200D49AF3 /* Top.storyboard */; };
 		DB7317AC20AB2FE200D49AF3 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317A920AB2FE200D49AF3 /* TopViewController.swift */; };
 		DB7317AE20AB31DC00D49AF3 /* TopAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317AD20AB31DC00D49AF3 /* TopAdapter.swift */; };
-		DB7317D020AB39A300D49AF3 /* WallpaperAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317CC20AB39A300D49AF3 /* WallpaperAdapter.swift */; };
-		DB7317D120AB39A300D49AF3 /* Wallpaper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7317CD20AB39A300D49AF3 /* Wallpaper.storyboard */; };
-		DB7317D220AB39A300D49AF3 /* WallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317CE20AB39A300D49AF3 /* WallpaperViewController.swift */; };
-		DB7317D320AB39A300D49AF3 /* WallpaperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317CF20AB39A300D49AF3 /* WallpaperPresenter.swift */; };
 		DB73510920E21B8800A04ACC /* railways.json in Resources */ = {isa = PBXBuildFile; fileRef = DB73510820E21B8800A04ACC /* railways.json */; };
 		DB73510B20E21C0800A04ACC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73510A20E21C0800A04ACC /* Station.swift */; };
 		DB73510D20E21E8B00A04ACC /* Railway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73510C20E21E8B00A04ACC /* Railway.swift */; };
@@ -66,12 +62,21 @@
 		E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28E20F399D200008B39 /* TransferringRepository.swift */; };
 		E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28F20F399D200008B39 /* RailwayRepository.swift */; };
 		E423A29320F399D200008B39 /* StationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A29020F399D200008B39 /* StationRepository.swift */; };
+		E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424EE5D20F7680500FB44E9 /* MainControlViewController.swift */; };
+		E424EE6020F7680600FB44E9 /* MainContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424EE5E20F7680600FB44E9 /* MainContentsViewController.swift */; };
 		E426B6E320BBA96900F54FF9 /* DestinationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426B6E220BBA96900F54FF9 /* DestinationDirection.swift */; };
 		E4428AC720B647D300704862 /* UIImage+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4428AC620B647D300704862 /* UIImage+App.swift */; };
 		E443947120EF8441008018BF /* DecodedStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443946F20EF8441008018BF /* DecodedStation.swift */; };
 		E443947220EF8441008018BF /* DecodedRailway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443947020EF8441008018BF /* DecodedRailway.swift */; };
 		E443947420F0D773008018BF /* locationKeys.json in Resources */ = {isa = PBXBuildFile; fileRef = E443947320F0D773008018BF /* locationKeys.json */; };
+		E453425720F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */; };
+		E453425820F70DCE00EFA9A0 /* GameTransferSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E453425420F70DCE00EFA9A0 /* GameTransferSelect.storyboard */; };
+		E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */; };
+		E453425A20F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */; };
 		E4733D3A20F4FB86000F77CD /* GameStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4733D3920F4FB85000F77CD /* GameStationsView.swift */; };
+		E485836020FDB17500FEECB7 /* GameListSelectControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E485835E20FDB17500FEECB7 /* GameListSelectControl.storyboard */; };
+		E485836120FDB17500FEECB7 /* GameListSelectControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485835F20FDB17500FEECB7 /* GameListSelectControlViewController.swift */; };
+		E485836320FDD68100FEECB7 /* IndexPath+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485836220FDD68100FEECB7 /* IndexPath+App.swift */; };
 		E492776020F5C59B007F6460 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492775E20F5C59B007F6460 /* UICustomView.swift */; };
 		E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492775F20F5C59B007F6460 /* UILayoutViewController.swift */; };
 		E492776320F6D30A007F6460 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492776220F6D30A007F6460 /* Company.swift */; };
@@ -134,10 +139,6 @@
 		DB7317A820AB2FE200D49AF3 /* Top.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
 		DB7317A920AB2FE200D49AF3 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		DB7317AD20AB31DC00D49AF3 /* TopAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAdapter.swift; sourceTree = "<group>"; };
-		DB7317CC20AB39A300D49AF3 /* WallpaperAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperAdapter.swift; sourceTree = "<group>"; };
-		DB7317CD20AB39A300D49AF3 /* Wallpaper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wallpaper.storyboard; sourceTree = "<group>"; };
-		DB7317CE20AB39A300D49AF3 /* WallpaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperViewController.swift; sourceTree = "<group>"; };
-		DB7317CF20AB39A300D49AF3 /* WallpaperPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperPresenter.swift; sourceTree = "<group>"; };
 		DB73510820E21B8800A04ACC /* railways.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = railways.json; sourceTree = "<group>"; };
 		DB73510A20E21C0800A04ACC /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		DB73510C20E21E8B00A04ACC /* Railway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Railway.swift; sourceTree = "<group>"; };
@@ -167,12 +168,21 @@
 		E423A28E20F399D200008B39 /* TransferringRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringRepository.swift; sourceTree = "<group>"; };
 		E423A28F20F399D200008B39 /* RailwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayRepository.swift; sourceTree = "<group>"; };
 		E423A29020F399D200008B39 /* StationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationRepository.swift; sourceTree = "<group>"; };
+		E424EE5D20F7680500FB44E9 /* MainControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainControlViewController.swift; sourceTree = "<group>"; };
+		E424EE5E20F7680600FB44E9 /* MainContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContentsViewController.swift; sourceTree = "<group>"; };
 		E426B6E220BBA96900F54FF9 /* DestinationDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationDirection.swift; sourceTree = "<group>"; };
 		E4428AC620B647D300704862 /* UIImage+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+App.swift"; sourceTree = "<group>"; };
 		E443946F20EF8441008018BF /* DecodedStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodedStation.swift; sourceTree = "<group>"; };
 		E443947020EF8441008018BF /* DecodedRailway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodedRailway.swift; sourceTree = "<group>"; };
 		E443947320F0D773008018BF /* locationKeys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locationKeys.json; sourceTree = "<group>"; };
+		E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectAdapter.swift; sourceTree = "<group>"; };
+		E453425420F70DCE00EFA9A0 /* GameTransferSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameTransferSelect.storyboard; sourceTree = "<group>"; };
+		E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectViewController.swift; sourceTree = "<group>"; };
+		E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectPresenter.swift; sourceTree = "<group>"; };
 		E4733D3920F4FB85000F77CD /* GameStationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationsView.swift; sourceTree = "<group>"; };
+		E485835E20FDB17500FEECB7 /* GameListSelectControl.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameListSelectControl.storyboard; sourceTree = "<group>"; };
+		E485835F20FDB17500FEECB7 /* GameListSelectControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListSelectControlViewController.swift; sourceTree = "<group>"; };
+		E485836220FDD68100FEECB7 /* IndexPath+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+App.swift"; sourceTree = "<group>"; };
 		E492775E20F5C59B007F6460 /* UICustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		E492775F20F5C59B007F6460 /* UILayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayoutViewController.swift; sourceTree = "<group>"; };
 		E492776220F6D30A007F6460 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
@@ -287,6 +297,7 @@
 				DB73175A20AB1DAB00D49AF3 /* Codable+App.swift */,
 				DB73175820AB1DAB00D49AF3 /* CoreGraphics+App.swift */,
 				DB73175720AB1DAB00D49AF3 /* DialogBehavior+App.swift */,
+				E485836220FDD68100FEECB7 /* IndexPath+App.swift */,
 				DB73175920AB1DAB00D49AF3 /* String+App.swift */,
 				DB73175520AB1DAB00D49AF3 /* UIColor+App.swift */,
 				E4428AC620B647D300704862 /* UIImage+App.swift */,
@@ -334,11 +345,11 @@
 			children = (
 				DBD3342320E952E7002128FF /* Main */,
 				DBD333FE20E7E5C8002128FF /* GameMain */,
+				E453425220F70DCE00EFA9A0 /* GameTransferSelect */,
 				DBD3342C20E95A02002128FF /* GameControllers */,
 				DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */,
 				DB73179D20AB2CE600D49AF3 /* Launch */,
 				DB7317A620AB2FE200D49AF3 /* Top */,
-				DB7317CB20AB39A300D49AF3 /* Wallpaper */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -386,17 +397,6 @@
 				DB7317A920AB2FE200D49AF3 /* TopViewController.swift */,
 			);
 			path = Top;
-			sourceTree = "<group>";
-		};
-		DB7317CB20AB39A300D49AF3 /* Wallpaper */ = {
-			isa = PBXGroup;
-			children = (
-				DB7317CD20AB39A300D49AF3 /* Wallpaper.storyboard */,
-				DB7317CF20AB39A300D49AF3 /* WallpaperPresenter.swift */,
-				DB7317CC20AB39A300D49AF3 /* WallpaperAdapter.swift */,
-				DB7317CE20AB39A300D49AF3 /* WallpaperViewController.swift */,
-			);
-			path = Wallpaper;
 			sourceTree = "<group>";
 		};
 		DB98A3DE20AB15F100A5273D = {
@@ -461,6 +461,8 @@
 			isa = PBXGroup;
 			children = (
 				DBD3342620E952E7002128FF /* Main.storyboard */,
+				E424EE5E20F7680600FB44E9 /* MainContentsViewController.swift */,
+				E424EE5D20F7680500FB44E9 /* MainControlViewController.swift */,
 				DBD3342520E952E7002128FF /* MainPresenter.swift */,
 				DBD3342420E952E7002128FF /* MainViewController.swift */,
 			);
@@ -471,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				DBD3342D20E95A02002128FF /* Train */,
+				E485835D20FDB17500FEECB7 /* ListSelect */,
 			);
 			path = GameControllers;
 			sourceTree = "<group>";
@@ -501,6 +504,26 @@
 				E443947020EF8441008018BF /* DecodedRailway.swift */,
 			);
 			path = DecodedEntity;
+			sourceTree = "<group>";
+		};
+		E453425220F70DCE00EFA9A0 /* GameTransferSelect */ = {
+			isa = PBXGroup;
+			children = (
+				E453425420F70DCE00EFA9A0 /* GameTransferSelect.storyboard */,
+				E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */,
+				E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */,
+				E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */,
+			);
+			path = GameTransferSelect;
+			sourceTree = "<group>";
+		};
+		E485835D20FDB17500FEECB7 /* ListSelect */ = {
+			isa = PBXGroup;
+			children = (
+				E485835E20FDB17500FEECB7 /* GameListSelectControl.storyboard */,
+				E485835F20FDB17500FEECB7 /* GameListSelectControlViewController.swift */,
+			);
+			path = ListSelect;
 			sourceTree = "<group>";
 		};
 		E492775D20F5C59B007F6460 /* Base */ = {
@@ -612,8 +635,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB98A3F520AB15F100A5273D /* LaunchScreen.storyboard in Resources */,
-				DB7317D120AB39A300D49AF3 /* Wallpaper.storyboard in Resources */,
 				DB7317AB20AB2FE200D49AF3 /* Top.storyboard in Resources */,
+				E485836020FDB17500FEECB7 /* GameListSelectControl.storyboard in Resources */,
 				DBD3342A20E952E7002128FF /* Main.storyboard in Resources */,
 				DBD3343320E964AB002128FF /* GameStationView.xib in Resources */,
 				DB73510920E21B8800A04ACC /* railways.json in Resources */,
@@ -621,6 +644,7 @@
 				DB98A3F020AB15F100A5273D /* Bootstrap.storyboard in Resources */,
 				DB7317A520AB2D0800D49AF3 /* Launch.storyboard in Resources */,
 				DBD3340520E7E5C8002128FF /* GameMain.storyboard in Resources */,
+				E453425820F70DCE00EFA9A0 /* GameTransferSelect.storyboard in Resources */,
 				E443947420F0D773008018BF /* locationKeys.json in Resources */,
 				DBD3343120E95A02002128FF /* GameTrainControl.storyboard in Resources */,
 			);
@@ -745,6 +769,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB73174C20AB1D7000D49AF3 /* Dimension.swift in Sources */,
+				E453425720F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift in Sources */,
 				DB73174D20AB1D7000D49AF3 /* Definition.swift in Sources */,
 				DB7317AA20AB2FE200D49AF3 /* TopPresenter.swift in Sources */,
 				E4B6D2F820E50B6800354CC3 /* Asset.swift in Sources */,
@@ -753,8 +778,8 @@
 				E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */,
 				DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */,
 				DB0553A920B1E6850008DAD5 /* StationManager.swift in Sources */,
+				E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */,
 				E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */,
-				DB7317D220AB39A300D49AF3 /* WallpaperViewController.swift in Sources */,
 				DBD3343920E96BAE002128FF /* RailwayManager.swift in Sources */,
 				DB73176220AB1DAB00D49AF3 /* Codable+App.swift in Sources */,
 				DBD3342220E944B7002128FF /* Notification.swift in Sources */,
@@ -773,6 +798,7 @@
 				DB73175C20AB1DAB00D49AF3 /* UIViewController+App.swift in Sources */,
 				E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */,
 				E4733D3A20F4FB86000F77CD /* GameStationsView.swift in Sources */,
+				E453425A20F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift in Sources */,
 				E492776320F6D30A007F6460 /* Company.swift in Sources */,
 				DB73510D20E21E8B00A04ACC /* Railway.swift in Sources */,
 				DB05539E20B1E6270008DAD5 /* File.swift in Sources */,
@@ -789,18 +815,20 @@
 				DBD3340620E7E5C8002128FF /* GameMainPresenter.swift in Sources */,
 				DB73511120E238A300A04ACC /* Transferring.swift in Sources */,
 				E4B73C1F20AEFCCA00A301FB /* UIButton+App.swift in Sources */,
+				E424EE6020F7680600FB44E9 /* MainContentsViewController.swift in Sources */,
 				DB73177620AB255C00D49AF3 /* Notificatable.swift in Sources */,
 				DB7317A120AB2CE600D49AF3 /* LaunchPresenter.swift in Sources */,
 				E423A29320F399D200008B39 /* StationRepository.swift in Sources */,
 				DB7317A220AB2CE600D49AF3 /* LaunchViewController.swift in Sources */,
 				DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */,
 				E492776520F6DCF8007F6460 /* GameMainRailwayView.swift in Sources */,
+				E485836120FDB17500FEECB7 /* GameListSelectControlViewController.swift in Sources */,
 				DB7317AC20AB2FE200D49AF3 /* TopViewController.swift in Sources */,
-				DB7317D020AB39A300D49AF3 /* WallpaperAdapter.swift in Sources */,
+				E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */,
 				DBD3340320E7E5C8002128FF /* GameMainViewController.swift in Sources */,
-				DB7317D320AB39A300D49AF3 /* WallpaperPresenter.swift in Sources */,
 				DB73175320AB1D9B00D49AF3 /* DialogRiseupBehavior.swift in Sources */,
 				DB73173D20AB192900D49AF3 /* Dialog.swift in Sources */,
+				E485836320FDD68100FEECB7 /* IndexPath+App.swift in Sources */,
 				DB73174A20AB1D7000D49AF3 /* Color.swift in Sources */,
 				E4B6D30B20EA0A2B00354CC3 /* NSPredicate+Realm.swift in Sources */,
 				E4B6D30520E9E7C100354CC3 /* Realm.swift in Sources */,
