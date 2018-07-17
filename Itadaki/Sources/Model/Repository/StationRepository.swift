@@ -8,6 +8,6 @@ class StationRepository {
     
     class func numbered(_ number: String) -> Station? {
         let predicate = NSPredicate("number", equal: number)
-        return Realm.select(from: Station.self, predicate: predicate).first
+        return Realm.select(from: Station.self, predicate: predicate).one
     }
 }
