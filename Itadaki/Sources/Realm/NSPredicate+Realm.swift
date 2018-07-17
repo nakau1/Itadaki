@@ -13,6 +13,9 @@ extension NSPredicate {
     static var dead: NSPredicate {
         return NSPredicate(value: false)
     }
+}
+
+extension NSPredicate {
     
     static func compounded(_ type: NSCompoundPredicate.LogicalType = .and, _ predicates: [NSPredicate]) -> NSPredicate {
         switch type {
@@ -92,26 +95,6 @@ extension NSPredicate {
     
     convenience init(isNotNil property: String) {
         self.init(format: "\(property) != nil", argumentArray: nil)
-    }
-    
-    convenience init(_ property: String, fromDate: Date?, toDate: Date?) {
-        var format = "", args = [Any]()
-        if let from = fromDate {
-            format += "\(property) >= %@"
-            args.append(from as Any)
-        }
-        if let to = toDate {
-            if !format.isEmpty {
-                format += " AND "
-            }
-            format += "\(property) <= %@"
-            args.append(to as Any)
-        }
-        if !args.isEmpty {
-            self.init(format: format, argumentArray: args)
-        } else {
-            self.init(value: true)
-        }
     }
 }
 
