@@ -43,7 +43,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     }
     
     @objc private func didCommandTransfer() {
-        main.push(contents: GameTransferSelectViewController.create(station: currentStation))
+        GameTransferSelectViewController.push(to: main, station: currentStation)
     }
 }
 
