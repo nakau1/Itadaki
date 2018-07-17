@@ -7,12 +7,14 @@ import UIKit
 class GameTransferSelectViewController: MainContentsViewController {
     
     private var presenter: GameTransferSelectPresentable!
+    private var station: Station!
 
     @IBOutlet private weak var adapter: GameTransferSelectAdapter!
     
-    class func create() -> MainContentsViewController {
+    class func create(station: Station) -> MainContentsViewController {
         let vc = instantiate(self)
         vc.presenter = GameTransferSelectPresenter(view: vc)
+        vc.station = station
         return vc
     }
     
@@ -24,6 +26,9 @@ class GameTransferSelectViewController: MainContentsViewController {
 
 extension GameTransferSelectViewController: GameTransferSelectViewable {
     
+    func showTransferrings(_ transferrings: [Transferring]) {
+        
+    }
 }
 
 extension GameTransferSelectViewController: GameTransferSelectAdapterDelegate {

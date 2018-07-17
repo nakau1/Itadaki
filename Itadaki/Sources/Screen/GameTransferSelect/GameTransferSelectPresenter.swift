@@ -6,10 +6,12 @@ import UIKit
 
 protocol GameTransferSelectPresentable: class {
     
+    func loadTransferrings(of station: Station)
 }
 
 protocol GameTransferSelectViewable: class {
     
+    func showTransferrings(_ transferrings: [Transferring])
 }
 
 class GameTransferSelectPresenter: GameTransferSelectPresentable {
@@ -18,5 +20,9 @@ class GameTransferSelectPresenter: GameTransferSelectPresentable {
     
     init(view: GameTransferSelectViewable) {
         self.view = view
+    }
+    
+    func loadTransferrings(of station: Station) {
+        view.showTransferrings(station.transferrings)
     }
 }

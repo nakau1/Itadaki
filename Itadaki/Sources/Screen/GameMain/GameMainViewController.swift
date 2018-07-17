@@ -12,6 +12,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     @IBOutlet private weak var railwayView: GameMainRailwayView!
     
     private var direction = DestinationDirection.ascending
+    private weak var currentStation: Station!
     
     class func create() -> MainContentsViewController {
         let vc = instantiate(self)
@@ -32,6 +33,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
         super.viewDidLayout()
         
         if let st = StationRepository.numbered("JK17") {
+            currentStation = st
             stationsView.changeStation(st)
         }
     }
@@ -41,7 +43,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     }
     
     @objc private func didCommandTransfer() {
-        main.push(contents: GameTransferSelectViewController.create())
+        main.push(contents: GameTransferSelectViewController.create(station: currentStation))
     }
 }
 
@@ -58,6 +60,7 @@ extension GameMainViewController: GameStationsViewDelegate {
     func gameStationsView(_ gameStationsView: GameStationsView, didMoveTo station: Station, isFinalStation: Bool) {
         postNotification(.DidStationMove)
         
+        currentStation = station
         railwayView.update(station: station, direction: direction)
         
         if isFinalStation {
