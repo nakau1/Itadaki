@@ -12,6 +12,15 @@ extension Notification.Name {
     static let CommandListUp = Notification.Name("CommandListUp")
     static let CommandListDown = Notification.Name("CommandListDown")
     
+    static let DidSelectTransferredStation = Notification.Name("DidSelectTransferredStation")
     static let WillStationMove = Notification.Name("WillStationMove")
     static let DidStationMove = Notification.Name("DidStationMove")
+}
+
+extension Notification {
+    
+    enum Key: String {
+        case station
+        case transferring
+    }
 }
