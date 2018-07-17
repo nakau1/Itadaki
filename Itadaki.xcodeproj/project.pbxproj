@@ -32,10 +32,6 @@
 		DB7317A220AB2CE600D49AF3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73179F20AB2CE600D49AF3 /* LaunchViewController.swift */; };
 		DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */; };
 		DB7317A520AB2D0800D49AF3 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7317A420AB2D0800D49AF3 /* Launch.storyboard */; };
-		DB7317AA20AB2FE200D49AF3 /* TopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317A720AB2FE200D49AF3 /* TopPresenter.swift */; };
-		DB7317AB20AB2FE200D49AF3 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7317A820AB2FE200D49AF3 /* Top.storyboard */; };
-		DB7317AC20AB2FE200D49AF3 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317A920AB2FE200D49AF3 /* TopViewController.swift */; };
-		DB7317AE20AB31DC00D49AF3 /* TopAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317AD20AB31DC00D49AF3 /* TopAdapter.swift */; };
 		DB73510920E21B8800A04ACC /* railways.json in Resources */ = {isa = PBXBuildFile; fileRef = DB73510820E21B8800A04ACC /* railways.json */; };
 		DB73510B20E21C0800A04ACC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73510A20E21C0800A04ACC /* Station.swift */; };
 		DB73510D20E21E8B00A04ACC /* Railway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73510C20E21E8B00A04ACC /* Railway.swift */; };
@@ -135,10 +131,6 @@
 		DB73179F20AB2CE600D49AF3 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapViewController.swift; sourceTree = "<group>"; };
 		DB7317A420AB2D0800D49AF3 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
-		DB7317A720AB2FE200D49AF3 /* TopPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPresenter.swift; sourceTree = "<group>"; };
-		DB7317A820AB2FE200D49AF3 /* Top.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
-		DB7317A920AB2FE200D49AF3 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
-		DB7317AD20AB31DC00D49AF3 /* TopAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAdapter.swift; sourceTree = "<group>"; };
 		DB73510820E21B8800A04ACC /* railways.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = railways.json; sourceTree = "<group>"; };
 		DB73510A20E21C0800A04ACC /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		DB73510C20E21E8B00A04ACC /* Railway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Railway.swift; sourceTree = "<group>"; };
@@ -349,7 +341,6 @@
 				DBD3342C20E95A02002128FF /* GameControllers */,
 				DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */,
 				DB73179D20AB2CE600D49AF3 /* Launch */,
-				DB7317A620AB2FE200D49AF3 /* Top */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -386,17 +377,6 @@
 				DB73179F20AB2CE600D49AF3 /* LaunchViewController.swift */,
 			);
 			path = Launch;
-			sourceTree = "<group>";
-		};
-		DB7317A620AB2FE200D49AF3 /* Top */ = {
-			isa = PBXGroup;
-			children = (
-				DB7317A820AB2FE200D49AF3 /* Top.storyboard */,
-				DB7317A720AB2FE200D49AF3 /* TopPresenter.swift */,
-				DB7317AD20AB31DC00D49AF3 /* TopAdapter.swift */,
-				DB7317A920AB2FE200D49AF3 /* TopViewController.swift */,
-			);
-			path = Top;
 			sourceTree = "<group>";
 		};
 		DB98A3DE20AB15F100A5273D = {
@@ -635,7 +615,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB98A3F520AB15F100A5273D /* LaunchScreen.storyboard in Resources */,
-				DB7317AB20AB2FE200D49AF3 /* Top.storyboard in Resources */,
 				E485836020FDB17500FEECB7 /* GameListSelectControl.storyboard in Resources */,
 				DBD3342A20E952E7002128FF /* Main.storyboard in Resources */,
 				DBD3343320E964AB002128FF /* GameStationView.xib in Resources */,
@@ -771,7 +750,6 @@
 				DB73174C20AB1D7000D49AF3 /* Dimension.swift in Sources */,
 				E453425720F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift in Sources */,
 				DB73174D20AB1D7000D49AF3 /* Definition.swift in Sources */,
-				DB7317AA20AB2FE200D49AF3 /* TopPresenter.swift in Sources */,
 				E4B6D2F820E50B6800354CC3 /* Asset.swift in Sources */,
 				DBD3342820E952E7002128FF /* MainViewController.swift in Sources */,
 				E4B6D2FA20E5BF1600354CC3 /* Player.swift in Sources */,
@@ -789,7 +767,6 @@
 				E4DE8E0B20E38C390049B7ED /* Array+App.swift in Sources */,
 				DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */,
 				E4428AC720B647D300704862 /* UIImage+App.swift in Sources */,
-				DB7317AE20AB31DC00D49AF3 /* TopAdapter.swift in Sources */,
 				DB73174820AB1D7000D49AF3 /* Definition+Railway.swift in Sources */,
 				DBD3343520E964EA002128FF /* GameStationView.swift in Sources */,
 				E426B6E320BBA96900F54FF9 /* DestinationDirection.swift in Sources */,
@@ -823,7 +800,6 @@
 				DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */,
 				E492776520F6DCF8007F6460 /* GameMainRailwayView.swift in Sources */,
 				E485836120FDB17500FEECB7 /* GameListSelectControlViewController.swift in Sources */,
-				DB7317AC20AB2FE200D49AF3 /* TopViewController.swift in Sources */,
 				E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */,
 				DBD3340320E7E5C8002128FF /* GameMainViewController.swift in Sources */,
 				DB73175320AB1D9B00D49AF3 /* DialogRiseupBehavior.swift in Sources */,

@@ -23,6 +23,6 @@ class LaunchViewController: UIViewController {
 extension LaunchViewController: LaunchViewable {
     
     func showResultExecuteLaunching() {
-        present(crossDissolve: TopViewController.create())
+        present(crossDissolve: MainViewController.create())
     }
 }
