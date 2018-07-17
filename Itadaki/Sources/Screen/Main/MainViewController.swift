@@ -76,6 +76,32 @@ class MainViewController: UILayoutViewController {
         }
     }
     
+    func popContents(animate: Bool = true) {
+        guard let poped = contentsControllers.popLast() else { return }
+        
+        if animate {
+            UIView.animate(withDuration: animationDuration, animations: {
+                poped.view.alpha = 0
+            }, completion: { _ in
+                poped.view.removeFromSuperview()
+            })
+        } else {
+            poped.view.removeFromSuperview()
+        }
+    }
+    
+    func popControl(animate: Bool = true) {
+        guard let poped = controlControllers.popLast() else { return }
+        
+        if animate {
+            UIView.animate(withDuration: animationDuration) {
+                poped.view.removeFromSuperview()
+            }
+        } else {
+            poped.view.removeFromSuperview()
+        }
+    }
+    
     private func presentPushedControllers() {
         contentsControllers.forEach { controller in
             if controller.view.parent == nil {
