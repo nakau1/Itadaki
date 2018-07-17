@@ -28,11 +28,30 @@ class GameTransferSelectAdapter: NSObject {
     }
     
     func selectUp() {
+        if delegate.numberOfItems(transferSelectAdapter: self) <= 0 || currentIndex <= 0 { return }
+        currentIndex -= 1
         
+        let indexPath = IndexPath(currentIndex)
+        if !isVisibleRows(at: indexPath) {
+            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        }
+        tableView.reloadData()
     }
     
     func selectDown() {
+        if currentIndex >= delegate.numberOfItems(transferSelectAdapter: self) - 1 { return }
+        currentIndex += 1
         
+        let indexPath = IndexPath(currentIndex)
+        if !isVisibleRows(at: indexPath) {
+            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        }
+        tableView.reloadData()
+    }
+    
+    private func isVisibleRows(at indexPath: IndexPath) -> Bool {
+        let indexPaths = tableView.indexPathsForVisibleRows ?? []
+        return indexPaths.dropFirst(2).dropLast(2).contains(indexPath)
     }
 }
 
