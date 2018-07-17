@@ -32,7 +32,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     override func viewDidLayout() {
         super.viewDidLayout()
         
-        if let st = StationRepository.numbered("JK17") {
+        if let st = StationRepository.numbered("JK26") {
             currentStation = st
             stationsView.changeStation(st)
         }

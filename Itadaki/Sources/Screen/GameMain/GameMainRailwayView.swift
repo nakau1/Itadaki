@@ -19,6 +19,14 @@ class GameMainRailwayView: UIView {
         symbolImageView.image = railway.numberingImage
     }
     
+    func update(transferring: Transferring) {
+        let railway = transferring.railway!
+        companyLabel.text = railway.company.name
+        nameLabel.text = railway.name
+        destinationLabel.text = transferring.destination
+        symbolImageView.image = railway.numberingImage
+    }
+    
 //    /// 行先方向
 //    var direction = DestinationDirection.ascending
 //
