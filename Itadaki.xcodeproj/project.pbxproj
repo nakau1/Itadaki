@@ -68,6 +68,7 @@
 		E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492775F20F5C59B007F6460 /* UILayoutViewController.swift */; };
 		E492776320F6D30A007F6460 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492776220F6D30A007F6460 /* Company.swift */; };
 		E492776520F6DCF8007F6460 /* GameMainRailwayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492776420F6DCF8007F6460 /* GameMainRailwayView.swift */; };
+		E49887172100D111001F98B3 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49887162100D110001F98B3 /* ListView.swift */; };
 		E4B6D2F820E50B6800354CC3 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D2F720E50B6800354CC3 /* Asset.swift */; };
 		E4B6D2FA20E5BF1600354CC3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D2F920E5BF1600354CC3 /* Player.swift */; };
 		E4B6D2FC20E5CF8400354CC3 /* AssetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D2FB20E5CF8400354CC3 /* AssetInfo.swift */; };
@@ -160,6 +161,7 @@
 		E492775F20F5C59B007F6460 /* UILayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayoutViewController.swift; sourceTree = "<group>"; };
 		E492776220F6D30A007F6460 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		E492776420F6DCF8007F6460 /* GameMainRailwayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMainRailwayView.swift; sourceTree = "<group>"; };
+		E49887162100D110001F98B3 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E4B6D2F720E50B6800354CC3 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		E4B6D2F920E5BF1600354CC3 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E4B6D2FB20E5CF8400354CC3 /* AssetInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetInfo.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				DB73173320AB192900D49AF3 /* Extension */,
 				DB73173620AB192900D49AF3 /* Dialog */,
 				DB73173520AB192900D49AF3 /* Protocol */,
+				E49887152100D110001F98B3 /* View */,
 				DB73173A20AB192900D49AF3 /* Model */,
 				DB73173920AB192900D49AF3 /* Screen */,
 			);
@@ -452,6 +455,14 @@
 				E492775E20F5C59B007F6460 /* UICustomView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		E49887152100D110001F98B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E49887162100D110001F98B3 /* ListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E4B6D30120E9BFD200354CC3 /* Realm */ = {
@@ -680,6 +691,7 @@
 				E423A29320F399D200008B39 /* StationRepository.swift in Sources */,
 				DB7317A220AB2CE600D49AF3 /* LaunchViewController.swift in Sources */,
 				DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */,
+				E49887172100D111001F98B3 /* ListView.swift in Sources */,
 				E492776520F6DCF8007F6460 /* GameMainRailwayView.swift in Sources */,
 				E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */,
 				DBD3340320E7E5C8002128FF /* GameMainViewController.swift in Sources */,
