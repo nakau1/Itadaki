@@ -13,25 +13,18 @@ extension Notification {
     }
 }
 
-extension Dictionary where Key == Notification.Key, Value == Any {
+extension Dictionary where Key == AnyHashable, Value == Any {
     
     var station: Station? {
-        return self[.station] as? Station
+        return self[Notification.Key.station] as? Station
     }
     
     var railway: Railway? {
-        return self[.railway] as? Railway
+        return self[Notification.Key.railway] as? Railway
     }
     
     var transferring: Transferring? {
-        return self[.transferring] as? Transferring
-    }
-}
-
-extension Notification {
-    
-    var info: [Notification.Key : Any]? {
-        return userInfo as? [Notification.Key : Any]
+        return self[Notification.Key.transferring] as? Transferring
     }
 }
 
@@ -54,7 +47,7 @@ extension Notificatable {
     /// 通知を送信する
     /// - Parameter name: 送信する通知名
     /// - Parameter userInfo: 追加情報
-    func postNotification(_ name: Notification.Name, userInfo: [Notification.Key : Any]? = nil) {
-        NotificationCenter.default.post(name: name, object: nil, userInfo: userInfo)
+    func postNotification(_ name: Notification.Name, info: [Notification.Key : Any]? = nil) {
+        NotificationCenter.default.post(name: name, object: nil, userInfo: info)
     }
 }

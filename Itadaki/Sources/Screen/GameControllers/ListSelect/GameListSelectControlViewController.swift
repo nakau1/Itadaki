@@ -18,12 +18,10 @@ class GameListSelectControlViewController: MainControlViewController, Notificata
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        observeNotification(.WillStationMove, when: #selector(willStationMove))
-        observeNotification(.DidStationMove, when: #selector(didStationMove))
     }
     
     @IBAction private func didTapSelectButton() {
-//        postNotification(.CommandListSelect, userInfo: ["": ""])
+        postNotification(.CommandListSelect)
         main.popControl()
         main.popContents()
     }

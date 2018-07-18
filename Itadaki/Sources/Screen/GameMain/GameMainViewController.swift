@@ -49,11 +49,13 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     
     @objc private func didSelectTransferredStation(_ notify: Notification) {
         guard
-            let transferring = notify.info?.transferring,
+            let transferring = notify.userInfo?.transferring,
             let station = transferring.station
             else {
                 return
         }
+        direction = transferring.direction
+        stationsView.direction = direction
         stationsView.changeStation(station)
     }
 }
