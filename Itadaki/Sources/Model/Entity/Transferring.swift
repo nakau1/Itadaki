@@ -10,7 +10,7 @@ class Transferring: RealmSwift.Object {
     @objc dynamic var locationKey = ""
     @objc dynamic var railway: Railway?
     @objc dynamic var station: Station?
-    @objc dynamic var direction = ""
+    @objc dynamic var directionValue = ""
     @objc dynamic var destination = ""
     
     override static func primaryKey() -> String? { return "id" }
@@ -24,7 +24,7 @@ extension Transferring {
         ret.locationKey = locationKey
         ret.station = Station.create(from: station)
         ret.railway = Railway.create(from: railway)
-        ret.direction = direction.rawValue
+        ret.directionValue = direction.rawValue
         
         guard let dest = Transferring.generateDestination(of: station, in: railway, direction: direction) else {
             return nil
@@ -33,6 +33,16 @@ extension Transferring {
         
         return ret
     }
+}
+
+extension Transferring {
+    
+    var direction: DestinationDirection {
+        return DestinationDirection(rawValue: directionValue) ?? .ascending
+    }
+}
+
+extension Transferring {
     
     class func generateIdentifier(station: DecodedStation, direction: DestinationDirection) -> String {
         return "\(station.number.uppercased())_\(direction.rawValue.uppercased())"

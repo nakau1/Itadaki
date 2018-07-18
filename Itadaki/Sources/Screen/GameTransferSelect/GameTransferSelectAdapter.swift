@@ -16,7 +16,7 @@ class GameTransferSelectAdapter: NSObject {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    private var currentIndex = -1
+    private(set) var currentIndex = -1
     
     func reload() {
         tableView.isScrollEnabled = false

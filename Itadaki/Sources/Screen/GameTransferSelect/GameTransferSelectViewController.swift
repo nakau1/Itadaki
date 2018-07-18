@@ -38,7 +38,8 @@ class GameTransferSelectViewController: MainContentsViewController, Notificatabl
     }
     
     @objc private func didCommandListSelect(_ notify: Notification) {
-        
+        let transferring = presenter.transferrings[adapter.currentIndex]
+        postNotification(.DidSelectTransferredStation, info: [.transferring : transferring])
     }
     
     @objc private func didCommandListUp(_ notify: Notification) {

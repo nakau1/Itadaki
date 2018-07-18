@@ -4,6 +4,30 @@
 // =============================================================================
 import UIKit
 
+extension Notification {
+    
+    enum Key: String {
+        case station
+        case railway
+        case transferring
+    }
+}
+
+extension Dictionary where Key == AnyHashable, Value == Any {
+    
+    var station: Station? {
+        return self[Notification.Key.station] as? Station
+    }
+    
+    var railway: Railway? {
+        return self[Notification.Key.railway] as? Railway
+    }
+    
+    var transferring: Transferring? {
+        return self[Notification.Key.transferring] as? Transferring
+    }
+}
+
 protocol Notificatable {}
     
 extension Notificatable where Self: NSObject {
@@ -21,9 +45,9 @@ extension Notificatable where Self: NSObject {
 extension Notificatable {
     
     /// 通知を送信する
-    ///
     /// - Parameter name: 送信する通知名
-    func postNotification(_ name: Notification.Name, userInfo: [AnyHashable : Any]? = nil) {
-        NotificationCenter.default.post(name: name, object: nil, userInfo: userInfo)
+    /// - Parameter userInfo: 追加情報
+    func postNotification(_ name: Notification.Name, info: [Notification.Key : Any]? = nil) {
+        NotificationCenter.default.post(name: name, object: nil, userInfo: info)
     }
 }
