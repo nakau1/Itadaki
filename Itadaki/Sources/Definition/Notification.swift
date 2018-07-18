@@ -16,11 +16,3 @@ extension Notification.Name {
     static let WillStationMove = Notification.Name("WillStationMove")
     static let DidStationMove = Notification.Name("DidStationMove")
 }
-
-extension Notification {
-    
-    enum Key: String {
-        case station
-        case transferring
-    }
-}

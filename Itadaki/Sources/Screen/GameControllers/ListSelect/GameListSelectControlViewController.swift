@@ -23,7 +23,7 @@ class GameListSelectControlViewController: MainControlViewController, Notificata
     }
     
     @IBAction private func didTapSelectButton() {
-        postNotification(.CommandListSelect, userInfo: ["": ""])
+//        postNotification(.CommandListSelect, userInfo: ["": ""])
         main.popControl()
         main.popContents()
     }

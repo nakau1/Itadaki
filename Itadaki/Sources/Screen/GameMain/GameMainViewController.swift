@@ -49,7 +49,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     
     @objc private func didSelectTransferredStation(_ notify: Notification) {
         guard
-            let transferring = notify.userInfo?[Notification.Key.transferring] as? Transferring,
+            let transferring = notify.info?.transferring,
             let station = transferring.station
             else {
                 return
