@@ -7,7 +7,7 @@ import CoreGraphics
 extension CGFloat {
     
     /// パーセンテージ (0未満は0, 1以上は1を返す)
-    var f: CGFloat {
+    var percentage: CGFloat {
         if self <= 0 {
             return 0
         } else if 1 <= self {
@@ -20,11 +20,6 @@ extension CGFloat {
 
 extension CGPoint {
     
-    /// 簡易イニシャライザ
-    ///
-    /// - Parameters:
-    ///   - x: x座標
-    ///   - y: y座標
     init(_ x: CGFloat, _ y: CGFloat) {
         self.init(x: x, y: y)
     }
@@ -48,11 +43,6 @@ extension CGPoint {
 
 extension CGSize {
     
-    /// 簡易イニシャライザ
-    ///
-    /// - Parameters:
-    ///   - width: 幅
-    ///   - height: 高さ
     init(_ width: CGFloat, _ height: CGFloat) {
         self.init(width: width, height: height)
     }
@@ -88,29 +78,14 @@ extension CGSize {
 
 extension CGRect {
     
-    /// 簡易イニシャライザ
-    ///
-    /// - Parameters:
-    ///   - x: x座標
-    ///   - y: y座標
-    ///   - width: 幅
-    ///   - height: 高さ
     init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) {
         self.init(x: x, y: y, width: width, height: height)
     }
     
-    /// 簡易イニシャライザ
-    ///
-    /// - Parameters:
-    ///   - origin: 位置
-    ///   - size: サイズ
     init(_ origin: CGPoint, _ size: CGSize) {
         self.init(origin: origin, size: size)
     }
     
-    /// 簡易イニシャライザ。位置はCGPoint.zeroが設定される
-    ///
-    /// - Parameter size: サイズ
     init(_ size: CGSize) {
         self.init(origin: .zero, size: size)
     }
@@ -118,7 +93,6 @@ extension CGRect {
 
 extension Int {
     
-    /// CGFloatにキャストした値
     var f: CGFloat {
         return CGFloat(self)
     }
@@ -126,7 +100,6 @@ extension Int {
 
 extension Double {
     
-    /// CGFloatにキャストした値
     var f: CGFloat {
         return CGFloat(self)
     }
@@ -134,7 +107,6 @@ extension Double {
 
 extension Float {
     
-    /// CGFloatにキャストした値
     var f: CGFloat {
         return CGFloat(self)
     }

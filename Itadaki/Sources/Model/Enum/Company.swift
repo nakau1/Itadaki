@@ -19,7 +19,7 @@ extension Company {
         switch self {
         case .jr: return "JR"
         case .metro: return "東京メトロ"
-        case .toei: return "都営三田線"
+        case .toei: return "都営"
         default: return "-"
         }
     }

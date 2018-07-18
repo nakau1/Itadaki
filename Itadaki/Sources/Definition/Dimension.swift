@@ -21,6 +21,5 @@ extension CGFloat {
 
 extension CGSize {
     
-    /// 似顔絵の生サイズ
-    static let portrait = CGSize(width: 500, height: 500)
+    
 }

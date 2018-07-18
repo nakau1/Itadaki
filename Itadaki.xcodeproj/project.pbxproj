@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		82EF94CEB7ABBA29451FFA96 /* Pods_ItadakiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94EBD6B9ACA52BC2DB6135F3 /* Pods_ItadakiTests.framework */; };
 		DB05539E20B1E6270008DAD5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05539120B1E6270008DAD5 /* File.swift */; };
-		DB0553A920B1E6850008DAD5 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0553A220B1E6850008DAD5 /* StationManager.swift */; };
 		DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D4B5320F75C24003A278F /* NumberingImage.swift */; };
 		DB73173D20AB192900D49AF3 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173720AB192900D49AF3 /* Dialog.swift */; };
 		DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173C20AB192900D49AF3 /* AppDelegate.swift */; };
-		DB73174820AB1D7000D49AF3 /* Definition+Railway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174020AB1D7000D49AF3 /* Definition+Railway.swift */; };
 		DB73174A20AB1D7000D49AF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174220AB1D7000D49AF3 /* Color.swift */; };
 		DB73174C20AB1D7000D49AF3 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174420AB1D7000D49AF3 /* Dimension.swift */; };
 		DB73174D20AB1D7000D49AF3 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174520AB1D7000D49AF3 /* Definition.swift */; };
@@ -21,21 +19,15 @@
 		DB73175320AB1D9B00D49AF3 /* DialogRiseupBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175120AB1D9B00D49AF3 /* DialogRiseupBehavior.swift */; };
 		DB73175C20AB1DAB00D49AF3 /* UIViewController+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175420AB1DAB00D49AF3 /* UIViewController+App.swift */; };
 		DB73175D20AB1DAB00D49AF3 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175520AB1DAB00D49AF3 /* UIColor+App.swift */; };
-		DB73175E20AB1DAB00D49AF3 /* UITextField+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175620AB1DAB00D49AF3 /* UITextField+App.swift */; };
 		DB73175F20AB1DAB00D49AF3 /* DialogBehavior+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175720AB1DAB00D49AF3 /* DialogBehavior+App.swift */; };
 		DB73176020AB1DAB00D49AF3 /* CoreGraphics+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175820AB1DAB00D49AF3 /* CoreGraphics+App.swift */; };
 		DB73176120AB1DAB00D49AF3 /* String+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175920AB1DAB00D49AF3 /* String+App.swift */; };
 		DB73176220AB1DAB00D49AF3 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175A20AB1DAB00D49AF3 /* Codable+App.swift */; };
-		DB73176320AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175B20AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift */; };
 		DB73177620AB255C00D49AF3 /* Notificatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73177420AB255C00D49AF3 /* Notificatable.swift */; };
 		DB7317A120AB2CE600D49AF3 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73179E20AB2CE600D49AF3 /* LaunchPresenter.swift */; };
 		DB7317A220AB2CE600D49AF3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73179F20AB2CE600D49AF3 /* LaunchViewController.swift */; };
 		DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */; };
 		DB7317A520AB2D0800D49AF3 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7317A420AB2D0800D49AF3 /* Launch.storyboard */; };
-		DB7317AA20AB2FE200D49AF3 /* TopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317A720AB2FE200D49AF3 /* TopPresenter.swift */; };
-		DB7317AB20AB2FE200D49AF3 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7317A820AB2FE200D49AF3 /* Top.storyboard */; };
-		DB7317AC20AB2FE200D49AF3 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317A920AB2FE200D49AF3 /* TopViewController.swift */; };
-		DB7317AE20AB31DC00D49AF3 /* TopAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7317AD20AB31DC00D49AF3 /* TopAdapter.swift */; };
 		DB73510920E21B8800A04ACC /* railways.json in Resources */ = {isa = PBXBuildFile; fileRef = DB73510820E21B8800A04ACC /* railways.json */; };
 		DB73510B20E21C0800A04ACC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73510A20E21C0800A04ACC /* Station.swift */; };
 		DB73510D20E21E8B00A04ACC /* Railway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73510C20E21E8B00A04ACC /* Railway.swift */; };
@@ -57,8 +49,7 @@
 		DBD3343120E95A02002128FF /* GameTrainControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD3342F20E95A02002128FF /* GameTrainControl.storyboard */; };
 		DBD3343320E964AB002128FF /* GameStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3343220E964AB002128FF /* GameStationView.xib */; };
 		DBD3343520E964EA002128FF /* GameStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343420E964EA002128FF /* GameStationView.swift */; };
-		DBD3343920E96BAE002128FF /* RailwayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343820E96BAE002128FF /* RailwayManager.swift */; };
-		E423A28520F3952F00008B39 /* RealmSwift.List+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift.List+App.swift */; };
+		E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift+App.swift */; };
 		E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28E20F399D200008B39 /* TransferringRepository.swift */; };
 		E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28F20F399D200008B39 /* RailwayRepository.swift */; };
 		E423A29320F399D200008B39 /* StationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A29020F399D200008B39 /* StationRepository.swift */; };
@@ -87,7 +78,6 @@
 		E4B6D30020E5F8B700354CC3 /* CoderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D2FF20E5F8B700354CC3 /* CoderProtocol.swift */; };
 		E4B6D30520E9E7C100354CC3 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D30420E9E7C100354CC3 /* Realm.swift */; };
 		E4B6D30720E9EB4600354CC3 /* RealmIdentifiedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D30620E9EB4600354CC3 /* RealmIdentifiedObject.swift */; };
-		E4B6D30920EA09D700354CC3 /* RealmSwift.Results+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D30820EA09D700354CC3 /* RealmSwift.Results+App.swift */; };
 		E4B6D30B20EA0A2B00354CC3 /* NSPredicate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D30A20EA0A2B00354CC3 /* NSPredicate+Realm.swift */; };
 		E4B73C1D20AEF95600A301FB /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B73C1C20AEF95500A301FB /* UIView+App.swift */; };
 		E4B73C1F20AEFCCA00A301FB /* UIButton+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */; };
@@ -112,11 +102,9 @@
 		94EBD6B9ACA52BC2DB6135F3 /* Pods_ItadakiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ItadakiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91675FE35FA4DFA2258BDA8 /* Pods-Itadaki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itadaki.release.xcconfig"; path = "Pods/Target Support Files/Pods-Itadaki/Pods-Itadaki.release.xcconfig"; sourceTree = "<group>"; };
 		DB05539120B1E6270008DAD5 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		DB0553A220B1E6850008DAD5 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
 		DB0D4B5320F75C24003A278F /* NumberingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberingImage.swift; sourceTree = "<group>"; };
 		DB73173720AB192900D49AF3 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		DB73173C20AB192900D49AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB73174020AB1D7000D49AF3 /* Definition+Railway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Definition+Railway.swift"; sourceTree = "<group>"; };
 		DB73174220AB1D7000D49AF3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DB73174420AB1D7000D49AF3 /* Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		DB73174520AB1D7000D49AF3 /* Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
@@ -124,21 +112,15 @@
 		DB73175120AB1D9B00D49AF3 /* DialogRiseupBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRiseupBehavior.swift; sourceTree = "<group>"; };
 		DB73175420AB1DAB00D49AF3 /* UIViewController+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+App.swift"; sourceTree = "<group>"; };
 		DB73175520AB1DAB00D49AF3 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
-		DB73175620AB1DAB00D49AF3 /* UITextField+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+App.swift"; sourceTree = "<group>"; };
 		DB73175720AB1DAB00D49AF3 /* DialogBehavior+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogBehavior+App.swift"; sourceTree = "<group>"; };
 		DB73175820AB1DAB00D49AF3 /* CoreGraphics+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+App.swift"; sourceTree = "<group>"; };
 		DB73175920AB1DAB00D49AF3 /* String+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+App.swift"; sourceTree = "<group>"; };
 		DB73175A20AB1DAB00D49AF3 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
-		DB73175B20AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutConstraint.swift"; sourceTree = "<group>"; };
 		DB73177420AB255C00D49AF3 /* Notificatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notificatable.swift; sourceTree = "<group>"; };
 		DB73179E20AB2CE600D49AF3 /* LaunchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
 		DB73179F20AB2CE600D49AF3 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapViewController.swift; sourceTree = "<group>"; };
 		DB7317A420AB2D0800D49AF3 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
-		DB7317A720AB2FE200D49AF3 /* TopPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPresenter.swift; sourceTree = "<group>"; };
-		DB7317A820AB2FE200D49AF3 /* Top.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
-		DB7317A920AB2FE200D49AF3 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
-		DB7317AD20AB31DC00D49AF3 /* TopAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAdapter.swift; sourceTree = "<group>"; };
 		DB73510820E21B8800A04ACC /* railways.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = railways.json; sourceTree = "<group>"; };
 		DB73510A20E21C0800A04ACC /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		DB73510C20E21E8B00A04ACC /* Railway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Railway.swift; sourceTree = "<group>"; };
@@ -163,8 +145,7 @@
 		DBD3342F20E95A02002128FF /* GameTrainControl.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameTrainControl.storyboard; sourceTree = "<group>"; };
 		DBD3343220E964AB002128FF /* GameStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStationView.xib; sourceTree = "<group>"; };
 		DBD3343420E964EA002128FF /* GameStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationView.swift; sourceTree = "<group>"; };
-		DBD3343820E96BAE002128FF /* RailwayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayManager.swift; sourceTree = "<group>"; };
-		E423A28420F3952F00008B39 /* RealmSwift.List+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift.List+App.swift"; sourceTree = "<group>"; };
+		E423A28420F3952F00008B39 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
 		E423A28E20F399D200008B39 /* TransferringRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringRepository.swift; sourceTree = "<group>"; };
 		E423A28F20F399D200008B39 /* RailwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayRepository.swift; sourceTree = "<group>"; };
 		E423A29020F399D200008B39 /* StationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationRepository.swift; sourceTree = "<group>"; };
@@ -193,7 +174,6 @@
 		E4B6D2FF20E5F8B700354CC3 /* CoderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoderProtocol.swift; sourceTree = "<group>"; };
 		E4B6D30420E9E7C100354CC3 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		E4B6D30620E9EB4600354CC3 /* RealmIdentifiedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmIdentifiedObject.swift; sourceTree = "<group>"; };
-		E4B6D30820EA09D700354CC3 /* RealmSwift.Results+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift.Results+App.swift"; sourceTree = "<group>"; };
 		E4B6D30A20EA0A2B00354CC3 /* NSPredicate+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Realm.swift"; sourceTree = "<group>"; };
 		E4B73C1C20AEF95500A301FB /* UIView+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+App.swift"; sourceTree = "<group>"; };
@@ -264,15 +244,6 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		DB05538E20B1E6260008DAD5 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				DBD3343820E96BAE002128FF /* RailwayManager.swift */,
-				DB0553A220B1E6850008DAD5 /* StationManager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
 		DB73173220AB192900D49AF3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,8 +273,6 @@
 				DB73175520AB1DAB00D49AF3 /* UIColor+App.swift */,
 				E4428AC620B647D300704862 /* UIImage+App.swift */,
 				E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */,
-				DB73175620AB1DAB00D49AF3 /* UITextField+App.swift */,
-				DB73175B20AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift */,
 				E4B73C1C20AEF95500A301FB /* UIView+App.swift */,
 				DB73175420AB1DAB00D49AF3 /* UIViewController+App.swift */,
 			);
@@ -332,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				DB73174520AB1D7000D49AF3 /* Definition.swift */,
-				DB73174020AB1D7000D49AF3 /* Definition+Railway.swift */,
 				DB73174220AB1D7000D49AF3 /* Color.swift */,
 				DB73174420AB1D7000D49AF3 /* Dimension.swift */,
 				DBD3342120E944B7002128FF /* Notification.swift */,
@@ -349,7 +317,6 @@
 				DBD3342C20E95A02002128FF /* GameControllers */,
 				DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */,
 				DB73179D20AB2CE600D49AF3 /* Launch */,
-				DB7317A620AB2FE200D49AF3 /* Top */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -360,7 +327,6 @@
 				DB05538620B1E6260008DAD5 /* Entity */,
 				E423A28D20F399D200008B39 /* Repository */,
 				DB05538220B1E6260008DAD5 /* Enum */,
-				DB05538E20B1E6260008DAD5 /* Manager */,
 				E443946E20EF8441008018BF /* DecodedEntity */,
 				DB05539120B1E6270008DAD5 /* File.swift */,
 				DB0D4B5320F75C24003A278F /* NumberingImage.swift */,
@@ -386,17 +352,6 @@
 				DB73179F20AB2CE600D49AF3 /* LaunchViewController.swift */,
 			);
 			path = Launch;
-			sourceTree = "<group>";
-		};
-		DB7317A620AB2FE200D49AF3 /* Top */ = {
-			isa = PBXGroup;
-			children = (
-				DB7317A820AB2FE200D49AF3 /* Top.storyboard */,
-				DB7317A720AB2FE200D49AF3 /* TopPresenter.swift */,
-				DB7317AD20AB31DC00D49AF3 /* TopAdapter.swift */,
-				DB7317A920AB2FE200D49AF3 /* TopViewController.swift */,
-			);
-			path = Top;
 			sourceTree = "<group>";
 		};
 		DB98A3DE20AB15F100A5273D = {
@@ -539,10 +494,9 @@
 			isa = PBXGroup;
 			children = (
 				E4B6D30420E9E7C100354CC3 /* Realm.swift */,
-				E4B6D30620E9EB4600354CC3 /* RealmIdentifiedObject.swift */,
-				E423A28420F3952F00008B39 /* RealmSwift.List+App.swift */,
-				E4B6D30820EA09D700354CC3 /* RealmSwift.Results+App.swift */,
 				E4B6D30A20EA0A2B00354CC3 /* NSPredicate+Realm.swift */,
+				E4B6D30620E9EB4600354CC3 /* RealmIdentifiedObject.swift */,
+				E423A28420F3952F00008B39 /* RealmSwift+App.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -635,7 +589,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB98A3F520AB15F100A5273D /* LaunchScreen.storyboard in Resources */,
-				DB7317AB20AB2FE200D49AF3 /* Top.storyboard in Resources */,
 				E485836020FDB17500FEECB7 /* GameListSelectControl.storyboard in Resources */,
 				DBD3342A20E952E7002128FF /* Main.storyboard in Resources */,
 				DBD3343320E964AB002128FF /* GameStationView.xib in Resources */,
@@ -771,29 +724,22 @@
 				DB73174C20AB1D7000D49AF3 /* Dimension.swift in Sources */,
 				E453425720F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift in Sources */,
 				DB73174D20AB1D7000D49AF3 /* Definition.swift in Sources */,
-				DB7317AA20AB2FE200D49AF3 /* TopPresenter.swift in Sources */,
 				E4B6D2F820E50B6800354CC3 /* Asset.swift in Sources */,
 				DBD3342820E952E7002128FF /* MainViewController.swift in Sources */,
 				E4B6D2FA20E5BF1600354CC3 /* Player.swift in Sources */,
 				E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */,
 				DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */,
-				DB0553A920B1E6850008DAD5 /* StationManager.swift in Sources */,
 				E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */,
 				E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */,
-				DBD3343920E96BAE002128FF /* RailwayManager.swift in Sources */,
 				DB73176220AB1DAB00D49AF3 /* Codable+App.swift in Sources */,
 				DBD3342220E944B7002128FF /* Notification.swift in Sources */,
-				E4B6D30920EA09D700354CC3 /* RealmSwift.Results+App.swift in Sources */,
 				E4B6D30720E9EB4600354CC3 /* RealmIdentifiedObject.swift in Sources */,
 				DB73176120AB1DAB00D49AF3 /* String+App.swift in Sources */,
 				E4DE8E0B20E38C390049B7ED /* Array+App.swift in Sources */,
 				DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */,
 				E4428AC720B647D300704862 /* UIImage+App.swift in Sources */,
-				DB7317AE20AB31DC00D49AF3 /* TopAdapter.swift in Sources */,
-				DB73174820AB1D7000D49AF3 /* Definition+Railway.swift in Sources */,
 				DBD3343520E964EA002128FF /* GameStationView.swift in Sources */,
 				E426B6E320BBA96900F54FF9 /* DestinationDirection.swift in Sources */,
-				DB73175E20AB1DAB00D49AF3 /* UITextField+App.swift in Sources */,
 				DB73175220AB1D9B00D49AF3 /* DialogRightDrawBehavior.swift in Sources */,
 				DB73175C20AB1DAB00D49AF3 /* UIViewController+App.swift in Sources */,
 				E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */,
@@ -802,7 +748,6 @@
 				E492776320F6D30A007F6460 /* Company.swift in Sources */,
 				DB73510D20E21E8B00A04ACC /* Railway.swift in Sources */,
 				DB05539E20B1E6270008DAD5 /* File.swift in Sources */,
-				DB73176320AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift in Sources */,
 				DB73510F20E2238200A04ACC /* Migration.swift in Sources */,
 				DB73510B20E21C0800A04ACC /* Station.swift in Sources */,
 				E443947120EF8441008018BF /* DecodedStation.swift in Sources */,
@@ -810,7 +755,7 @@
 				DBD3342920E952E7002128FF /* MainPresenter.swift in Sources */,
 				E4B6D30020E5F8B700354CC3 /* CoderProtocol.swift in Sources */,
 				E492776020F5C59B007F6460 /* UICustomView.swift in Sources */,
-				E423A28520F3952F00008B39 /* RealmSwift.List+App.swift in Sources */,
+				E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */,
 				E4B6D2FC20E5CF8400354CC3 /* AssetInfo.swift in Sources */,
 				DBD3340620E7E5C8002128FF /* GameMainPresenter.swift in Sources */,
 				DB73511120E238A300A04ACC /* Transferring.swift in Sources */,
@@ -823,7 +768,6 @@
 				DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */,
 				E492776520F6DCF8007F6460 /* GameMainRailwayView.swift in Sources */,
 				E485836120FDB17500FEECB7 /* GameListSelectControlViewController.swift in Sources */,
-				DB7317AC20AB2FE200D49AF3 /* TopViewController.swift in Sources */,
 				E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */,
 				DBD3340320E7E5C8002128FF /* GameMainViewController.swift in Sources */,
 				DB73175320AB1D9B00D49AF3 /* DialogRiseupBehavior.swift in Sources */,

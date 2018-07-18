@@ -38,7 +38,13 @@ extension UIColor {
     ///
     /// - Parameter colorCode: カラーコード
     convenience init(colorCode: String) {
-        self.init(rgb: colorCode.toHex())
+        let hex = colorCode.toHex() ?? 0
+        self.init(rgb: hex)
+    }
+    
+    convenience init?(colorCodeOrNil colorCode: String) {
+        guard let hex = colorCode.toHex() else { return nil }
+        self.init(rgb: hex)
     }
     
     /// カラーコード
@@ -82,13 +88,15 @@ extension UIColor {
 
 private extension String {
     
-    func toHex() -> Int {
+    func toHex() -> Int? {
         if (self as NSString).range(of: "^[a-fA-F0-9]+$", options: .regularExpression).location == NSNotFound {
-            return 0
+            return nil
         }
         var ret: UInt32 = 0
-        Scanner(string: self).scanHexInt32(&ret)
-        return Int(ret)
+        if Scanner(string: self).scanHexInt32(&ret) {
+            return Int(ret)
+        }
+        return nil
     }
 }
 

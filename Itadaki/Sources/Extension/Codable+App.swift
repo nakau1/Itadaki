@@ -21,52 +21,54 @@ extension KeyedDecodingContainerProtocol {
     }
     
     func string(_ key: Key, _ substitute: String = "") -> String {
-        guard let tmp = try? decodeIfPresent(String.self, forKey: key), let ret = tmp else {
-            return substitute
-        }
-        return ret
+        return to(String.self, key, substitute)
     }
     
     func stringOrNil(_ key: Key) -> String? {
-        guard let ret = try? decodeIfPresent(String.self, forKey: key) else {
-            return nil
-        }
-        return ret
+        return toOrNil(String.self, key)
     }
     
     func int(_ key: Key, _ substitute: Int = 0) -> Int {
-        guard let tmp = try? decodeIfPresent(Int.self, forKey: key), let ret = tmp else {
-            return substitute
-        }
-        return ret
+        return to(Int.self, key, substitute)
+    }
+    
+    func intOrNil(_ key: Key) -> Int? {
+        return toOrNil(Int.self, key)
     }
     
     func bool(_ key: Key, _ substitute: Bool = false) -> Bool {
-        guard let tmp = try? decodeIfPresent(Bool.self, forKey: key), let ret = tmp else {
-            return substitute
-        }
-        return ret
+        return to(Bool.self, key, substitute)
+    }
+    
+    func boolOrNil(_ key: Key) -> Bool? {
+        return toOrNil(Bool.self, key)
     }
     
     func cgfloat(_ key: Key, _ substitute: CGFloat = 0) -> CGFloat {
-        guard let tmp = try? decodeIfPresent(CGFloat.self, forKey: key), let ret = tmp else {
-            return substitute
-        }
-        return ret
+        return to(CGFloat.self, key, substitute)
     }
     
-    func point(_ key: Key, _ substitute: CGPoint = .zero) -> CGPoint {
-        guard let tmp = try? decodeIfPresent(CGPoint.self, forKey: key), let ret = tmp else {
-            return substitute
-        }
-        return ret
+    func cgfloatOrNil(_ key: Key) -> CGFloat? {
+        return toOrNil(CGFloat.self, key)
+    }
+    
+    func cgPoint(_ key: Key, _ substitute: CGPoint = .zero) -> CGPoint {
+        return to(CGPoint.self, key, substitute)
+    }
+    
+    func cgPointOrNil(_ key: Key) -> CGPoint? {
+        return toOrNil(CGPoint.self, key)
     }
     
     func color(_ key: Key, _ substitute: UIColor = .clear) -> UIColor {
-        guard let tmp = try? decodeIfPresent(String.self, forKey: key), let ret = tmp else {
-            return substitute
+        return colorOrNil(key) ?? substitute
+    }
+    
+    func colorOrNil(_ key: Key) -> UIColor? {
+        guard let colorCode = toOrNil(String.self, key), let color = UIColor(colorCodeOrNil: colorCode) else {
+            return nil
         }
-        return UIColor(colorCode: ret)
+        return color
     }
 }
 

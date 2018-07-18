@@ -24,16 +24,6 @@ class Realm {
         realm.beginWrite()
     }
     
-    class func deleteRealm() {
-        do {
-            if FileManager.default.fileExists(atPath: path) {
-                try FileManager.default.removeItem(atPath: path)
-            }
-        } catch let e {
-            print("failed delete realm file. \(e.localizedDescription)")
-        }
-    }
-    
     class func create<Entity>(_ type: Entity.Type) -> Entity where Entity: RealmSwift.Object {
         return realm.create(type)
     }
