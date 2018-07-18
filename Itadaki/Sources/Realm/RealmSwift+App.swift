@@ -15,3 +15,14 @@ extension RealmSwift.Results {
         return map { $0 }
     }
 }
+
+extension RealmSwift.List {
+    
+    var firstIndex: Int {
+        return count > 0 ? 0 : -1
+    }
+    
+    var lastIndex: Int {
+        return count > 0 ? count - 1 : -1
+    }
+}

@@ -53,7 +53,7 @@
 		DBD3343320E964AB002128FF /* GameStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3343220E964AB002128FF /* GameStationView.xib */; };
 		DBD3343520E964EA002128FF /* GameStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343420E964EA002128FF /* GameStationView.swift */; };
 		DBD3343920E96BAE002128FF /* RailwayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343820E96BAE002128FF /* RailwayManager.swift */; };
-		E423A28520F3952F00008B39 /* RealmSwift.List+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift.List+App.swift */; };
+		E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift+App.swift */; };
 		E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28E20F399D200008B39 /* TransferringRepository.swift */; };
 		E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28F20F399D200008B39 /* RailwayRepository.swift */; };
 		E423A29320F399D200008B39 /* StationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A29020F399D200008B39 /* StationRepository.swift */; };
@@ -82,7 +82,6 @@
 		E4B6D30020E5F8B700354CC3 /* CoderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D2FF20E5F8B700354CC3 /* CoderProtocol.swift */; };
 		E4B6D30520E9E7C100354CC3 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D30420E9E7C100354CC3 /* Realm.swift */; };
 		E4B6D30720E9EB4600354CC3 /* RealmIdentifiedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D30620E9EB4600354CC3 /* RealmIdentifiedObject.swift */; };
-		E4B6D30920EA09D700354CC3 /* RealmSwift.Results+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D30820EA09D700354CC3 /* RealmSwift.Results+App.swift */; };
 		E4B6D30B20EA0A2B00354CC3 /* NSPredicate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D30A20EA0A2B00354CC3 /* NSPredicate+Realm.swift */; };
 		E4B73C1D20AEF95600A301FB /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B73C1C20AEF95500A301FB /* UIView+App.swift */; };
 		E4B73C1F20AEFCCA00A301FB /* UIButton+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */; };
@@ -154,7 +153,7 @@
 		DBD3343220E964AB002128FF /* GameStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStationView.xib; sourceTree = "<group>"; };
 		DBD3343420E964EA002128FF /* GameStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationView.swift; sourceTree = "<group>"; };
 		DBD3343820E96BAE002128FF /* RailwayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayManager.swift; sourceTree = "<group>"; };
-		E423A28420F3952F00008B39 /* RealmSwift.List+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift.List+App.swift"; sourceTree = "<group>"; };
+		E423A28420F3952F00008B39 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
 		E423A28E20F399D200008B39 /* TransferringRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringRepository.swift; sourceTree = "<group>"; };
 		E423A28F20F399D200008B39 /* RailwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayRepository.swift; sourceTree = "<group>"; };
 		E423A29020F399D200008B39 /* StationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationRepository.swift; sourceTree = "<group>"; };
@@ -183,7 +182,6 @@
 		E4B6D2FF20E5F8B700354CC3 /* CoderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoderProtocol.swift; sourceTree = "<group>"; };
 		E4B6D30420E9E7C100354CC3 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		E4B6D30620E9EB4600354CC3 /* RealmIdentifiedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmIdentifiedObject.swift; sourceTree = "<group>"; };
-		E4B6D30820EA09D700354CC3 /* RealmSwift.Results+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift.Results+App.swift"; sourceTree = "<group>"; };
 		E4B6D30A20EA0A2B00354CC3 /* NSPredicate+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Realm.swift"; sourceTree = "<group>"; };
 		E4B73C1C20AEF95500A301FB /* UIView+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+App.swift"; sourceTree = "<group>"; };
@@ -516,10 +514,9 @@
 			isa = PBXGroup;
 			children = (
 				E4B6D30420E9E7C100354CC3 /* Realm.swift */,
-				E4B6D30620E9EB4600354CC3 /* RealmIdentifiedObject.swift */,
-				E423A28420F3952F00008B39 /* RealmSwift.List+App.swift */,
-				E4B6D30820EA09D700354CC3 /* RealmSwift.Results+App.swift */,
 				E4B6D30A20EA0A2B00354CC3 /* NSPredicate+Realm.swift */,
+				E4B6D30620E9EB4600354CC3 /* RealmIdentifiedObject.swift */,
+				E423A28420F3952F00008B39 /* RealmSwift+App.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -758,7 +755,6 @@
 				DBD3343920E96BAE002128FF /* RailwayManager.swift in Sources */,
 				DB73176220AB1DAB00D49AF3 /* Codable+App.swift in Sources */,
 				DBD3342220E944B7002128FF /* Notification.swift in Sources */,
-				E4B6D30920EA09D700354CC3 /* RealmSwift.Results+App.swift in Sources */,
 				E4B6D30720E9EB4600354CC3 /* RealmIdentifiedObject.swift in Sources */,
 				DB73176120AB1DAB00D49AF3 /* String+App.swift in Sources */,
 				E4DE8E0B20E38C390049B7ED /* Array+App.swift in Sources */,
@@ -783,7 +779,7 @@
 				DBD3342920E952E7002128FF /* MainPresenter.swift in Sources */,
 				E4B6D30020E5F8B700354CC3 /* CoderProtocol.swift in Sources */,
 				E492776020F5C59B007F6460 /* UICustomView.swift in Sources */,
-				E423A28520F3952F00008B39 /* RealmSwift.List+App.swift in Sources */,
+				E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */,
 				E4B6D2FC20E5CF8400354CC3 /* AssetInfo.swift in Sources */,
 				DBD3340620E7E5C8002128FF /* GameMainPresenter.swift in Sources */,
 				DB73511120E238A300A04ACC /* Transferring.swift in Sources */,
