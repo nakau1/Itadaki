@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		82EF94CEB7ABBA29451FFA96 /* Pods_ItadakiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94EBD6B9ACA52BC2DB6135F3 /* Pods_ItadakiTests.framework */; };
 		DB05539E20B1E6270008DAD5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05539120B1E6270008DAD5 /* File.swift */; };
-		DB0553A920B1E6850008DAD5 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0553A220B1E6850008DAD5 /* StationManager.swift */; };
 		DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D4B5320F75C24003A278F /* NumberingImage.swift */; };
 		DB73173D20AB192900D49AF3 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173720AB192900D49AF3 /* Dialog.swift */; };
 		DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173C20AB192900D49AF3 /* AppDelegate.swift */; };
@@ -50,7 +49,6 @@
 		DBD3343120E95A02002128FF /* GameTrainControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD3342F20E95A02002128FF /* GameTrainControl.storyboard */; };
 		DBD3343320E964AB002128FF /* GameStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3343220E964AB002128FF /* GameStationView.xib */; };
 		DBD3343520E964EA002128FF /* GameStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343420E964EA002128FF /* GameStationView.swift */; };
-		DBD3343920E96BAE002128FF /* RailwayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343820E96BAE002128FF /* RailwayManager.swift */; };
 		E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift+App.swift */; };
 		E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28E20F399D200008B39 /* TransferringRepository.swift */; };
 		E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28F20F399D200008B39 /* RailwayRepository.swift */; };
@@ -104,7 +102,6 @@
 		94EBD6B9ACA52BC2DB6135F3 /* Pods_ItadakiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ItadakiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91675FE35FA4DFA2258BDA8 /* Pods-Itadaki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itadaki.release.xcconfig"; path = "Pods/Target Support Files/Pods-Itadaki/Pods-Itadaki.release.xcconfig"; sourceTree = "<group>"; };
 		DB05539120B1E6270008DAD5 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		DB0553A220B1E6850008DAD5 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
 		DB0D4B5320F75C24003A278F /* NumberingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberingImage.swift; sourceTree = "<group>"; };
 		DB73173720AB192900D49AF3 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		DB73173C20AB192900D49AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +145,6 @@
 		DBD3342F20E95A02002128FF /* GameTrainControl.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameTrainControl.storyboard; sourceTree = "<group>"; };
 		DBD3343220E964AB002128FF /* GameStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStationView.xib; sourceTree = "<group>"; };
 		DBD3343420E964EA002128FF /* GameStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationView.swift; sourceTree = "<group>"; };
-		DBD3343820E96BAE002128FF /* RailwayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayManager.swift; sourceTree = "<group>"; };
 		E423A28420F3952F00008B39 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
 		E423A28E20F399D200008B39 /* TransferringRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringRepository.swift; sourceTree = "<group>"; };
 		E423A28F20F399D200008B39 /* RailwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayRepository.swift; sourceTree = "<group>"; };
@@ -248,15 +244,6 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		DB05538E20B1E6260008DAD5 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				DBD3343820E96BAE002128FF /* RailwayManager.swift */,
-				DB0553A220B1E6850008DAD5 /* StationManager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
 		DB73173220AB192900D49AF3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,7 +327,6 @@
 				DB05538620B1E6260008DAD5 /* Entity */,
 				E423A28D20F399D200008B39 /* Repository */,
 				DB05538220B1E6260008DAD5 /* Enum */,
-				DB05538E20B1E6260008DAD5 /* Manager */,
 				E443946E20EF8441008018BF /* DecodedEntity */,
 				DB05539120B1E6270008DAD5 /* File.swift */,
 				DB0D4B5320F75C24003A278F /* NumberingImage.swift */,
@@ -743,10 +729,8 @@
 				E4B6D2FA20E5BF1600354CC3 /* Player.swift in Sources */,
 				E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */,
 				DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */,
-				DB0553A920B1E6850008DAD5 /* StationManager.swift in Sources */,
 				E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */,
 				E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */,
-				DBD3343920E96BAE002128FF /* RailwayManager.swift in Sources */,
 				DB73176220AB1DAB00D49AF3 /* Codable+App.swift in Sources */,
 				DBD3342220E944B7002128FF /* Notification.swift in Sources */,
 				E4B6D30720E9EB4600354CC3 /* RealmIdentifiedObject.swift in Sources */,
