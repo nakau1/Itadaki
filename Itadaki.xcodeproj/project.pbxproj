@@ -20,12 +20,10 @@
 		DB73175320AB1D9B00D49AF3 /* DialogRiseupBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175120AB1D9B00D49AF3 /* DialogRiseupBehavior.swift */; };
 		DB73175C20AB1DAB00D49AF3 /* UIViewController+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175420AB1DAB00D49AF3 /* UIViewController+App.swift */; };
 		DB73175D20AB1DAB00D49AF3 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175520AB1DAB00D49AF3 /* UIColor+App.swift */; };
-		DB73175E20AB1DAB00D49AF3 /* UITextField+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175620AB1DAB00D49AF3 /* UITextField+App.swift */; };
 		DB73175F20AB1DAB00D49AF3 /* DialogBehavior+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175720AB1DAB00D49AF3 /* DialogBehavior+App.swift */; };
 		DB73176020AB1DAB00D49AF3 /* CoreGraphics+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175820AB1DAB00D49AF3 /* CoreGraphics+App.swift */; };
 		DB73176120AB1DAB00D49AF3 /* String+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175920AB1DAB00D49AF3 /* String+App.swift */; };
 		DB73176220AB1DAB00D49AF3 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175A20AB1DAB00D49AF3 /* Codable+App.swift */; };
-		DB73176320AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73175B20AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift */; };
 		DB73177620AB255C00D49AF3 /* Notificatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73177420AB255C00D49AF3 /* Notificatable.swift */; };
 		DB7317A120AB2CE600D49AF3 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73179E20AB2CE600D49AF3 /* LaunchPresenter.swift */; };
 		DB7317A220AB2CE600D49AF3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73179F20AB2CE600D49AF3 /* LaunchViewController.swift */; };
@@ -117,12 +115,10 @@
 		DB73175120AB1D9B00D49AF3 /* DialogRiseupBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRiseupBehavior.swift; sourceTree = "<group>"; };
 		DB73175420AB1DAB00D49AF3 /* UIViewController+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+App.swift"; sourceTree = "<group>"; };
 		DB73175520AB1DAB00D49AF3 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
-		DB73175620AB1DAB00D49AF3 /* UITextField+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+App.swift"; sourceTree = "<group>"; };
 		DB73175720AB1DAB00D49AF3 /* DialogBehavior+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogBehavior+App.swift"; sourceTree = "<group>"; };
 		DB73175820AB1DAB00D49AF3 /* CoreGraphics+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+App.swift"; sourceTree = "<group>"; };
 		DB73175920AB1DAB00D49AF3 /* String+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+App.swift"; sourceTree = "<group>"; };
 		DB73175A20AB1DAB00D49AF3 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
-		DB73175B20AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutConstraint.swift"; sourceTree = "<group>"; };
 		DB73177420AB255C00D49AF3 /* Notificatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notificatable.swift; sourceTree = "<group>"; };
 		DB73179E20AB2CE600D49AF3 /* LaunchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
 		DB73179F20AB2CE600D49AF3 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -290,8 +286,6 @@
 				DB73175520AB1DAB00D49AF3 /* UIColor+App.swift */,
 				E4428AC620B647D300704862 /* UIImage+App.swift */,
 				E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */,
-				DB73175620AB1DAB00D49AF3 /* UITextField+App.swift */,
-				DB73175B20AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift */,
 				E4B73C1C20AEF95500A301FB /* UIView+App.swift */,
 				DB73175420AB1DAB00D49AF3 /* UIViewController+App.swift */,
 			);
@@ -762,7 +756,6 @@
 				E4428AC720B647D300704862 /* UIImage+App.swift in Sources */,
 				DBD3343520E964EA002128FF /* GameStationView.swift in Sources */,
 				E426B6E320BBA96900F54FF9 /* DestinationDirection.swift in Sources */,
-				DB73175E20AB1DAB00D49AF3 /* UITextField+App.swift in Sources */,
 				DB73175220AB1D9B00D49AF3 /* DialogRightDrawBehavior.swift in Sources */,
 				DB73175C20AB1DAB00D49AF3 /* UIViewController+App.swift in Sources */,
 				E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */,
@@ -771,7 +764,6 @@
 				E492776320F6D30A007F6460 /* Company.swift in Sources */,
 				DB73510D20E21E8B00A04ACC /* Railway.swift in Sources */,
 				DB05539E20B1E6270008DAD5 /* File.swift in Sources */,
-				DB73176320AB1DAB00D49AF3 /* UIView+LayoutConstraint.swift in Sources */,
 				DB73510F20E2238200A04ACC /* Migration.swift in Sources */,
 				DB73510B20E21C0800A04ACC /* Station.swift in Sources */,
 				E443947120EF8441008018BF /* DecodedStation.swift in Sources */,
