@@ -13,7 +13,6 @@
 		DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D4B5320F75C24003A278F /* NumberingImage.swift */; };
 		DB73173D20AB192900D49AF3 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173720AB192900D49AF3 /* Dialog.swift */; };
 		DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173C20AB192900D49AF3 /* AppDelegate.swift */; };
-		DB73174820AB1D7000D49AF3 /* Definition+Railway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174020AB1D7000D49AF3 /* Definition+Railway.swift */; };
 		DB73174A20AB1D7000D49AF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174220AB1D7000D49AF3 /* Color.swift */; };
 		DB73174C20AB1D7000D49AF3 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174420AB1D7000D49AF3 /* Dimension.swift */; };
 		DB73174D20AB1D7000D49AF3 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174520AB1D7000D49AF3 /* Definition.swift */; };
@@ -112,7 +111,6 @@
 		DB0D4B5320F75C24003A278F /* NumberingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberingImage.swift; sourceTree = "<group>"; };
 		DB73173720AB192900D49AF3 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		DB73173C20AB192900D49AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB73174020AB1D7000D49AF3 /* Definition+Railway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Definition+Railway.swift"; sourceTree = "<group>"; };
 		DB73174220AB1D7000D49AF3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DB73174420AB1D7000D49AF3 /* Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		DB73174520AB1D7000D49AF3 /* Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
@@ -324,7 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				DB73174520AB1D7000D49AF3 /* Definition.swift */,
-				DB73174020AB1D7000D49AF3 /* Definition+Railway.swift */,
 				DB73174220AB1D7000D49AF3 /* Color.swift */,
 				DB73174420AB1D7000D49AF3 /* Dimension.swift */,
 				DBD3342120E944B7002128FF /* Notification.swift */,
@@ -767,7 +764,6 @@
 				E4DE8E0B20E38C390049B7ED /* Array+App.swift in Sources */,
 				DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */,
 				E4428AC720B647D300704862 /* UIImage+App.swift in Sources */,
-				DB73174820AB1D7000D49AF3 /* Definition+Railway.swift in Sources */,
 				DBD3343520E964EA002128FF /* GameStationView.swift in Sources */,
 				E426B6E320BBA96900F54FF9 /* DestinationDirection.swift in Sources */,
 				DB73175E20AB1DAB00D49AF3 /* UITextField+App.swift in Sources */,

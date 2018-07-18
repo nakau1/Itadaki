@@ -33,7 +33,7 @@ class Migration {
     }
     
     private func executeMigrate() {
-        let decodedRailways = self.load(path: Path.Railway.resource, to: [DecodedRailway].self, default: [])
+        let decodedRailways = self.load(path: Path.railwaysJson, to: [DecodedRailway].self, default: [])
         
         let railways = createRailways(from: decodedRailways)
         Realm.insert(railways)
