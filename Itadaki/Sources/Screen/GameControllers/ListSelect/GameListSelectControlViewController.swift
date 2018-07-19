@@ -22,7 +22,6 @@ class GameListSelectControlViewController: MainControlViewController, Notificata
     
     @IBAction private func didTapSelectButton() {
         postNotification(.CommandListSelect)
-        main.popControl()
         main.popContents()
     }
     
@@ -35,7 +34,6 @@ class GameListSelectControlViewController: MainControlViewController, Notificata
     }
     
     @IBAction private func didTapCancelButton() {
-        main.popControl()
         main.popContents()
     }
     

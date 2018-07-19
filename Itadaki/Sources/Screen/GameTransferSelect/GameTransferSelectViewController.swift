@@ -13,7 +13,6 @@ class GameTransferSelectViewController: MainContentsViewController, Notificatabl
     
     class func push(to main: MainViewController, station: Station) {
         main.push(contents: GameTransferSelectViewController.create(station: station))
-        main.push(control: GameListSelectControlViewController.create())
     }
     
     class func create(station: Station) -> MainContentsViewController {
