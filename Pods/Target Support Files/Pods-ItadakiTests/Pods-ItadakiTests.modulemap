@@ -1,6 +1,0 @@
-framework module Pods_ItadakiTests {
-  umbrella header "Pods-ItadakiTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
