@@ -10,6 +10,8 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     
     @IBOutlet private weak var stationsView: GameStationsView!
     @IBOutlet private weak var railwayView: GameMainRailwayView!
+    @IBOutlet private weak var forwardButton: UIButton!
+    @IBOutlet private weak var transferButton: UIButton!
     
     private var direction = DestinationDirection.ascending
     private weak var currentStation: Station!
@@ -25,8 +27,6 @@ class GameMainViewController: MainContentsViewController, Notificatable {
         stationsView.direction = direction
         stationsView.delegate = self
         
-        observeNotification(.CommandForward, when: #selector(didCommandForward))
-        observeNotification(.CommandTransfer, when: #selector(didCommandTransfer))
         observeNotification(.DidSelectTransferredStation, when: #selector(didSelectTransferredStation(_:)))
     }
     
@@ -39,11 +39,11 @@ class GameMainViewController: MainContentsViewController, Notificatable {
         }
     }
     
-    @objc private func didCommandForward() {
+    @IBAction private func didTapForwardButton() {
         stationsView.move()
     }
     
-    @objc private func didCommandTransfer() {
+    @IBAction private func didTapTransferButton() {
         GameTransferSelectViewController.push(to: main, station: currentStation)
     }
     
@@ -67,11 +67,11 @@ extension GameMainViewController: GameMainViewable {
 extension GameMainViewController: GameStationsViewDelegate {
     
     func gameStationsView(_ gameStationsView: GameStationsView, willMoveFrom station: Station) {
-        postNotification(.WillStationMove)
+        forwardButton.isEnabled = false
     }
     
     func gameStationsView(_ gameStationsView: GameStationsView, didMoveTo station: Station, isFinalStation: Bool) {
-        postNotification(.DidStationMove)
+        forwardButton.isEnabled = true
         
         currentStation = station
         railwayView.update(station: station, direction: direction)
