@@ -14,7 +14,7 @@ class BootstrapViewController: UITableViewController {
         (section: "App",
          rows: [
             (title: "ゲームメイン画面", handler: { vc in
-                vc.present(crossDissolve: MainViewController.create())
+                vc.present(crossDissolve: MainViewController.create(initialContents: GameMainViewController.create()))
             }),
             (title: "アプリ起動", handler: { vc in
                 vc.present(crossDissolve: LaunchViewController.create())

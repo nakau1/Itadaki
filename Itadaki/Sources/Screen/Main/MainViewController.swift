@@ -16,15 +16,15 @@ class MainViewController: UILayoutViewController {
     
     private var contentsFrame: CGRect!
     
-    class func create() -> UIViewController {
+    class func create(initialContents contents: MainContentsViewController) -> UIViewController {
         let vc = instantiate(self)
         vc.presenter = MainPresenter(view: vc)
+        vc.push(contents: contents)
         return vc
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        push(contents: GameMainViewController.create(), animate: false)
     }
     
     override func viewDidLayout() {
