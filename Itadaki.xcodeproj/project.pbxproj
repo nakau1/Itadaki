@@ -73,6 +73,7 @@
 		E498871E2100D185001F98B3 /* GameTransferringSelectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498871A2100D185001F98B3 /* GameTransferringSelectPresenter.swift */; };
 		E498871F2100D185001F98B3 /* GameTransferringSelectAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498871B2100D185001F98B3 /* GameTransferringSelectAdapter.swift */; };
 		E49887202100D185001F98B3 /* GameTransferringSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498871C2100D185001F98B3 /* GameTransferringSelectViewController.swift */; };
+		E49887222100D509001F98B3 /* GameTransferringSelectAdapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E49887212100D508001F98B3 /* GameTransferringSelectAdapterCell.xib */; };
 		E4B6D2F820E50B6800354CC3 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D2F720E50B6800354CC3 /* Asset.swift */; };
 		E4B6D2FA20E5BF1600354CC3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D2F920E5BF1600354CC3 /* Player.swift */; };
 		E4B6D2FC20E5CF8400354CC3 /* AssetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D2FB20E5CF8400354CC3 /* AssetInfo.swift */; };
@@ -170,6 +171,7 @@
 		E498871A2100D185001F98B3 /* GameTransferringSelectPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferringSelectPresenter.swift; sourceTree = "<group>"; };
 		E498871B2100D185001F98B3 /* GameTransferringSelectAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferringSelectAdapter.swift; sourceTree = "<group>"; };
 		E498871C2100D185001F98B3 /* GameTransferringSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferringSelectViewController.swift; sourceTree = "<group>"; };
+		E49887212100D508001F98B3 /* GameTransferringSelectAdapterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTransferringSelectAdapterCell.xib; sourceTree = "<group>"; };
 		E4B6D2F720E50B6800354CC3 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		E4B6D2F920E5BF1600354CC3 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E4B6D2FB20E5CF8400354CC3 /* AssetInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetInfo.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				E49887192100D185001F98B3 /* GameTransferringSelect.storyboard */,
+				E49887212100D508001F98B3 /* GameTransferringSelectAdapterCell.xib */,
 				E498871A2100D185001F98B3 /* GameTransferringSelectPresenter.swift */,
 				E498871B2100D185001F98B3 /* GameTransferringSelectAdapter.swift */,
 				E498871C2100D185001F98B3 /* GameTransferringSelectViewController.swift */,
@@ -582,6 +585,7 @@
 			files = (
 				DB98A3F520AB15F100A5273D /* LaunchScreen.storyboard in Resources */,
 				DBD3342A20E952E7002128FF /* Main.storyboard in Resources */,
+				E49887222100D509001F98B3 /* GameTransferringSelectAdapterCell.xib in Resources */,
 				DBD3343320E964AB002128FF /* GameStationView.xib in Resources */,
 				DB73510920E21B8800A04ACC /* railways.json in Resources */,
 				DB98A3F220AB15F100A5273D /* Assets.xcassets in Resources */,
