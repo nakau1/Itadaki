@@ -9,7 +9,12 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     private var presenter: GameMainPresentable!
     
     @IBOutlet private weak var stationsView: GameStationsView!
-    @IBOutlet private weak var railwayView: GameMainRailwayView!
+    
+    @IBOutlet private weak var railwayCompanyLabel: UILabel!
+    @IBOutlet private weak var railwayNameLabel: UILabel!
+    @IBOutlet private weak var destinationLabel: UILabel!
+    @IBOutlet private weak var railwayImageView: UIImageView!
+    
     @IBOutlet private weak var forwardButton: UIButton!
     @IBOutlet private weak var transferButton: UIButton!
     
@@ -58,6 +63,14 @@ class GameMainViewController: MainContentsViewController, Notificatable {
         stationsView.direction = direction
         stationsView.changeStation(station)
     }
+    
+    private func update(station: Station, direction: DestinationDirection) {
+        let railway = station.railway
+        railwayCompanyLabel.text = railway.company.name
+        railwayNameLabel.text = railway.name
+        destinationLabel.text = station.destination(direction: direction)
+        railwayImageView.image = railway.numberingImage
+    }
 }
 
 extension GameMainViewController: GameMainViewable {
@@ -74,7 +87,7 @@ extension GameMainViewController: GameStationsViewDelegate {
         forwardButton.isEnabled = true
         
         currentStation = station
-        railwayView.update(station: station, direction: direction)
+        update(station: station, direction: direction)
         
         if isFinalStation {
             direction = direction.reversed
