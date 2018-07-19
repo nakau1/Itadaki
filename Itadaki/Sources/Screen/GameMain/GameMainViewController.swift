@@ -59,6 +59,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
             else {
                 return
         }
+        currentStation = station
         direction = transferring.direction
         stationsView.direction = direction
         stationsView.changeStation(station)
