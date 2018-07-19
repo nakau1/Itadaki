@@ -9,110 +9,41 @@ class MainViewController: UILayoutViewController {
     private let animationDuration: TimeInterval = 0.1
     
     private var presenter: MainPresentable!
+    private var animate = true
     
     @IBOutlet private weak var areaContents: UIView!
-    @IBOutlet private weak var areaControl: UIView!
-    
-    private var contentsControllers = [MainContentsViewController]()
-    private var controlControllers = [MainControlViewController]()
     
     private var contentsFrame: CGRect!
-    private var controlFrame: CGRect!
     
-    class func create() -> UIViewController {
+    class func create(initialContents contents: MainContentsViewController) -> UIViewController {
         let vc = instantiate(self)
         vc.presenter = MainPresenter(view: vc)
+        vc.push(contents: contents, animate: false)
         return vc
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        push(contents: GameMainViewController.create(), animate: false)
-        push(control: GameTrainControlViewController.create(), animate: false)
     }
     
     override func viewDidLayout() {
         super.viewDidLayout()
         contentsFrame = areaContents.bounds
-        controlFrame = areaControl.bounds
-        presentPushedControllers()
+        showAllPushedContentsViews()
     }
     
     func push(contents controller: MainContentsViewController, animate: Bool = true) {
+        self.animate = animate
         controller.main = self
-        contentsControllers.append(controller)
-        
-        if contentsFrame == nil { return }
-        
-        controller.view.frame = contentsFrame
-        if animate {
-            controller.view.alpha = 0
-        }
-        
-        controller.view.parent = areaContents
-        if animate {
-            UIView.animate(withDuration: animationDuration) {
-                controller.view.alpha = 1
-            }
-        }
-    }
-    
-    func push(control controller: MainControlViewController, animate: Bool = true) {
-        controller.main = self
-        controlControllers.append(controller)
-        
-        if controlFrame == nil { return }
-        
-        controller.view.frame = controlFrame
-        if animate {
-            controller.view.alpha = 0
-        }
-        
-        controller.view.parent = areaControl
-        if animate {
-            UIView.animate(withDuration: animationDuration) {
-                controller.view.alpha = 1
-            }
-        }
+        presenter.push(contents: controller)
     }
     
     func popContents(animate: Bool = true) {
-        guard let poped = contentsControllers.popLast() else { return }
-        
-        if animate {
-            UIView.animate(withDuration: animationDuration, animations: {
-                poped.view.alpha = 0
-            }, completion: { _ in
-                poped.view.removeFromSuperview()
-            })
-        } else {
-            poped.view.removeFromSuperview()
-        }
+        self.animate = animate
+        presenter.popContents()
     }
     
-    func popControl(animate: Bool = true) {
-        guard let poped = controlControllers.popLast() else { return }
-        
-        if animate {
-            UIView.animate(withDuration: animationDuration) {
-                poped.view.removeFromSuperview()
-            }
-        } else {
-            poped.view.removeFromSuperview()
-        }
-    }
-    
-    private func presentPushedControllers() {
-        contentsControllers.forEach { controller in
-            if controller.view.parent == nil {
-                controller.view.frame = contentsFrame
-                controller.view.parent = areaContents
-            }
-        }
-        controlControllers.forEach { controller in
-            if controller.view.parent == nil {
-                controller.view.frame = controlFrame
-                controller.view.parent = areaControl
+    private func showAllPushedContentsViews() {
+        presenter.fetchContentsViews().forEach { contentsView in
+            if contentsView.parent == nil {
+                contentsView.frame = contentsFrame
+                contentsView.parent = areaContents
             }
         }
     }
@@ -120,4 +51,31 @@ class MainViewController: UILayoutViewController {
 
 extension MainViewController: MainViewable {
     
+    func showPushedContentsView(_ contentsView: UIView) {
+        if !isViewLoaded || contentsFrame == nil { return }
+        
+        contentsView.frame = contentsFrame
+        if animate {
+            contentsView.alpha = 0
+        }
+        
+        contentsView.parent = areaContents
+        if animate {
+            UIView.animate(withDuration: animationDuration) {
+                contentsView.alpha = 1
+            }
+        }
+    }
+    
+    func hidePoppedContents(_ contentsView: UIView) {
+        if animate {
+            UIView.animate(withDuration: animationDuration, animations: {
+                contentsView.alpha = 0
+            }, completion: { _ in
+                contentsView.parent = nil
+            })
+        } else {
+            contentsView.parent = nil
+        }
+    }
 }

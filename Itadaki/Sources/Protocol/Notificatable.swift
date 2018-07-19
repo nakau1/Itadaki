@@ -40,6 +40,14 @@ extension Notificatable where Self: NSObject {
     func observeNotification(_ name: Notification.Name, when selector: Selector) {
         NotificationCenter.default.addObserver(self, selector: selector, name: name, object: nil)
     }
+    
+    /// 通知の監視を停止する
+    ///
+    /// - Parameters:
+    ///   - name: 対象の通知名
+    func stopObserveNotification(_ name: Notification.Name) {
+        NotificationCenter.default.removeObserver(self, name: name, object: nil)
+    }
 }
 
 extension Notificatable {

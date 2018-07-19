@@ -7,13 +7,14 @@ import UIKit
 protocol MainPresentable: class {
     
     func push(contents controller: MainContentsViewController)
-    func push(control controller: MainControlViewController)
     func popContents()
-    func popControl()
+    func fetchContentsViews() -> [UIView]
 }
 
 protocol MainViewable: class {
     
+    func showPushedContentsView(_ contentsView: UIView)
+    func hidePoppedContents(_ contentsView: UIView)
 }
 
 class MainPresenter: MainPresentable {
@@ -21,25 +22,23 @@ class MainPresenter: MainPresentable {
     weak var view: MainViewable!
     
     private var contentsControllers = [MainContentsViewController]()
-    private var controlControllers = [MainControlViewController]()
     
     init(view: MainViewable) {
         self.view = view
     }
     
     func push(contents controller: MainContentsViewController) {
-        // TODO:
-    }
-    
-    func push(control controller: MainControlViewController) {
-        // TODO:
+        contentsControllers.append(controller)
+        view.showPushedContentsView(controller.view)
     }
     
     func popContents() {
-        // TODO:
+        if let poppedContents = contentsControllers.popLast() {
+            view.hidePoppedContents(poppedContents.view)
+        }
     }
     
-    func popControl() {
-        // TODO:
+    func fetchContentsViews() -> [UIView] {
+        return contentsControllers.map { $0.view }
     }
 }

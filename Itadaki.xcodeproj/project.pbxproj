@@ -45,8 +45,6 @@
 		DBD3342820E952E7002128FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3342420E952E7002128FF /* MainViewController.swift */; };
 		DBD3342920E952E7002128FF /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3342520E952E7002128FF /* MainPresenter.swift */; };
 		DBD3342A20E952E7002128FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD3342620E952E7002128FF /* Main.storyboard */; };
-		DBD3343020E95A02002128FF /* GameTrainControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3342E20E95A02002128FF /* GameTrainControlViewController.swift */; };
-		DBD3343120E95A02002128FF /* GameTrainControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD3342F20E95A02002128FF /* GameTrainControl.storyboard */; };
 		DBD3343320E964AB002128FF /* GameStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3343220E964AB002128FF /* GameStationView.xib */; };
 		DBD3343520E964EA002128FF /* GameStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343420E964EA002128FF /* GameStationView.swift */; };
 		E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift+App.swift */; };
@@ -65,8 +63,6 @@
 		E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */; };
 		E453425A20F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */; };
 		E4733D3A20F4FB86000F77CD /* GameStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4733D3920F4FB85000F77CD /* GameStationsView.swift */; };
-		E485836020FDB17500FEECB7 /* GameListSelectControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E485835E20FDB17500FEECB7 /* GameListSelectControl.storyboard */; };
-		E485836120FDB17500FEECB7 /* GameListSelectControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485835F20FDB17500FEECB7 /* GameListSelectControlViewController.swift */; };
 		E485836320FDD68100FEECB7 /* IndexPath+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485836220FDD68100FEECB7 /* IndexPath+App.swift */; };
 		E492776020F5C59B007F6460 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492775E20F5C59B007F6460 /* UICustomView.swift */; };
 		E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492775F20F5C59B007F6460 /* UILayoutViewController.swift */; };
@@ -141,8 +137,6 @@
 		DBD3342420E952E7002128FF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DBD3342520E952E7002128FF /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		DBD3342620E952E7002128FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		DBD3342E20E95A02002128FF /* GameTrainControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTrainControlViewController.swift; sourceTree = "<group>"; };
-		DBD3342F20E95A02002128FF /* GameTrainControl.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameTrainControl.storyboard; sourceTree = "<group>"; };
 		DBD3343220E964AB002128FF /* GameStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStationView.xib; sourceTree = "<group>"; };
 		DBD3343420E964EA002128FF /* GameStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationView.swift; sourceTree = "<group>"; };
 		E423A28420F3952F00008B39 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
@@ -161,8 +155,6 @@
 		E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectViewController.swift; sourceTree = "<group>"; };
 		E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectPresenter.swift; sourceTree = "<group>"; };
 		E4733D3920F4FB85000F77CD /* GameStationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationsView.swift; sourceTree = "<group>"; };
-		E485835E20FDB17500FEECB7 /* GameListSelectControl.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameListSelectControl.storyboard; sourceTree = "<group>"; };
-		E485835F20FDB17500FEECB7 /* GameListSelectControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListSelectControlViewController.swift; sourceTree = "<group>"; };
 		E485836220FDD68100FEECB7 /* IndexPath+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+App.swift"; sourceTree = "<group>"; };
 		E492775E20F5C59B007F6460 /* UICustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		E492775F20F5C59B007F6460 /* UILayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayoutViewController.swift; sourceTree = "<group>"; };
@@ -314,7 +306,6 @@
 				DBD3342320E952E7002128FF /* Main */,
 				DBD333FE20E7E5C8002128FF /* GameMain */,
 				E453425220F70DCE00EFA9A0 /* GameTransferSelect */,
-				DBD3342C20E95A02002128FF /* GameControllers */,
 				DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */,
 				DB73179D20AB2CE600D49AF3 /* Launch */,
 			);
@@ -424,24 +415,6 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		DBD3342C20E95A02002128FF /* GameControllers */ = {
-			isa = PBXGroup;
-			children = (
-				DBD3342D20E95A02002128FF /* Train */,
-				E485835D20FDB17500FEECB7 /* ListSelect */,
-			);
-			path = GameControllers;
-			sourceTree = "<group>";
-		};
-		DBD3342D20E95A02002128FF /* Train */ = {
-			isa = PBXGroup;
-			children = (
-				DBD3342E20E95A02002128FF /* GameTrainControlViewController.swift */,
-				DBD3342F20E95A02002128FF /* GameTrainControl.storyboard */,
-			);
-			path = Train;
-			sourceTree = "<group>";
-		};
 		E423A28D20F399D200008B39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,15 +443,6 @@
 				E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */,
 			);
 			path = GameTransferSelect;
-			sourceTree = "<group>";
-		};
-		E485835D20FDB17500FEECB7 /* ListSelect */ = {
-			isa = PBXGroup;
-			children = (
-				E485835E20FDB17500FEECB7 /* GameListSelectControl.storyboard */,
-				E485835F20FDB17500FEECB7 /* GameListSelectControlViewController.swift */,
-			);
-			path = ListSelect;
 			sourceTree = "<group>";
 		};
 		E492775D20F5C59B007F6460 /* Base */ = {
@@ -513,7 +477,6 @@
 				DB98A3E420AB15F100A5273D /* Frameworks */,
 				DB98A3E520AB15F100A5273D /* Resources */,
 				71EC941471550FC23A65C1B1 /* [CP] Embed Pods Frameworks */,
-				F72682F751B81335169D0D86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -532,8 +495,6 @@
 				DB98A3F720AB15F200A5273D /* Sources */,
 				DB98A3F820AB15F200A5273D /* Frameworks */,
 				DB98A3F920AB15F200A5273D /* Resources */,
-				6BEE9FEC66E72324D6BDCC41 /* [CP] Embed Pods Frameworks */,
-				D6F784239DAE935481CFA60F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -589,7 +550,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB98A3F520AB15F100A5273D /* LaunchScreen.storyboard in Resources */,
-				E485836020FDB17500FEECB7 /* GameListSelectControl.storyboard in Resources */,
 				DBD3342A20E952E7002128FF /* Main.storyboard in Resources */,
 				DBD3343320E964AB002128FF /* GameStationView.xib in Resources */,
 				DB73510920E21B8800A04ACC /* railways.json in Resources */,
@@ -599,7 +559,6 @@
 				DBD3340520E7E5C8002128FF /* GameMain.storyboard in Resources */,
 				E453425820F70DCE00EFA9A0 /* GameTransferSelect.storyboard in Resources */,
 				E443947420F0D773008018BF /* locationKeys.json in Resources */,
-				DBD3343120E95A02002128FF /* GameTrainControl.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,21 +572,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6BEE9FEC66E72324D6BDCC41 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ItadakiTests/Pods-ItadakiTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		71EC941471550FC23A65C1B1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -663,7 +607,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B979C4B986EF3EDB2B159849 /* [CP] Check Pods Manifest.lock */ = {
@@ -681,37 +625,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D6F784239DAE935481CFA60F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ItadakiTests/Pods-ItadakiTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F72682F751B81335169D0D86 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Itadaki/Pods-Itadaki-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -767,7 +681,6 @@
 				DB7317A220AB2CE600D49AF3 /* LaunchViewController.swift in Sources */,
 				DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */,
 				E492776520F6DCF8007F6460 /* GameMainRailwayView.swift in Sources */,
-				E485836120FDB17500FEECB7 /* GameListSelectControlViewController.swift in Sources */,
 				E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */,
 				DBD3340320E7E5C8002128FF /* GameMainViewController.swift in Sources */,
 				DB73175320AB1D9B00D49AF3 /* DialogRiseupBehavior.swift in Sources */,
@@ -780,7 +693,6 @@
 				E4B73C1D20AEF95600A301FB /* UIView+App.swift in Sources */,
 				DB73175F20AB1DAB00D49AF3 /* DialogBehavior+App.swift in Sources */,
 				E443947220EF8441008018BF /* DecodedRailway.swift in Sources */,
-				DBD3343020E95A02002128FF /* GameTrainControlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

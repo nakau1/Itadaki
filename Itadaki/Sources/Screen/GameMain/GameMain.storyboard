@@ -34,11 +34,11 @@
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7z-nB-o2h" customClass="GameStationsView" customModule="Itadaki" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="162" width="320" height="326"/>
+                                <rect key="frame" x="0.0" y="162" width="320" height="244"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEQ-XP-22Q" customClass="GameMainRailwayView" customModule="Itadaki" customModuleProvider="target">
-                                <rect key="frame" x="4" y="492" width="312" height="72"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEQ-XP-22Q">
+                                <rect key="frame" x="4" y="410" width="312" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京メトロ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scv-vH-lys">
                                         <rect key="frame" x="48" y="12" width="256" height="12"/>
@@ -92,35 +92,94 @@
                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="companyLabel" destination="scv-vH-lys" id="YlD-7H-FRP"/>
-                                    <outlet property="destinationLabel" destination="uZm-IN-OgV" id="f6M-o9-6du"/>
-                                    <outlet property="nameLabel" destination="7eF-wC-8iN" id="SbJ-N7-j2G"/>
-                                    <outlet property="symbolImageView" destination="tx7-oo-UVp" id="vNq-fj-5YU"/>
-                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKb-Tc-he4">
+                                <rect key="frame" x="0.0" y="486" width="320" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fun-Wf-rdh">
+                                        <rect key="frame" x="246" y="8" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fun-Wf-rdh" secondAttribute="height" multiplier="1:1" id="lTP-Of-3l5"/>
+                                        </constraints>
+                                        <state key="normal" title="進む"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapForwardButton" destination="fly-5s-CAo" eventType="touchUpInside" id="ZWm-W9-x7Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQB-5C-NeK">
+                                        <rect key="frame" x="8" y="8" width="132" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="oQB-5C-NeK" secondAttribute="height" multiplier="2:1" id="c3m-27-pI8"/>
+                                        </constraints>
+                                        <state key="normal" title="乗り換え"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapTransferButton" destination="fly-5s-CAo" eventType="touchUpInside" id="zRz-NH-9YC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oQB-5C-NeK" firstAttribute="top" secondItem="VKb-Tc-he4" secondAttribute="top" constant="8" id="9e5-lw-ZBt"/>
+                                    <constraint firstAttribute="bottom" secondItem="fun-Wf-rdh" secondAttribute="bottom" constant="8" id="U9R-Y5-Upo"/>
+                                    <constraint firstItem="oQB-5C-NeK" firstAttribute="leading" secondItem="VKb-Tc-he4" secondAttribute="leading" constant="8" id="WWP-ts-MOC"/>
+                                    <constraint firstItem="fun-Wf-rdh" firstAttribute="top" secondItem="VKb-Tc-he4" secondAttribute="top" constant="8" id="aAK-wI-Qil"/>
+                                    <constraint firstAttribute="height" constant="82" id="cfC-zb-6dJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="fun-Wf-rdh" secondAttribute="trailing" constant="8" id="csG-xW-X4Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="oQB-5C-NeK" secondAttribute="bottom" constant="8" id="yr5-rr-oPK"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="bottom" secondItem="VKb-Tc-he4" secondAttribute="bottom" id="5By-EX-AAg"/>
                             <constraint firstItem="nEQ-XP-22Q" firstAttribute="top" secondItem="v7z-nB-o2h" secondAttribute="bottom" constant="4" id="A6P-nQ-ekz"/>
+                            <constraint firstItem="VKb-Tc-he4" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" id="C0t-DO-Apb"/>
                             <constraint firstItem="nEQ-XP-22Q" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" constant="4" id="E0Y-pc-10W"/>
                             <constraint firstItem="9vR-39-C5x" firstAttribute="trailing" secondItem="tTL-1g-ji6" secondAttribute="trailing" id="EEl-fA-cVS"/>
+                            <constraint firstItem="tTL-1g-ji6" firstAttribute="trailing" secondItem="VKb-Tc-he4" secondAttribute="trailing" id="JBA-an-JUB"/>
                             <constraint firstItem="ADf-qR-YqO" firstAttribute="top" secondItem="tTL-1g-ji6" secondAttribute="top" id="Nd0-0K-1jy"/>
                             <constraint firstItem="v7z-nB-o2h" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" id="VTw-wf-6qb"/>
                             <constraint firstItem="9vR-39-C5x" firstAttribute="top" secondItem="ADf-qR-YqO" secondAttribute="bottom" id="XQ2-4S-Bkd"/>
                             <constraint firstItem="v7z-nB-o2h" firstAttribute="top" secondItem="9vR-39-C5x" secondAttribute="bottom" constant="4" id="Y9Z-K8-wfZ"/>
+                            <constraint firstItem="VKb-Tc-he4" firstAttribute="top" secondItem="nEQ-XP-22Q" secondAttribute="bottom" constant="4" id="cQS-gl-juP"/>
                             <constraint firstItem="9vR-39-C5x" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" id="oZk-q6-f6y"/>
                             <constraint firstItem="ADf-qR-YqO" firstAttribute="trailing" secondItem="tTL-1g-ji6" secondAttribute="trailing" id="oz7-mS-jyQ"/>
                             <constraint firstItem="v7z-nB-o2h" firstAttribute="trailing" secondItem="tTL-1g-ji6" secondAttribute="trailing" id="pUZ-CA-25h"/>
-                            <constraint firstItem="tTL-1g-ji6" firstAttribute="bottom" secondItem="nEQ-XP-22Q" secondAttribute="bottom" constant="4" id="rg7-CH-SiO"/>
                             <constraint firstItem="ADf-qR-YqO" firstAttribute="leading" secondItem="tTL-1g-ji6" secondAttribute="leading" id="tv0-bB-qf3"/>
                             <constraint firstItem="tTL-1g-ji6" firstAttribute="trailing" secondItem="nEQ-XP-22Q" secondAttribute="trailing" constant="4" id="wTv-sM-IyF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tTL-1g-ji6"/>
                     </view>
                     <connections>
-                        <outlet property="railwayView" destination="nEQ-XP-22Q" id="Jsn-VM-n7r"/>
+                        <outlet property="destinationLabel" destination="uZm-IN-OgV" id="vb2-AZ-Vv9"/>
+                        <outlet property="forwardButton" destination="fun-Wf-rdh" id="RDg-Mw-DHh"/>
+                        <outlet property="railwayCompanyLabel" destination="scv-vH-lys" id="imL-xM-2mG"/>
+                        <outlet property="railwayImageView" destination="tx7-oo-UVp" id="MAR-N7-mlt"/>
+                        <outlet property="railwayNameLabel" destination="7eF-wC-8iN" id="S1A-hL-FJn"/>
                         <outlet property="stationsView" destination="v7z-nB-o2h" id="UIo-MH-6jm"/>
+                        <outlet property="transferButton" destination="oQB-5C-NeK" id="BZ9-8s-Lra"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqY-jZ-KgT" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,9 +9,13 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     private var presenter: GameMainPresentable!
     
     @IBOutlet private weak var stationsView: GameStationsView!
-    @IBOutlet private weak var railwayView: GameMainRailwayView!
+    @IBOutlet private weak var railwayCompanyLabel: UILabel!
+    @IBOutlet private weak var railwayNameLabel: UILabel!
+    @IBOutlet private weak var railwayImageView: UIImageView!
+    @IBOutlet private weak var destinationLabel: UILabel!
+    @IBOutlet private weak var forwardButton: UIButton!
+    @IBOutlet private weak var transferButton: UIButton!
     
-    private var direction = DestinationDirection.ascending
     private weak var currentStation: Station!
     
     class func create() -> MainContentsViewController {
@@ -22,11 +26,9 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        stationsView.direction = direction
+        stationsView.direction = presenter.direction
         stationsView.delegate = self
         
-        observeNotification(.CommandForward, when: #selector(didCommandForward))
-        observeNotification(.CommandTransfer, when: #selector(didCommandTransfer))
         observeNotification(.DidSelectTransferredStation, when: #selector(didSelectTransferredStation(_:)))
     }
     
@@ -35,15 +37,16 @@ class GameMainViewController: MainContentsViewController, Notificatable {
         
         if let st = StationRepository.numbered("JK26") {
             currentStation = st
+            update(station: st, direction: presenter.direction)
             stationsView.changeStation(st)
         }
     }
     
-    @objc private func didCommandForward() {
+    @IBAction private func didTapForwardButton() {
         stationsView.move()
     }
     
-    @objc private func didCommandTransfer() {
+    @IBAction private func didTapTransferButton() {
         GameTransferSelectViewController.push(to: main, station: currentStation)
     }
     
@@ -54,9 +57,18 @@ class GameMainViewController: MainContentsViewController, Notificatable {
             else {
                 return
         }
-        direction = transferring.direction
-        stationsView.direction = direction
+        currentStation = station
+        presenter.direction = transferring.direction
+        stationsView.direction = presenter.direction
         stationsView.changeStation(station)
+    }
+    
+    private func update(station: Station, direction: DestinationDirection) {
+        let railway = station.railway
+        railwayCompanyLabel.text = railway.company.name
+        railwayNameLabel.text = railway.name
+        destinationLabel.text = station.destination(direction: direction)
+        railwayImageView.image = railway.numberingImage
     }
 }
 
@@ -67,18 +79,18 @@ extension GameMainViewController: GameMainViewable {
 extension GameMainViewController: GameStationsViewDelegate {
     
     func gameStationsView(_ gameStationsView: GameStationsView, willMoveFrom station: Station) {
-        postNotification(.WillStationMove)
+        forwardButton.isEnabled = false
     }
     
     func gameStationsView(_ gameStationsView: GameStationsView, didMoveTo station: Station, isFinalStation: Bool) {
-        postNotification(.DidStationMove)
+        forwardButton.isEnabled = true
         
         currentStation = station
-        railwayView.update(station: station, direction: direction)
+        update(station: station, direction: presenter.direction)
         
         if isFinalStation {
-            direction = direction.reversed
-            stationsView.direction = direction
+            presenter.direction = presenter.direction.reversed
+            stationsView.direction = presenter.direction
             stationsView.changeStation(station)
         }
     }
