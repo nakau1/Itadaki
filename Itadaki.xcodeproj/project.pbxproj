@@ -63,8 +63,6 @@
 		E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */; };
 		E453425A20F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */; };
 		E4733D3A20F4FB86000F77CD /* GameStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4733D3920F4FB85000F77CD /* GameStationsView.swift */; };
-		E485836020FDB17500FEECB7 /* GameListSelectControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E485835E20FDB17500FEECB7 /* GameListSelectControl.storyboard */; };
-		E485836120FDB17500FEECB7 /* GameListSelectControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485835F20FDB17500FEECB7 /* GameListSelectControlViewController.swift */; };
 		E485836320FDD68100FEECB7 /* IndexPath+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485836220FDD68100FEECB7 /* IndexPath+App.swift */; };
 		E492776020F5C59B007F6460 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492775E20F5C59B007F6460 /* UICustomView.swift */; };
 		E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492775F20F5C59B007F6460 /* UILayoutViewController.swift */; };
@@ -157,8 +155,6 @@
 		E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectViewController.swift; sourceTree = "<group>"; };
 		E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectPresenter.swift; sourceTree = "<group>"; };
 		E4733D3920F4FB85000F77CD /* GameStationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationsView.swift; sourceTree = "<group>"; };
-		E485835E20FDB17500FEECB7 /* GameListSelectControl.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameListSelectControl.storyboard; sourceTree = "<group>"; };
-		E485835F20FDB17500FEECB7 /* GameListSelectControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListSelectControlViewController.swift; sourceTree = "<group>"; };
 		E485836220FDD68100FEECB7 /* IndexPath+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+App.swift"; sourceTree = "<group>"; };
 		E492775E20F5C59B007F6460 /* UICustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		E492775F20F5C59B007F6460 /* UILayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayoutViewController.swift; sourceTree = "<group>"; };
@@ -310,7 +306,6 @@
 				DBD3342320E952E7002128FF /* Main */,
 				DBD333FE20E7E5C8002128FF /* GameMain */,
 				E453425220F70DCE00EFA9A0 /* GameTransferSelect */,
-				DBD3342C20E95A02002128FF /* GameControllers */,
 				DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */,
 				DB73179D20AB2CE600D49AF3 /* Launch */,
 			);
@@ -420,14 +415,6 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		DBD3342C20E95A02002128FF /* GameControllers */ = {
-			isa = PBXGroup;
-			children = (
-				E485835D20FDB17500FEECB7 /* ListSelect */,
-			);
-			path = GameControllers;
-			sourceTree = "<group>";
-		};
 		E423A28D20F399D200008B39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,15 +443,6 @@
 				E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */,
 			);
 			path = GameTransferSelect;
-			sourceTree = "<group>";
-		};
-		E485835D20FDB17500FEECB7 /* ListSelect */ = {
-			isa = PBXGroup;
-			children = (
-				E485835E20FDB17500FEECB7 /* GameListSelectControl.storyboard */,
-				E485835F20FDB17500FEECB7 /* GameListSelectControlViewController.swift */,
-			);
-			path = ListSelect;
 			sourceTree = "<group>";
 		};
 		E492775D20F5C59B007F6460 /* Base */ = {
@@ -572,7 +550,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB98A3F520AB15F100A5273D /* LaunchScreen.storyboard in Resources */,
-				E485836020FDB17500FEECB7 /* GameListSelectControl.storyboard in Resources */,
 				DBD3342A20E952E7002128FF /* Main.storyboard in Resources */,
 				DBD3343320E964AB002128FF /* GameStationView.xib in Resources */,
 				DB73510920E21B8800A04ACC /* railways.json in Resources */,
@@ -704,7 +681,6 @@
 				DB7317A220AB2CE600D49AF3 /* LaunchViewController.swift in Sources */,
 				DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */,
 				E492776520F6DCF8007F6460 /* GameMainRailwayView.swift in Sources */,
-				E485836120FDB17500FEECB7 /* GameListSelectControlViewController.swift in Sources */,
 				E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */,
 				DBD3340320E7E5C8002128FF /* GameMainViewController.swift in Sources */,
 				DB73175320AB1D9B00D49AF3 /* DialogRiseupBehavior.swift in Sources */,

@@ -10,6 +10,10 @@ class GameTransferSelectViewController: MainContentsViewController, Notificatabl
     private var station: Station!
 
     @IBOutlet private weak var adapter: GameTransferSelectAdapter!
+    @IBOutlet private weak var selectButton: UIButton!
+    @IBOutlet private weak var upButton: UIButton!
+    @IBOutlet private weak var downButton: UIButton!
+    @IBOutlet private weak var cancelButton: UIButton!
     
     class func push(to main: MainViewController, station: Station) {
         main.push(contents: GameTransferSelectViewController.create(station: station))
@@ -26,27 +30,29 @@ class GameTransferSelectViewController: MainContentsViewController, Notificatabl
         super.viewDidLoad()
         adapter.delegate = self
         presenter.loadTransferrings(of: station)
-        
-        observeNotification(.CommandListSelect, when: #selector(didCommandListSelect(_:)))
-        observeNotification(.CommandListUp, when: #selector(didCommandListUp(_:)))
-        observeNotification(.CommandListDown, when: #selector(didCommandListDown(_:)))
     }
     
     override func viewDidLayout() {
         super.viewDidLayout()
     }
     
-    @objc private func didCommandListSelect(_ notify: Notification) {
+    
+    @IBAction private func didTapSelectButton() {
         let transferring = presenter.transferrings[adapter.currentIndex]
         postNotification(.DidSelectTransferredStation, info: [.transferring : transferring])
+        main.popContents()
     }
     
-    @objc private func didCommandListUp(_ notify: Notification) {
+    @IBAction private func didTapUpButton() {
         adapter.selectUp()
     }
     
-    @objc private func didCommandListDown(_ notify: Notification) {
+    @IBAction private func didTapDownButton() {
         adapter.selectDown()
+    }
+    
+    @IBAction private func didTapCancelButton() {
+        main.popContents()
     }
 }
 
