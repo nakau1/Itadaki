@@ -40,6 +40,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
         
         if let st = StationRepository.numbered("JK26") {
             currentStation = st
+            update(station: st, direction: direction)
             stationsView.changeStation(st)
         }
     }
