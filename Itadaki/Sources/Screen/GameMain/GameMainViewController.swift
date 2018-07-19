@@ -9,16 +9,15 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     private var presenter: GameMainPresentable!
     
     @IBOutlet private weak var stationsView: GameStationsView!
-    
     @IBOutlet private weak var railwayCompanyLabel: UILabel!
     @IBOutlet private weak var railwayNameLabel: UILabel!
-    @IBOutlet private weak var destinationLabel: UILabel!
     @IBOutlet private weak var railwayImageView: UIImageView!
-    
+    @IBOutlet private weak var destinationLabel: UILabel!
     @IBOutlet private weak var forwardButton: UIButton!
     @IBOutlet private weak var transferButton: UIButton!
     
     private var direction = DestinationDirection.ascending
+    
     private weak var currentStation: Station!
     
     class func create() -> MainContentsViewController {
