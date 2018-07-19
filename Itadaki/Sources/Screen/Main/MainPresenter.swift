@@ -8,10 +8,13 @@ protocol MainPresentable: class {
     
     func push(contents controller: MainContentsViewController)
     func popContents()
+    func fetchContentsViews() -> [UIView]
 }
 
 protocol MainViewable: class {
     
+    func showPushedContentsView(_ contentsView: UIView)
+    func hidePoppedContents(_ contentsView: UIView)
 }
 
 class MainPresenter: MainPresentable {
@@ -25,10 +28,17 @@ class MainPresenter: MainPresentable {
     }
     
     func push(contents controller: MainContentsViewController) {
-        // TODO:
+        contentsControllers.append(controller)
+        view.showPushedContentsView(controller.view)
     }
     
     func popContents() {
-        // TODO:
+        if let poppedContents = contentsControllers.popLast() {
+            view.hidePoppedContents(poppedContents.view)
+        }
+    }
+    
+    func fetchContentsViews() -> [UIView] {
+        return contentsControllers.map { $0.view }
     }
 }
