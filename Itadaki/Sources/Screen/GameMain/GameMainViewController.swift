@@ -16,8 +16,6 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     @IBOutlet private weak var forwardButton: UIButton!
     @IBOutlet private weak var transferButton: UIButton!
     
-    private var direction = DestinationDirection.ascending
-    
     private weak var currentStation: Station!
     
     class func create() -> MainContentsViewController {
@@ -28,7 +26,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        stationsView.direction = direction
+        stationsView.direction = presenter.direction
         stationsView.delegate = self
         
         observeNotification(.DidSelectTransferredStation, when: #selector(didSelectTransferredStation(_:)))
@@ -39,7 +37,7 @@ class GameMainViewController: MainContentsViewController, Notificatable {
         
         if let st = StationRepository.numbered("JK26") {
             currentStation = st
-            update(station: st, direction: direction)
+            update(station: st, direction: presenter.direction)
             stationsView.changeStation(st)
         }
     }
@@ -60,8 +58,8 @@ class GameMainViewController: MainContentsViewController, Notificatable {
                 return
         }
         currentStation = station
-        direction = transferring.direction
-        stationsView.direction = direction
+        presenter.direction = transferring.direction
+        stationsView.direction = presenter.direction
         stationsView.changeStation(station)
     }
     
@@ -88,11 +86,11 @@ extension GameMainViewController: GameStationsViewDelegate {
         forwardButton.isEnabled = true
         
         currentStation = station
-        update(station: station, direction: direction)
+        update(station: station, direction: presenter.direction)
         
         if isFinalStation {
-            direction = direction.reversed
-            stationsView.direction = direction
+            presenter.direction = presenter.direction.reversed
+            stationsView.direction = presenter.direction
             stationsView.changeStation(station)
         }
     }
