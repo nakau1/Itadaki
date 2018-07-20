@@ -29,11 +29,11 @@ class GameTransferringSelectViewController: MainContentsViewController, Notifica
     override func viewDidLoad() {
         super.viewDidLoad()
         adapter.delegate = self
-        presenter.loadTransferrings(of: station)
     }
     
     override func viewDidLayout() {
         super.viewDidLayout()
+        presenter.loadTransferrings(of: station)
     }
     
     

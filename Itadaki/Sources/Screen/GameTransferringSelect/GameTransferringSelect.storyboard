@@ -21,9 +21,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsr-ae-aEL" customClass="ListView" customModule="Itadaki" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="320" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="visibleCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="dataSource" destination="vJA-lw-trB" id="ceI-9h-K2y"/>
-                                    <outlet property="delegate" destination="vJA-lw-trB" id="7x1-3Q-E0f"/>
+                                    <outlet property="dataSource" destination="vJA-lw-trB" id="Vf0-6E-Tgb"/>
+                                    <outlet property="delegate" destination="vJA-lw-trB" id="yLd-Tp-i1D"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iip-Ap-49X">
