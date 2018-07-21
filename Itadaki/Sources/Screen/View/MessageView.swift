@@ -4,10 +4,11 @@
 // =============================================================================
 import UIKit
 
-protocol MessageViewDelegate: class {
+@objc protocol MessageViewDelegate: NSObjectProtocol {
     
-    func messageViewDidAnimaing(_ messageView: MessageView, index: Int)
     func messageViewDidShowText(_ messageView: MessageView)
+    
+    @objc optional func messageViewDidAnimaing(_ messageView: MessageView, index: Int)
 }
 
 class MessageView: UIView {
@@ -75,7 +76,7 @@ class MessageView: UIView {
     @objc private func didFireTimer() {
         let text = storedText.substring(start: 0, end: index)
         updateText(text)
-        delegate?.messageViewDidAnimaing(self, index: index)
+        delegate?.messageViewDidAnimaing?(self, index: index)
         
         index += 1
         if index < storedText.count {
