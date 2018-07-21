@@ -19,6 +19,7 @@ class GameRouletteViewController: MainContentsViewController, Notificatable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageView.delegate = self
     }
     
     override func viewDidLayout() {
@@ -33,4 +34,14 @@ class GameRouletteViewController: MainContentsViewController, Notificatable {
 
 extension GameRouletteViewController: GameRouletteViewable {
     
+}
+
+extension GameRouletteViewController: MessageViewDelegate {
+    func messageViewDidAnimaing(_ messageView: MessageView, index: Int) {
+        print(index)
+    }
+    
+    func messageViewDidShowText(_ messageView: MessageView) {
+        messageView.setText("パートタイム派遣など主婦層に特化した人材サービスを提供するビースタイル（東京・新宿）は、専門知識やスキルのある主婦を労働時間が短い", animate: true)
+    }
 }

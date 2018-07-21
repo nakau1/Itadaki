@@ -6,130 +6,177 @@ import UIKit
 
 protocol MessageViewDelegate: class {
     
+    func messageViewDidAnimaing(_ messageView: MessageView, index: Int)
+    func messageViewDidShowText(_ messageView: MessageView)
 }
 
 class MessageView: UIView {
     
     weak var delegate: MessageViewDelegate?
     
-    var font = UIFont(name: "HiraMaruProN-W4", size: 18)! {
-        didSet {
-            if label != nil {
-                label.font = font
-            }
-        }
-    }
+    var font = UIFont(name: "HiraMaruProN-W4", size: 18)!
     
-    var textColor = UIColor.white {
-        didSet {
-            if label != nil {
-                label.textColor = textColor
-            }
-        }
-    }
+    var textColor = UIColor.white
+    
+    var lineBreakMode = NSLineBreakMode.byCharWrapping
     
     var duration: TimeInterval = 0.01
     
+    var padding: CGFloat = 16
+    
+    var existsNext = true
+    
     private var storedText = ""
-    private var label: UILabel!
     private var index = 0
-    private var maxIndex = 0
-    private var timer: Timer!
     private var shown = false
+    
+    private var mainLabel: UILabel!
+    private var mainTimer: Timer!
+    
+    private var nextLabel: UILabel!
+    private var nextTimer: Timer!
     
     func setText(_ text: String, animate: Bool) {
         makeLabelIfNeeded()
-        
+        invalidateTimers()
         storedText = text
-        index = 0
-        maxIndex = storedText.count - 1
         
         if animate {
-            shown = false
-            label.frame = .zero
-            label.text = ""
-            timer = makeTimer()
+            showAllTextWithAnimating()
         } else {
-            shown = true
-            label.frame = labelFrame(of: text)
-            label.text = text
+            showAllText()
+        }
+    }
+    
+    private func showAllTextWithAnimating() {
+        shown = false
+        updateText("")
+        index = 0
+        mainTimer = makeMainTimer()
+        hideNextLabel()
+    }
+    
+    private func updateText(_ text: String) {
+        mainLabel.frame = mainLabelFrame(of: text)
+        mainLabel.text = text
+    }
+    
+    private func showAllText() {
+        shown = true
+        updateText(storedText)
+        
+        if existsNext {
+            showNextLabel()
+        } else {
+            hideNextLabel()
         }
     }
     
     @objc private func didFireTimer() {
-        let text = substring(storedText, start: 0, end: index)
-        let frame = labelFrame(of: text)
-        
-        label.frame = frame
-        label.text = text
+        let text = storedText.substring(start: 0, end: index)
+        updateText(text)
+        delegate?.messageViewDidAnimaing(self, index: index)
         
         index += 1
         if index < storedText.count {
-            timer = makeTimer()
+            mainTimer = makeMainTimer()
         } else {
+            mainTimer.invalidate()
             shown = true
-            timer.invalidate()
+            if existsNext {
+                showNextLabel()
+            }
         }
+    }
+    
+    @objc private func didFireNextTimer() {
+        nextLabel.isHidden = !nextLabel.isHidden
+        nextTimer = makeNextTimer()
     }
     
     @objc private func didTapSelf() {
-        if timer.isValid {
-            timer.invalidate()
-        }
+        invalidateMainTimer()
         
         if shown {
-            
+            delegate?.messageViewDidShowText(self)
         } else {
-            shown = true
-            label.frame = labelFrame(of: storedText)
-            label.text = storedText
+            showAllText()
         }
     }
     
-    private func makeLabelIfNeeded() {
-        if label == nil {
-            label = UILabel(frame: .zero)
-            label.font = font
-            label.textColor = textColor
-            label.numberOfLines = 0
-            label.lineBreakMode = .byCharWrapping
-            addSubview(label)
-            
-            let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapSelf))
-            addGestureRecognizer(gesture)
+    private func showNextLabel() {
+        if !existsNext {
+            nextLabel.isHidden = true
+            return
         }
+        nextTimer = makeNextTimer()
     }
     
-    private func makeTimer(_ selector: Selector = #selector(didFireTimer)) -> Timer {
-        let timer = Timer(
+    private func hideNextLabel() {
+        nextLabel.isHidden = true
+    }
+    
+    private func makeMainTimer() -> Timer {
+        return Timer.scheduledTimer(
             timeInterval: duration,
             target: self,
-            selector: selector,
+            selector: #selector(didFireTimer),
             userInfo: nil,
             repeats: false
         )
-        RunLoop.main.add(timer, forMode: .defaultRunLoopMode)
-        return timer
     }
     
-    private func substring(_ string: String, start: Int, end: Int) -> String {
-        let max = string.count - 1
-        var s = start, e = end
-        if max < 0 || e < s || max < s || e < 0 {
-            return ""
+    private func makeNextTimer() -> Timer {
+        return Timer.scheduledTimer(
+            timeInterval: 0.5,
+            target: self,
+            selector: #selector(didFireNextTimer),
+            userInfo: nil,
+            repeats: false
+        )
+    }
+    
+    private func makeLabelIfNeeded() {
+        if mainLabel == nil {
+            makeMainLabel()
+            makeNextLabel()
+            makeTapGestureRecognizer()
         }
-        s = s >= 0 ? s : 0
-        e = max >= e ? e : max
-        
-        let substring = string[string.index(string.startIndex, offsetBy: s)...string.index(string.startIndex, offsetBy: e)]
-        return String(substring)
     }
     
-    private func labelFrame(of text: String) -> CGRect {
-        var frame = bounds.insetBy(dx: 16, dy: 16)
+    private func makeMainLabel() {
+        mainLabel = UILabel(frame: .zero)
+        mainLabel.font = font
+        mainLabel.textColor = textColor
+        mainLabel.numberOfLines = 0
+        mainLabel.lineBreakMode = lineBreakMode
+        addSubview(mainLabel)
+    }
+    
+    private func makeNextLabel() {
+        let frame = CGRect(
+            (bounds.width - 20) / 2,
+            bounds.height - 24,
+            20,
+            20
+        )
+        nextLabel = UILabel(frame: frame)
+        nextLabel.font = UIFont.boldSystemFont(ofSize: 12)
+        nextLabel.textColor = textColor
+        nextLabel.text = "▼"
+        addSubview(nextLabel)
+    }
+    
+    private func makeTapGestureRecognizer() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapSelf))
+        addGestureRecognizer(gesture)
+    }
+    
+    private func mainLabelFrame(of text: String) -> CGRect {
+        var frame = bounds.insetBy(dx: padding, dy: padding)
         
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineBreakMode = .byCharWrapping
+        paragraphStyle.lineBreakMode = lineBreakMode
         
         let attributes: [NSAttributedStringKey : Any] = [
             .font: font,
@@ -144,5 +191,28 @@ class MessageView: UIView {
         ).size
         
         return frame
+    }
+    
+    private func invalidateTimers() {
+        invalidateMainTimer()
+        invalidateNextTimer()
+    }
+    
+    private func invalidateMainTimer() {
+        if mainTimer != nil && mainTimer.isValid {
+            mainTimer.invalidate()
+        }
+        mainTimer = nil
+    }
+    
+    private func invalidateNextTimer() {
+        if nextTimer != nil && nextTimer.isValid {
+            nextTimer.invalidate()
+        }
+        nextTimer = nil
+    }
+    
+    deinit {
+        invalidateTimers()
     }
 }
