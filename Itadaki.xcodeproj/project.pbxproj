@@ -14,6 +14,7 @@
 		DB395C922102CEBA009C1BD1 /* GameRouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB395C8F2102CEBA009C1BD1 /* GameRouletteViewController.swift */; };
 		DB395C932102CEBA009C1BD1 /* GameRoulette.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB395C902102CEBA009C1BD1 /* GameRoulette.storyboard */; };
 		DB395C952103658F009C1BD1 /* roulette_events.json in Resources */ = {isa = PBXBuildFile; fileRef = DB395C942103658F009C1BD1 /* roulette_events.json */; };
+		DB395C982103684A009C1BD1 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB395C972103684A009C1BD1 /* MessageView.swift */; };
 		DB73173D20AB192900D49AF3 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173720AB192900D49AF3 /* Dialog.swift */; };
 		DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173C20AB192900D49AF3 /* AppDelegate.swift */; };
 		DB73174A20AB1D7000D49AF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174220AB1D7000D49AF3 /* Color.swift */; };
@@ -51,6 +52,7 @@
 		DBD3342A20E952E7002128FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD3342620E952E7002128FF /* Main.storyboard */; };
 		DBD3343320E964AB002128FF /* GameStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3343220E964AB002128FF /* GameStationView.xib */; };
 		DBD3343520E964EA002128FF /* GameStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343420E964EA002128FF /* GameStationView.swift */; };
+		DBEE759B2107A480006CB2CB /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEE759A2107A480006CB2CB /* ListView.swift */; };
 		E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift+App.swift */; };
 		E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28E20F399D200008B39 /* TransferringRepository.swift */; };
 		E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28F20F399D200008B39 /* RailwayRepository.swift */; };
@@ -113,6 +115,7 @@
 		DB395C8F2102CEBA009C1BD1 /* GameRouletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRouletteViewController.swift; sourceTree = "<group>"; };
 		DB395C902102CEBA009C1BD1 /* GameRoulette.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameRoulette.storyboard; sourceTree = "<group>"; };
 		DB395C942103658F009C1BD1 /* roulette_events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roulette_events.json; sourceTree = "<group>"; };
+		DB395C972103684A009C1BD1 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		DB73173720AB192900D49AF3 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		DB73173C20AB192900D49AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB73174220AB1D7000D49AF3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 		DBD3342620E952E7002128FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DBD3343220E964AB002128FF /* GameStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStationView.xib; sourceTree = "<group>"; };
 		DBD3343420E964EA002128FF /* GameStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationView.swift; sourceTree = "<group>"; };
+		DBEE759A2107A480006CB2CB /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E423A28420F3952F00008B39 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
 		E423A28E20F399D200008B39 /* TransferringRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringRepository.swift; sourceTree = "<group>"; };
 		E423A28F20F399D200008B39 /* RailwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayRepository.swift; sourceTree = "<group>"; };
@@ -276,7 +280,7 @@
 				DB73173320AB192900D49AF3 /* Extension */,
 				DB73173620AB192900D49AF3 /* Dialog */,
 				DB73173520AB192900D49AF3 /* Protocol */,
-				E49887152100D110001F98B3 /* View */,
+				DBEE75992107A480006CB2CB /* View */,
 				DB73173A20AB192900D49AF3 /* Model */,
 				DB73173920AB192900D49AF3 /* Screen */,
 			);
@@ -388,6 +392,7 @@
 				DB98A3E820AB15F100A5273D /* Products */,
 				5706C7EBF9A76D9B9586C6DD /* Pods */,
 				C48FEE564B5FC1449A8CE7C8 /* Frameworks */,
+				DBEE75982107A46E006CB2CB /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -450,6 +455,23 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		DBEE75982107A46E006CB2CB /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				DB395C972103684A009C1BD1 /* MessageView.swift */,
+				E49887162100D110001F98B3 /* ListView.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		DBEE75992107A480006CB2CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBEE759A2107A480006CB2CB /* ListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E423A28D20F399D200008B39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,14 +509,6 @@
 				E492775E20F5C59B007F6460 /* UICustomView.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		E49887152100D110001F98B3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E49887162100D110001F98B3 /* ListView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E49887182100D185001F98B3 /* GameTransferringSelect */ = {
@@ -615,7 +629,7 @@
 				DB395C952103658F009C1BD1 /* roulette_events.json in Resources */,
 				DBD3340520E7E5C8002128FF /* GameMain.storyboard in Resources */,
 				E453425820F70DCE00EFA9A0 /* GameTransferSelect.storyboard in Resources */,
-				E443947420F0D773008018BF /* locationKeys.json in Resources */,
+				E443947420F0D773008018BF /* location_keys.json in Resources */,
 				E498871D2100D185001F98B3 /* GameTransferringSelect.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,6 +715,8 @@
 				DBD3342820E952E7002128FF /* MainViewController.swift in Sources */,
 				E49887202100D185001F98B3 /* GameTransferringSelectViewController.swift in Sources */,
 				E4B6D2FA20E5BF1600354CC3 /* Player.swift in Sources */,
+				DBEE759B2107A480006CB2CB /* ListView.swift in Sources */,
+				DB395C982103684A009C1BD1 /* MessageView.swift in Sources */,
 				E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */,
 				DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */,
 				E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */,
