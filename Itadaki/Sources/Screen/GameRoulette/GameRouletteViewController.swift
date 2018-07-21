@@ -9,6 +9,7 @@ class GameRouletteViewController: MainContentsViewController, Notificatable {
     private var presenter: GameRoulettePresentable!
 
     @IBOutlet private weak var stopButton: UIButton!
+    @IBOutlet private weak var messageView: MessageView!
     
     class func create() -> MainContentsViewController {
         let vc = instantiate(self)
@@ -20,8 +21,13 @@ class GameRouletteViewController: MainContentsViewController, Notificatable {
         super.viewDidLoad()
     }
     
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        messageView.setText("ディズニーやサンリオ、ドラえもんなど、これまで子ども向けと思われていたような商品アイテムを大人向けに開発し、「オトナ消費」を促してキャラクターグッズの売上を伸ばしてる", animate: true)
+    }
+    
     @IBAction private func didTapStopButton() {
-        
+        main.popContents()
     }
 }
 

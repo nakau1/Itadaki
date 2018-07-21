@@ -61,6 +61,17 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CLV-3L-NXa" secondAttribute="height" multiplier="1:1" id="N5P-ma-D4Z"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjW-UJ-wcz" customClass="MessageView" customModule="Itadaki" customModuleProvider="target">
                                 <rect key="frame" x="4" y="354" width="312" height="128"/>
@@ -100,6 +111,7 @@
                         <viewLayoutGuide key="safeArea" id="tTL-1g-ji6"/>
                     </view>
                     <connections>
+                        <outlet property="messageView" destination="zjW-UJ-wcz" id="3dx-tj-QyG"/>
                         <outlet property="stopButton" destination="dD4-EW-ZrE" id="1Ch-Sy-XHH"/>
                     </connections>
                 </viewController>
