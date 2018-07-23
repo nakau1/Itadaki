@@ -53,6 +53,9 @@
 		DBD3343320E964AB002128FF /* GameStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3343220E964AB002128FF /* GameStationView.xib */; };
 		DBD3343520E964EA002128FF /* GameStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343420E964EA002128FF /* GameStationView.swift */; };
 		DBEE759B2107A480006CB2CB /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEE759A2107A480006CB2CB /* ListView.swift */; };
+		DBEE75A02107A8C7006CB2CB /* GameMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEE759D2107A8C7006CB2CB /* GameMessagePresenter.swift */; };
+		DBEE75A12107A8C7006CB2CB /* GameMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEE759E2107A8C7006CB2CB /* GameMessageViewController.swift */; };
+		DBEE75A22107A8C7006CB2CB /* GameMessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBEE759F2107A8C7006CB2CB /* GameMessage.storyboard */; };
 		E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift+App.swift */; };
 		E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28E20F399D200008B39 /* TransferringRepository.swift */; };
 		E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28F20F399D200008B39 /* RailwayRepository.swift */; };
@@ -153,6 +156,9 @@
 		DBD3343220E964AB002128FF /* GameStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStationView.xib; sourceTree = "<group>"; };
 		DBD3343420E964EA002128FF /* GameStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationView.swift; sourceTree = "<group>"; };
 		DBEE759A2107A480006CB2CB /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		DBEE759D2107A8C7006CB2CB /* GameMessagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMessagePresenter.swift; sourceTree = "<group>"; };
+		DBEE759E2107A8C7006CB2CB /* GameMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMessageViewController.swift; sourceTree = "<group>"; };
+		DBEE759F2107A8C7006CB2CB /* GameMessage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameMessage.storyboard; sourceTree = "<group>"; };
 		E423A28420F3952F00008B39 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
 		E423A28E20F399D200008B39 /* TransferringRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringRepository.swift; sourceTree = "<group>"; };
 		E423A28F20F399D200008B39 /* RailwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayRepository.swift; sourceTree = "<group>"; };
@@ -334,6 +340,7 @@
 				DBD3342320E952E7002128FF /* Main */,
 				DBD333FE20E7E5C8002128FF /* GameMain */,
 				E49887182100D185001F98B3 /* GameTransferringSelect */,
+				DBEE759C2107A8C7006CB2CB /* GameMessage */,
 				DB395C8D2102CEBA009C1BD1 /* GameRoulette */,
 				DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */,
 				DB73179D20AB2CE600D49AF3 /* Launch */,
@@ -461,6 +468,16 @@
 				DBEE759A2107A480006CB2CB /* ListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DBEE759C2107A8C7006CB2CB /* GameMessage */ = {
+			isa = PBXGroup;
+			children = (
+				DBEE759D2107A8C7006CB2CB /* GameMessagePresenter.swift */,
+				DBEE759E2107A8C7006CB2CB /* GameMessageViewController.swift */,
+				DBEE759F2107A8C7006CB2CB /* GameMessage.storyboard */,
+			);
+			path = GameMessage;
 			sourceTree = "<group>";
 		};
 		E423A28D20F399D200008B39 /* Repository */ = {
@@ -603,6 +620,7 @@
 				E49887222100D509001F98B3 /* GameTransferringSelectAdapterCell.xib in Resources */,
 				DBD3343320E964AB002128FF /* GameStationView.xib in Resources */,
 				DB73510920E21B8800A04ACC /* railways.json in Resources */,
+				DBEE75A22107A8C7006CB2CB /* GameMessage.storyboard in Resources */,
 				DB98A3F220AB15F100A5273D /* Assets.xcassets in Resources */,
 				DB98A3F020AB15F100A5273D /* Bootstrap.storyboard in Resources */,
 				DB7317A520AB2D0800D49AF3 /* Launch.storyboard in Resources */,
@@ -691,6 +709,7 @@
 				DB73174D20AB1D7000D49AF3 /* Definition.swift in Sources */,
 				E4B6D2F820E50B6800354CC3 /* Asset.swift in Sources */,
 				DBD3342820E952E7002128FF /* MainViewController.swift in Sources */,
+				DBEE75A12107A8C7006CB2CB /* GameMessageViewController.swift in Sources */,
 				E49887202100D185001F98B3 /* GameTransferringSelectViewController.swift in Sources */,
 				E4B6D2FA20E5BF1600354CC3 /* Player.swift in Sources */,
 				DBEE759B2107A480006CB2CB /* ListView.swift in Sources */,
@@ -730,6 +749,7 @@
 				DB73511120E238A300A04ACC /* Transferring.swift in Sources */,
 				E4B73C1F20AEFCCA00A301FB /* UIButton+App.swift in Sources */,
 				E424EE6020F7680600FB44E9 /* MainContentsViewController.swift in Sources */,
+				DBEE75A02107A8C7006CB2CB /* GameMessagePresenter.swift in Sources */,
 				DB73177620AB255C00D49AF3 /* Notificatable.swift in Sources */,
 				DB7317A120AB2CE600D49AF3 /* LaunchPresenter.swift in Sources */,
 				E423A29320F399D200008B39 /* StationRepository.swift in Sources */,
