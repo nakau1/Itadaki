@@ -13,9 +13,9 @@ import UIKit
 
 @objc protocol ListViewDelegate: NSObjectProtocol {
     
-    @objc optional func listView(_ listView: ListView, didStartMoveTo index: Int)
+    @objc optional func listView(_ listView: ListView, didStartMoveTo index: Int, animate: Bool)
     
-    @objc optional func listView(_ listView: ListView, didEndMoveAt index: Int)
+    @objc optional func listView(_ listView: ListView, didEndMoveAt index: Int, animate: Bool)
     
     @objc optional func listView(_ listView: ListView, updateSelectionView view: UIView, selected: Bool)
     
@@ -59,13 +59,17 @@ class ListView: UIView {
         currentIndex += 1
         
         if positionIndex < (visibleCount - 1) {
+            delegate?.listView?(self, didStartMoveTo: currentIndex, animate: false)
             positionIndex += 1
             updateSelectionViews()
+            delegate?.listView?(self, didEndMoveAt: currentIndex, animate: false)
         } else {
             let preparingIndex = indeciesDown()
+            delegate?.listView?(self, didStartMoveTo: currentIndex, animate: true)
             animateDown() { [unowned self] in
                 self.exchangeViewInDown(preparingIndex)
                 self.updateSelectionViews()
+                self.delegate?.listView?(self, didEndMoveAt: self.currentIndex, animate: true)
             }
         }
     }
@@ -75,13 +79,17 @@ class ListView: UIView {
         currentIndex -= 1
         
         if positionIndex > 0 {
+            delegate?.listView?(self, didStartMoveTo: currentIndex, animate: false)
             positionIndex -= 1
             updateSelectionViews()
+            delegate?.listView?(self, didEndMoveAt: currentIndex, animate: false)
         } else {
             let preparingIndex = indeciesUp()
+            delegate?.listView?(self, didStartMoveTo: currentIndex, animate: true)
             animateUp() { [unowned self] in
                 self.exchangeViewInUp(preparingIndex)
                 self.updateSelectionViews()
+                self.delegate?.listView?(self, didEndMoveAt: self.currentIndex, animate: true)
             }
         }
     }
@@ -114,7 +122,6 @@ extension ListView {
     }
     
     private func animateDown(finished: @escaping () -> Void) {
-        delegate?.listView?(self, didStartMoveTo: currentIndex)
         UIView.animate(
             withDuration: TimeInterval(animationDuration),
             delay: 0,
@@ -129,13 +136,11 @@ extension ListView {
             },
             completion: { _ in
                 finished()
-                self.delegate?.listView?(self, didEndMoveAt: self.currentIndex)
             }
         )
     }
     
     private func animateUp(finished: @escaping () -> Void) {
-        delegate?.listView?(self, didStartMoveTo: currentIndex)
         UIView.animate(
             withDuration: TimeInterval(animationDuration),
             delay: 0,
@@ -150,7 +155,6 @@ extension ListView {
             },
             completion: { _ in
                 finished()
-                self.delegate?.listView?(self, didEndMoveAt: self.currentIndex)
             }
         )
     }

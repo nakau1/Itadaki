@@ -84,11 +84,11 @@ extension GameTransferringSelectAdapter: ListViewDelegate, ListViewDatasource {
         }
     }
     
-    func listView(_ listView: ListView, didStartMoveTo index: Int) {
+    func listView(_ listView: ListView, didStartMoveTo index: Int, animate: Bool) {
         delegate.transferSelectAdapter(self, moveTo: index, end: false)
     }
     
-    func listView(_ listView: ListView, didEndMoveAt index: Int) {
+    func listView(_ listView: ListView, didEndMoveAt index: Int, animate: Bool) {
         delegate.transferSelectAdapter(self, moveTo: index, end: true)
     }
 }
