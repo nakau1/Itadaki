@@ -48,8 +48,6 @@ class ListView: UIView {
         resetFrames()
         resetViews()
         resetIndecies()
-        print("ListView: \(numberOfRows)件 内\(visibleCount)件表示")
-        print("ListView: down: current = \(currentIndex) position = \(positionIndex) indecies = \(indecies) " )
     }
     
     func selectDown() {
@@ -66,8 +64,6 @@ class ListView: UIView {
                 self.updateSelectionViews()
             }
         }
-        
-        print("ListView: down: current = \(currentIndex) position = \(positionIndex) indecies = \(indecies) " )
     }
     
     func selectUp() {
@@ -84,8 +80,6 @@ class ListView: UIView {
                 self.updateSelectionViews()
             }
         }
-        
-        print("ListView: up: current = \(currentIndex) position = \(positionIndex) indecies = \(indecies) " )
     }
     
     func dequeueReusableView(for: Int) -> UIView? {
@@ -207,7 +201,6 @@ class ListView: UIView {
         frames = (-1...num).map { i -> CGRect in
             var frame = baseFrame
             frame.origin.y = CGFloat(i) * baseFrame.height
-//            print("ListView: frames(\(i) = \(frame)")
             return frame
         }
     }
@@ -232,9 +225,6 @@ class ListView: UIView {
             
             return view
         }
-        
-//        let log = views.reduce(into: [String]()) { $0.append(($1 != nil) ? "<view>" : "nil") }
-//        print("ListView: views = [\(log.joined(separator: ", "))]")
     }
     
     private func resetIndecies() {
@@ -246,7 +236,6 @@ class ListView: UIView {
         indecies = (currentIndex..<(currentIndex + num)).compactMap { index -> Int? in
             return containsRange(index: index, max: max) ? index : nil
         }
-//        print("ListView: indecies = \(indecies)")
     }
     
     private var numberOfVisibleRows: Int? {
