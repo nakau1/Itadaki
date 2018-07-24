@@ -85,6 +85,9 @@ class ListView: UIView {
     func dequeueReusableView(for: Int) -> UIView? {
         return reusableView
     }
+}
+
+extension ListView {
     
     private func indeciesDown() -> Int? {
         let num = numberOfRows
