@@ -6,9 +6,11 @@ import UIKit
 
 @objc protocol MessageViewDelegate: NSObjectProtocol {
     
-    func messageViewDidShowText(_ messageView: MessageView)
+    @objc optional func messageViewDidShowAllText(in messageView: MessageView)
     
-    @objc optional func messageViewDidAnimaing(_ messageView: MessageView, index: Int)
+    @objc optional func messageView(_ messageView: MessageView, didShowTextAt arrayIndex: Int)
+    
+    @objc optional func messageView(_ messageView: MessageView, didAnimating textIndex: Int, arrayIndex: Int)
 }
 
 class MessageView: UIView {
@@ -25,11 +27,14 @@ class MessageView: UIView {
     
     var padding: CGFloat = 16
     
-    var existsNext = true
+    private var storedTexts = [String]()
+    private var arrayIndex = 0
     
     private var storedText = ""
-    private var index = 0
+    private var textIndex = 0
     private var shown = false
+    private var animating = true
+    private var gesture: UITapGestureRecognizer!
     
     private var mainLabel: UILabel!
     private var mainTimer: Timer!
@@ -37,85 +42,51 @@ class MessageView: UIView {
     private var nextLabel: UILabel!
     private var nextTimer: Timer!
     
-    func setText(_ text: String, animate: Bool) {
+    // MARK: - Show Text
+    
+    func setTexts(_ texts: [String], animate: Bool = true) {
         makeLabelIfNeeded()
         invalidateTimers()
+        
+        storedTexts = texts
+        if storedTexts.isEmpty { return }
+        
+        arrayIndex = 0
+        animating = animate
+        gesture.isEnabled = true
+        setText(storedTexts[arrayIndex])
+    }
+    
+   private func setText(_ text: String) {
         storedText = text
         
-        if animate {
-            showAllTextWithAnimating()
+        if animating {
+            showStoredTextWithAnimating()
         } else {
-            showAllText()
+            showStoredText()
         }
     }
     
-    private func showAllTextWithAnimating() {
+    private func showStoredTextWithAnimating() {
         shown = false
         updateText("")
-        index = 0
+        textIndex = 0
         mainTimer = makeMainTimer()
         hideNextLabel()
     }
     
-    private func updateText(_ text: String) {
-        mainLabel.frame = mainLabelFrame(of: text)
-        mainLabel.text = text
-    }
-    
-    private func showAllText() {
+    private func showStoredText() {
         shown = true
         updateText(storedText)
-        
-        if existsNext {
-            showNextLabel()
-        } else {
-            hideNextLabel()
-        }
-    }
-    
-    @objc private func didFireTimer() {
-        let text = storedText.substring(start: 0, end: index)
-        updateText(text)
-        delegate?.messageViewDidAnimaing?(self, index: index)
-        
-        index += 1
-        if index < storedText.count {
-            mainTimer = makeMainTimer()
-        } else {
-            mainTimer.invalidate()
-            shown = true
-            if existsNext {
-                showNextLabel()
-            }
-        }
-    }
-    
-    @objc private func didFireNextTimer() {
-        nextLabel.isHidden = !nextLabel.isHidden
-        nextTimer = makeNextTimer()
-    }
-    
-    @objc private func didTapSelf() {
-        invalidateMainTimer()
-        
-        if shown {
-            delegate?.messageViewDidShowText(self)
-        } else {
-            showAllText()
-        }
-    }
-    
-    private func showNextLabel() {
+        showNextLabelIfNeeded()
+        delegate?.messageView?(self, didShowTextAt: arrayIndex)
         if !existsNext {
-            nextLabel.isHidden = true
-            return
+            delegate?.messageViewDidShowAllText?(in: self)
+            gesture.isEnabled = false
         }
-        nextTimer = makeNextTimer()
     }
     
-    private func hideNextLabel() {
-        nextLabel.isHidden = true
-    }
+    // MARK: - Main Timer
     
     private func makeMainTimer() -> Timer {
         return Timer.scheduledTimer(
@@ -127,6 +98,29 @@ class MessageView: UIView {
         )
     }
     
+    @objc private func didFireTimer() {
+        let text = storedText.substring(start: 0, end: textIndex)
+        updateText(text)
+        delegate?.messageView?(self, didAnimating: textIndex, arrayIndex: arrayIndex)
+        
+        textIndex += 1
+        if textIndex < storedText.count {
+            mainTimer = makeMainTimer()
+        } else {
+            invalidateMainTimer()
+            showStoredText()
+        }
+    }
+    
+    private func invalidateMainTimer() {
+        if mainTimer != nil && mainTimer.isValid {
+            mainTimer.invalidate()
+        }
+        mainTimer = nil
+    }
+    
+    // MARK: - Next Label
+    
     private func makeNextTimer() -> Timer {
         return Timer.scheduledTimer(
             timeInterval: 0.5,
@@ -136,6 +130,67 @@ class MessageView: UIView {
             repeats: false
         )
     }
+    
+    @objc private func didFireNextTimer() {
+        nextLabel.isHidden = !nextLabel.isHidden
+        nextTimer = makeNextTimer()
+    }
+    
+    private func invalidateNextTimer() {
+        if nextTimer != nil && nextTimer.isValid {
+            nextTimer.invalidate()
+        }
+        nextTimer = nil
+    }
+    
+    private var existsNext: Bool {
+        return arrayIndex < (storedTexts.count - 1)
+    }
+    
+    private func showNextLabelIfNeeded() {
+        if existsNext {
+            showNextLabel()
+        } else {
+            hideNextLabel()
+        }
+    }
+    
+    private func showNextLabel() {
+        invalidateNextTimer()
+        nextLabel.isHidden = true // 点滅のために一旦hidden
+        nextTimer = makeNextTimer()
+    }
+    
+    private func hideNextLabel() {
+        invalidateNextTimer()
+        nextLabel.isHidden = true
+    }
+    
+    // MARK: - Self Tap GestureRecognizer
+    
+    private func makeTapGestureRecognizer() {
+        gesture = UITapGestureRecognizer(target: self, action: #selector(didTapSelf))
+        addGestureRecognizer(gesture)
+    }
+    
+    @objc private func didTapSelf() {
+        invalidateMainTimer()
+        
+        if shown {
+            showNextLabelIfNeeded()
+            if existsNext {
+                arrayIndex += 1
+                setText(storedTexts[arrayIndex])
+            } else {
+                delegate?.messageViewDidShowAllText?(in: self)
+                gesture.isEnabled = false
+            }
+        } else {
+            showStoredText()
+        }
+    }
+    
+    // MARK: - Make UI Components
     
     private func makeLabelIfNeeded() {
         if mainLabel == nil {
@@ -168,9 +223,16 @@ class MessageView: UIView {
         addSubview(nextLabel)
     }
     
-    private func makeTapGestureRecognizer() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapSelf))
-        addGestureRecognizer(gesture)
+    // MARK: - Other
+    
+    private func updateText(_ text: String) {
+        mainLabel.frame = mainLabelFrame(of: text)
+        mainLabel.text = text
+    }
+    
+    private func invalidateTimers() {
+        invalidateMainTimer()
+        invalidateNextTimer()
     }
     
     private func mainLabelFrame(of text: String) -> CGRect {
@@ -182,36 +244,19 @@ class MessageView: UIView {
         let attributes: [NSAttributedStringKey : Any] = [
             .font: font,
             .paragraphStyle: paragraphStyle,
-        ]
+            ]
         
         frame.size = NSString(string: text).boundingRect(
             with: frame.size,
             options: .usesLineFragmentOrigin,
             attributes: attributes,
             context: nil
-        ).size
+            ).size
         
         return frame
     }
     
-    private func invalidateTimers() {
-        invalidateMainTimer()
-        invalidateNextTimer()
-    }
-    
-    private func invalidateMainTimer() {
-        if mainTimer != nil && mainTimer.isValid {
-            mainTimer.invalidate()
-        }
-        mainTimer = nil
-    }
-    
-    private func invalidateNextTimer() {
-        if nextTimer != nil && nextTimer.isValid {
-            nextTimer.invalidate()
-        }
-        nextTimer = nil
-    }
+    // MARK: - Deinit
     
     deinit {
         invalidateTimers()
