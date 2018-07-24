@@ -65,6 +65,16 @@ extension GameTransferringSelectViewController: GameTransferringSelectViewable {
 
 extension GameTransferringSelectViewController: GameTransferringSelectAdapterDelegate {
     
+    func transferSelectAdapter(_ transferSelectAdapter: GameTransferringSelectAdapter, moveTo index: Int, end: Bool) {
+        [upButton, downButton, cancelButton, selectButton].forEach { button in
+            button!.isEnabled = end
+        }
+        
+        if end {
+            print(index)
+        }
+    }
+    
     func numberOfItems(transferSelectAdapter: GameTransferringSelectAdapter) -> Int {
         return presenter.transferrings.count
     }

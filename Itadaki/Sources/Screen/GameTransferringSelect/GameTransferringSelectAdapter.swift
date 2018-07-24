@@ -6,6 +6,7 @@ import UIKit
 
 protocol GameTransferringSelectAdapterDelegate: class {
     
+    func transferSelectAdapter(_ transferSelectAdapter: GameTransferringSelectAdapter, moveTo index: Int, end: Bool)
     func numberOfItems(transferSelectAdapter: GameTransferringSelectAdapter) -> Int
     func transferSelectAdapter(_ transferSelectAdapter: GameTransferringSelectAdapter, transferringAt index: Int) -> Transferring!
 }
@@ -82,6 +83,14 @@ extension GameTransferringSelectAdapter: ListViewDelegate, ListViewDatasource {
             cell.current = selected
         }
     }
+    
+    func listView(_ listView: ListView, didStartMoveTo index: Int) {
+        delegate.transferSelectAdapter(self, moveTo: index, end: false)
+    }
+    
+    func listView(_ listView: ListView, didEndMoveAt index: Int) {
+        delegate.transferSelectAdapter(self, moveTo: index, end: true)
+    }
 }
 
 class GameTransferringSelectAdapterCell: UICustomView {
@@ -106,9 +115,5 @@ class GameTransferringSelectAdapterCell: UICustomView {
         didSet {
             borderedView.borderColor = current ? .red : .gray
         }
-    }
-    
-    deinit {
-        print("GameTransferringSelectAdapterCell deinit!")
     }
 }
