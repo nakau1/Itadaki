@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game Transferring Select View Controller-->
+        <!--Data Source-->
         <scene sceneID="dfL-Yy-a7j">
             <objects>
                 <viewController id="fly-5s-CAo" customClass="GameTransferringSelectViewController" customModule="Itadaki" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,8 +27,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="dataSource" destination="vJA-lw-trB" id="Vf0-6E-Tgb"/>
-                                    <outlet property="delegate" destination="vJA-lw-trB" id="yLd-Tp-i1D"/>
+                                    <outlet property="dataSource" destination="fly-5s-CAo" id="Nxe-xZ-5gV"/>
+                                    <outlet property="delegate" destination="fly-5s-CAo" id="BIJ-Jt-SDN"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iip-Ap-49X">
@@ -143,19 +143,14 @@
                         <viewLayoutGuide key="safeArea" id="tTL-1g-ji6"/>
                     </view>
                     <connections>
-                        <outlet property="adapter" destination="vJA-lw-trB" id="xfp-uN-l4y"/>
                         <outlet property="cancelButton" destination="PVw-yH-xSF" id="cQW-ni-40w"/>
                         <outlet property="downButton" destination="hgZ-su-j6G" id="U6l-fO-jVg"/>
+                        <outlet property="listView" destination="zsr-ae-aEL" id="QMF-YB-ynM"/>
                         <outlet property="selectButton" destination="dD4-EW-ZrE" id="9fT-io-leS"/>
                         <outlet property="upButton" destination="sew-7q-OHU" id="3Xg-re-kp0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqY-jZ-KgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="vJA-lw-trB" customClass="GameTransferringSelectAdapter" customModule="Itadaki" customModuleProvider="target">
-                    <connections>
-                        <outlet property="listView" destination="zsr-ae-aEL" id="46E-fR-xn4"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="-498.39999999999998" y="86.806596701649184"/>
         </scene>

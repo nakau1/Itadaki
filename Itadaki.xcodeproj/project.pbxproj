@@ -72,7 +72,6 @@
 		E49887172100D111001F98B3 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49887162100D110001F98B3 /* ListView.swift */; };
 		E498871D2100D185001F98B3 /* GameTransferringSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49887192100D185001F98B3 /* GameTransferringSelect.storyboard */; };
 		E498871E2100D185001F98B3 /* GameTransferringSelectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498871A2100D185001F98B3 /* GameTransferringSelectPresenter.swift */; };
-		E498871F2100D185001F98B3 /* GameTransferringSelectAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498871B2100D185001F98B3 /* GameTransferringSelectAdapter.swift */; };
 		E49887202100D185001F98B3 /* GameTransferringSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498871C2100D185001F98B3 /* GameTransferringSelectViewController.swift */; };
 		E49887222100D509001F98B3 /* GameTransferringSelectAdapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E49887212100D508001F98B3 /* GameTransferringSelectAdapterCell.xib */; };
 		E4B6D2F820E50B6800354CC3 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6D2F720E50B6800354CC3 /* Asset.swift */; };
@@ -171,7 +170,6 @@
 		E49887162100D110001F98B3 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E49887192100D185001F98B3 /* GameTransferringSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameTransferringSelect.storyboard; sourceTree = "<group>"; };
 		E498871A2100D185001F98B3 /* GameTransferringSelectPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferringSelectPresenter.swift; sourceTree = "<group>"; };
-		E498871B2100D185001F98B3 /* GameTransferringSelectAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferringSelectAdapter.swift; sourceTree = "<group>"; };
 		E498871C2100D185001F98B3 /* GameTransferringSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferringSelectViewController.swift; sourceTree = "<group>"; };
 		E49887212100D508001F98B3 /* GameTransferringSelectAdapterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTransferringSelectAdapterCell.xib; sourceTree = "<group>"; };
 		E4B6D2F720E50B6800354CC3 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
@@ -485,7 +483,6 @@
 				E49887192100D185001F98B3 /* GameTransferringSelect.storyboard */,
 				E49887212100D508001F98B3 /* GameTransferringSelectAdapterCell.xib */,
 				E498871A2100D185001F98B3 /* GameTransferringSelectPresenter.swift */,
-				E498871B2100D185001F98B3 /* GameTransferringSelectAdapter.swift */,
 				E498871C2100D185001F98B3 /* GameTransferringSelectViewController.swift */,
 			);
 			path = GameTransferringSelect;
@@ -708,7 +705,6 @@
 				DB73510B20E21C0800A04ACC /* Station.swift in Sources */,
 				E443947120EF8441008018BF /* DecodedStation.swift in Sources */,
 				DB73176020AB1DAB00D49AF3 /* CoreGraphics+App.swift in Sources */,
-				E498871F2100D185001F98B3 /* GameTransferringSelectAdapter.swift in Sources */,
 				DBD3342920E952E7002128FF /* MainPresenter.swift in Sources */,
 				E4B6D30020E5F8B700354CC3 /* CoderProtocol.swift in Sources */,
 				E492776020F5C59B007F6460 /* UICustomView.swift in Sources */,
