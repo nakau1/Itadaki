@@ -184,7 +184,14 @@ extension ListView {
     }
     
     private func resetCurrentIndex() {
-        currentIndex = numberOfVisibleRows != nil ? 0 : -1
+        guard let _ = numberOfVisibleRows else {
+            currentIndex = -1
+            return
+        }
+        
+        if currentIndex < 0 {
+            currentIndex = 0
+        }
     }
     
     private func resetBaseViews() {
