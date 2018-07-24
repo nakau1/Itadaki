@@ -63,6 +63,7 @@
 		E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */; };
 		E453425A20F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */; };
 		E4733D3A20F4FB86000F77CD /* GameStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4733D3920F4FB85000F77CD /* GameStationsView.swift */; };
+		E483EAC42107408600BA6B6E /* Number+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483EAC32107408600BA6B6E /* Number+App.swift */; };
 		E485836320FDD68100FEECB7 /* IndexPath+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485836220FDD68100FEECB7 /* IndexPath+App.swift */; };
 		E492776020F5C59B007F6460 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492775E20F5C59B007F6460 /* UICustomView.swift */; };
 		E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492775F20F5C59B007F6460 /* UILayoutViewController.swift */; };
@@ -161,6 +162,7 @@
 		E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectViewController.swift; sourceTree = "<group>"; };
 		E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectPresenter.swift; sourceTree = "<group>"; };
 		E4733D3920F4FB85000F77CD /* GameStationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationsView.swift; sourceTree = "<group>"; };
+		E483EAC32107408600BA6B6E /* Number+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+App.swift"; sourceTree = "<group>"; };
 		E485836220FDD68100FEECB7 /* IndexPath+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+App.swift"; sourceTree = "<group>"; };
 		E492775E20F5C59B007F6460 /* UICustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		E492775F20F5C59B007F6460 /* UILayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayoutViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				DB73175720AB1DAB00D49AF3 /* DialogBehavior+App.swift */,
 				E485836220FDD68100FEECB7 /* IndexPath+App.swift */,
 				DB73175920AB1DAB00D49AF3 /* String+App.swift */,
+				E483EAC32107408600BA6B6E /* Number+App.swift */,
 				DB73175520AB1DAB00D49AF3 /* UIColor+App.swift */,
 				E4428AC620B647D300704862 /* UIImage+App.swift */,
 				E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */,
@@ -673,6 +676,7 @@
 			files = (
 				DB73174C20AB1D7000D49AF3 /* Dimension.swift in Sources */,
 				E453425720F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift in Sources */,
+				E483EAC42107408600BA6B6E /* Number+App.swift in Sources */,
 				DB73174D20AB1D7000D49AF3 /* Definition.swift in Sources */,
 				E4B6D2F820E50B6800354CC3 /* Asset.swift in Sources */,
 				DBD3342820E952E7002128FF /* MainViewController.swift in Sources */,
@@ -898,7 +902,10 @@
 				DEVELOPMENT_TEAM = F5GAB67SL8;
 				INFOPLIST_FILE = Itadaki/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neroblu.ios.app.Itadaki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -915,7 +922,10 @@
 				DEVELOPMENT_TEAM = F5GAB67SL8;
 				INFOPLIST_FILE = Itadaki/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neroblu.ios.app.Itadaki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -932,7 +942,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F5GAB67SL8;
 				INFOPLIST_FILE = ItadakiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neroblu.ios.app.ItadakiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -950,7 +964,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F5GAB67SL8;
 				INFOPLIST_FILE = ItadakiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neroblu.ios.app.ItadakiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
