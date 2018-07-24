@@ -13,6 +13,10 @@ import UIKit
 
 @objc protocol ListViewDelegate: NSObjectProtocol {
     
+    @objc optional func listView(_ listView: ListView, didStartMoveTo index: Int)
+    
+    @objc optional func listView(_ listView: ListView, didEndMoveAt index: Int)
+    
     @objc optional func listView(_ listView: ListView, updateSelectionView view: UIView, selected: Bool)
     
     @objc optional func headerView(in listView: ListView) -> UIView?
@@ -110,6 +114,7 @@ extension ListView {
     }
     
     private func animateDown(finished: @escaping () -> Void) {
+        delegate?.listView?(self, didStartMoveTo: currentIndex)
         UIView.animate(
             withDuration: TimeInterval(animationDuration),
             delay: 0,
@@ -124,11 +129,13 @@ extension ListView {
             },
             completion: { _ in
                 finished()
+                self.delegate?.listView?(self, didEndMoveAt: self.currentIndex)
             }
         )
     }
     
     private func animateUp(finished: @escaping () -> Void) {
+        delegate?.listView?(self, didStartMoveTo: currentIndex)
         UIView.animate(
             withDuration: TimeInterval(animationDuration),
             delay: 0,
@@ -143,6 +150,7 @@ extension ListView {
             },
             completion: { _ in
                 finished()
+                self.delegate?.listView?(self, didEndMoveAt: self.currentIndex)
             }
         )
     }
