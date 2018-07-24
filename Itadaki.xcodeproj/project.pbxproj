@@ -10,6 +10,11 @@
 		82EF94CEB7ABBA29451FFA96 /* Pods_ItadakiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94EBD6B9ACA52BC2DB6135F3 /* Pods_ItadakiTests.framework */; };
 		DB05539E20B1E6270008DAD5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05539120B1E6270008DAD5 /* File.swift */; };
 		DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D4B5320F75C24003A278F /* NumberingImage.swift */; };
+		DB395C912102CEBA009C1BD1 /* GameRoulettePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB395C8E2102CEBA009C1BD1 /* GameRoulettePresenter.swift */; };
+		DB395C922102CEBA009C1BD1 /* GameRouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB395C8F2102CEBA009C1BD1 /* GameRouletteViewController.swift */; };
+		DB395C932102CEBA009C1BD1 /* GameRoulette.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB395C902102CEBA009C1BD1 /* GameRoulette.storyboard */; };
+		DB395C952103658F009C1BD1 /* roulette_events.json in Resources */ = {isa = PBXBuildFile; fileRef = DB395C942103658F009C1BD1 /* roulette_events.json */; };
+		DB395C982103684A009C1BD1 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB395C972103684A009C1BD1 /* MessageView.swift */; };
 		DB73173D20AB192900D49AF3 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173720AB192900D49AF3 /* Dialog.swift */; };
 		DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173C20AB192900D49AF3 /* AppDelegate.swift */; };
 		DB73174A20AB1D7000D49AF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73174220AB1D7000D49AF3 /* Color.swift */; };
@@ -47,6 +52,7 @@
 		DBD3342A20E952E7002128FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD3342620E952E7002128FF /* Main.storyboard */; };
 		DBD3343320E964AB002128FF /* GameStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3343220E964AB002128FF /* GameStationView.xib */; };
 		DBD3343520E964EA002128FF /* GameStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD3343420E964EA002128FF /* GameStationView.swift */; };
+		DBEE759B2107A480006CB2CB /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEE759A2107A480006CB2CB /* ListView.swift */; };
 		E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28420F3952F00008B39 /* RealmSwift+App.swift */; };
 		E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28E20F399D200008B39 /* TransferringRepository.swift */; };
 		E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423A28F20F399D200008B39 /* RailwayRepository.swift */; };
@@ -57,7 +63,7 @@
 		E4428AC720B647D300704862 /* UIImage+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4428AC620B647D300704862 /* UIImage+App.swift */; };
 		E443947120EF8441008018BF /* DecodedStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443946F20EF8441008018BF /* DecodedStation.swift */; };
 		E443947220EF8441008018BF /* DecodedRailway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443947020EF8441008018BF /* DecodedRailway.swift */; };
-		E443947420F0D773008018BF /* locationKeys.json in Resources */ = {isa = PBXBuildFile; fileRef = E443947320F0D773008018BF /* locationKeys.json */; };
+		E443947420F0D773008018BF /* location_keys.json in Resources */ = {isa = PBXBuildFile; fileRef = E443947320F0D773008018BF /* location_keys.json */; };
 		E453425720F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */; };
 		E453425820F70DCE00EFA9A0 /* GameTransferSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E453425420F70DCE00EFA9A0 /* GameTransferSelect.storyboard */; };
 		E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */; };
@@ -105,6 +111,11 @@
 		D91675FE35FA4DFA2258BDA8 /* Pods-Itadaki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itadaki.release.xcconfig"; path = "Pods/Target Support Files/Pods-Itadaki/Pods-Itadaki.release.xcconfig"; sourceTree = "<group>"; };
 		DB05539120B1E6270008DAD5 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		DB0D4B5320F75C24003A278F /* NumberingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberingImage.swift; sourceTree = "<group>"; };
+		DB395C8E2102CEBA009C1BD1 /* GameRoulettePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRoulettePresenter.swift; sourceTree = "<group>"; };
+		DB395C8F2102CEBA009C1BD1 /* GameRouletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRouletteViewController.swift; sourceTree = "<group>"; };
+		DB395C902102CEBA009C1BD1 /* GameRoulette.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameRoulette.storyboard; sourceTree = "<group>"; };
+		DB395C942103658F009C1BD1 /* roulette_events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roulette_events.json; sourceTree = "<group>"; };
+		DB395C972103684A009C1BD1 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		DB73173720AB192900D49AF3 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		DB73173C20AB192900D49AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB73174220AB1D7000D49AF3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -145,6 +156,7 @@
 		DBD3342620E952E7002128FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DBD3343220E964AB002128FF /* GameStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStationView.xib; sourceTree = "<group>"; };
 		DBD3343420E964EA002128FF /* GameStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationView.swift; sourceTree = "<group>"; };
+		DBEE759A2107A480006CB2CB /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E423A28420F3952F00008B39 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
 		E423A28E20F399D200008B39 /* TransferringRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferringRepository.swift; sourceTree = "<group>"; };
 		E423A28F20F399D200008B39 /* RailwayRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailwayRepository.swift; sourceTree = "<group>"; };
@@ -155,7 +167,7 @@
 		E4428AC620B647D300704862 /* UIImage+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+App.swift"; sourceTree = "<group>"; };
 		E443946F20EF8441008018BF /* DecodedStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodedStation.swift; sourceTree = "<group>"; };
 		E443947020EF8441008018BF /* DecodedRailway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodedRailway.swift; sourceTree = "<group>"; };
-		E443947320F0D773008018BF /* locationKeys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locationKeys.json; sourceTree = "<group>"; };
+		E443947320F0D773008018BF /* location_keys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location_keys.json; sourceTree = "<group>"; };
 		E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectAdapter.swift; sourceTree = "<group>"; };
 		E453425420F70DCE00EFA9A0 /* GameTransferSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameTransferSelect.storyboard; sourceTree = "<group>"; };
 		E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +260,16 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		DB395C8D2102CEBA009C1BD1 /* GameRoulette */ = {
+			isa = PBXGroup;
+			children = (
+				DB395C902102CEBA009C1BD1 /* GameRoulette.storyboard */,
+				DB395C8E2102CEBA009C1BD1 /* GameRoulettePresenter.swift */,
+				DB395C8F2102CEBA009C1BD1 /* GameRouletteViewController.swift */,
+			);
+			path = GameRoulette;
+			sourceTree = "<group>";
+		};
 		DB73173220AB192900D49AF3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +280,7 @@
 				DB73173320AB192900D49AF3 /* Extension */,
 				DB73173620AB192900D49AF3 /* Dialog */,
 				DB73173520AB192900D49AF3 /* Protocol */,
-				E49887152100D110001F98B3 /* View */,
+				DBEE75992107A480006CB2CB /* View */,
 				DB73173A20AB192900D49AF3 /* Model */,
 				DB73173920AB192900D49AF3 /* Screen */,
 			);
@@ -321,6 +343,7 @@
 				DBD333FE20E7E5C8002128FF /* GameMain */,
 				E49887182100D185001F98B3 /* GameTransferringSelect */,
 				E453425220F70DCE00EFA9A0 /* GameTransferSelect */,
+				DB395C8D2102CEBA009C1BD1 /* GameRoulette */,
 				DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */,
 				DB73179D20AB2CE600D49AF3 /* Launch */,
 			);
@@ -369,6 +392,7 @@
 				DB98A3E820AB15F100A5273D /* Products */,
 				5706C7EBF9A76D9B9586C6DD /* Pods */,
 				C48FEE564B5FC1449A8CE7C8 /* Frameworks */,
+				DBEE75982107A46E006CB2CB /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -385,7 +409,8 @@
 			isa = PBXGroup;
 			children = (
 				DB73510820E21B8800A04ACC /* railways.json */,
-				E443947320F0D773008018BF /* locationKeys.json */,
+				E443947320F0D773008018BF /* location_keys.json */,
+				DB395C942103658F009C1BD1 /* roulette_events.json */,
 				DB98A3EE20AB15F100A5273D /* Bootstrap.storyboard */,
 				DB98A3F320AB15F100A5273D /* LaunchScreen.storyboard */,
 				DB98A3F120AB15F100A5273D /* Assets.xcassets */,
@@ -430,6 +455,23 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		DBEE75982107A46E006CB2CB /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				DB395C972103684A009C1BD1 /* MessageView.swift */,
+				E49887162100D110001F98B3 /* ListView.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		DBEE75992107A480006CB2CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBEE759A2107A480006CB2CB /* ListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E423A28D20F399D200008B39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,14 +509,6 @@
 				E492775E20F5C59B007F6460 /* UICustomView.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		E49887152100D110001F98B3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E49887162100D110001F98B3 /* ListView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E49887182100D185001F98B3 /* GameTransferringSelect */ = {
@@ -583,6 +617,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB395C932102CEBA009C1BD1 /* GameRoulette.storyboard in Resources */,
 				DB98A3F520AB15F100A5273D /* LaunchScreen.storyboard in Resources */,
 				DBD3342A20E952E7002128FF /* Main.storyboard in Resources */,
 				E49887222100D509001F98B3 /* GameTransferringSelectAdapterCell.xib in Resources */,
@@ -591,9 +626,10 @@
 				DB98A3F220AB15F100A5273D /* Assets.xcassets in Resources */,
 				DB98A3F020AB15F100A5273D /* Bootstrap.storyboard in Resources */,
 				DB7317A520AB2D0800D49AF3 /* Launch.storyboard in Resources */,
+				DB395C952103658F009C1BD1 /* roulette_events.json in Resources */,
 				DBD3340520E7E5C8002128FF /* GameMain.storyboard in Resources */,
 				E453425820F70DCE00EFA9A0 /* GameTransferSelect.storyboard in Resources */,
-				E443947420F0D773008018BF /* locationKeys.json in Resources */,
+				E443947420F0D773008018BF /* location_keys.json in Resources */,
 				E498871D2100D185001F98B3 /* GameTransferringSelect.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,12 +715,15 @@
 				DBD3342820E952E7002128FF /* MainViewController.swift in Sources */,
 				E49887202100D185001F98B3 /* GameTransferringSelectViewController.swift in Sources */,
 				E4B6D2FA20E5BF1600354CC3 /* Player.swift in Sources */,
+				DBEE759B2107A480006CB2CB /* ListView.swift in Sources */,
+				DB395C982103684A009C1BD1 /* MessageView.swift in Sources */,
 				E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */,
 				DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */,
 				E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */,
 				E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */,
 				DB73176220AB1DAB00D49AF3 /* Codable+App.swift in Sources */,
 				DBD3342220E944B7002128FF /* Notification.swift in Sources */,
+				DB395C922102CEBA009C1BD1 /* GameRouletteViewController.swift in Sources */,
 				E4B6D30720E9EB4600354CC3 /* RealmIdentifiedObject.swift in Sources */,
 				DB73176120AB1DAB00D49AF3 /* String+App.swift in Sources */,
 				E4DE8E0B20E38C390049B7ED /* Array+App.swift in Sources */,
@@ -709,6 +748,7 @@
 				E4B6D30020E5F8B700354CC3 /* CoderProtocol.swift in Sources */,
 				E492776020F5C59B007F6460 /* UICustomView.swift in Sources */,
 				E423A28520F3952F00008B39 /* RealmSwift+App.swift in Sources */,
+				DB395C912102CEBA009C1BD1 /* GameRoulettePresenter.swift in Sources */,
 				E4B6D2FC20E5CF8400354CC3 /* AssetInfo.swift in Sources */,
 				DBD3340620E7E5C8002128FF /* GameMainPresenter.swift in Sources */,
 				DB73511120E238A300A04ACC /* Transferring.swift in Sources */,

@@ -35,15 +35,6 @@ class BootstrapViewController: UITableViewController {
             (title: "パス", handler: { vc in
                 print("open " + Realm.path)
             }),
-            (title: "プレディケート", handler: { vc in
-                let pred = NSPredicate.empty
-                    .and(NSPredicate("age", greaterThan: 30))
-                    .and(NSPredicate("name", beginsWith: "Mc"))
-                    .and(NSPredicate("code", equal: "CD").or(NSPredicate("code", equal: "ED")))
-                    .and(NSPredicate(isNil: "mark"))
-                    .and(NSPredicate(ids: [1, 3, 20]))
-                print(pred)
-            }),
             ]),
         ]
     // =========================================================================
