@@ -64,10 +64,6 @@
 		E443947120EF8441008018BF /* DecodedStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443946F20EF8441008018BF /* DecodedStation.swift */; };
 		E443947220EF8441008018BF /* DecodedRailway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443947020EF8441008018BF /* DecodedRailway.swift */; };
 		E443947420F0D773008018BF /* location_keys.json in Resources */ = {isa = PBXBuildFile; fileRef = E443947320F0D773008018BF /* location_keys.json */; };
-		E453425720F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */; };
-		E453425820F70DCE00EFA9A0 /* GameTransferSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E453425420F70DCE00EFA9A0 /* GameTransferSelect.storyboard */; };
-		E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */; };
-		E453425A20F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */; };
 		E4733D3A20F4FB86000F77CD /* GameStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4733D3920F4FB85000F77CD /* GameStationsView.swift */; };
 		E483EAC42107408600BA6B6E /* Number+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483EAC32107408600BA6B6E /* Number+App.swift */; };
 		E485836320FDD68100FEECB7 /* IndexPath+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485836220FDD68100FEECB7 /* IndexPath+App.swift */; };
@@ -168,10 +164,6 @@
 		E443946F20EF8441008018BF /* DecodedStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodedStation.swift; sourceTree = "<group>"; };
 		E443947020EF8441008018BF /* DecodedRailway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodedRailway.swift; sourceTree = "<group>"; };
 		E443947320F0D773008018BF /* location_keys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location_keys.json; sourceTree = "<group>"; };
-		E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectAdapter.swift; sourceTree = "<group>"; };
-		E453425420F70DCE00EFA9A0 /* GameTransferSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameTransferSelect.storyboard; sourceTree = "<group>"; };
-		E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectViewController.swift; sourceTree = "<group>"; };
-		E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTransferSelectPresenter.swift; sourceTree = "<group>"; };
 		E4733D3920F4FB85000F77CD /* GameStationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStationsView.swift; sourceTree = "<group>"; };
 		E483EAC32107408600BA6B6E /* Number+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+App.swift"; sourceTree = "<group>"; };
 		E485836220FDD68100FEECB7 /* IndexPath+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+App.swift"; sourceTree = "<group>"; };
@@ -342,7 +334,6 @@
 				DBD3342320E952E7002128FF /* Main */,
 				DBD333FE20E7E5C8002128FF /* GameMain */,
 				E49887182100D185001F98B3 /* GameTransferringSelect */,
-				E453425220F70DCE00EFA9A0 /* GameTransferSelect */,
 				DB395C8D2102CEBA009C1BD1 /* GameRoulette */,
 				DB7317A020AB2CE600D49AF3 /* BootstrapViewController.swift */,
 				DB73179D20AB2CE600D49AF3 /* Launch */,
@@ -491,17 +482,6 @@
 			path = DecodedEntity;
 			sourceTree = "<group>";
 		};
-		E453425220F70DCE00EFA9A0 /* GameTransferSelect */ = {
-			isa = PBXGroup;
-			children = (
-				E453425420F70DCE00EFA9A0 /* GameTransferSelect.storyboard */,
-				E453425620F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift */,
-				E453425520F70DCE00EFA9A0 /* GameTransferSelectViewController.swift */,
-				E453425320F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift */,
-			);
-			path = GameTransferSelect;
-			sourceTree = "<group>";
-		};
 		E492775D20F5C59B007F6460 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,7 +608,6 @@
 				DB7317A520AB2D0800D49AF3 /* Launch.storyboard in Resources */,
 				DB395C952103658F009C1BD1 /* roulette_events.json in Resources */,
 				DBD3340520E7E5C8002128FF /* GameMain.storyboard in Resources */,
-				E453425820F70DCE00EFA9A0 /* GameTransferSelect.storyboard in Resources */,
 				E443947420F0D773008018BF /* location_keys.json in Resources */,
 				E498871D2100D185001F98B3 /* GameTransferringSelect.storyboard in Resources */,
 			);
@@ -708,7 +687,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB73174C20AB1D7000D49AF3 /* Dimension.swift in Sources */,
-				E453425720F70DCE00EFA9A0 /* GameTransferSelectAdapter.swift in Sources */,
 				E483EAC42107408600BA6B6E /* Number+App.swift in Sources */,
 				DB73174D20AB1D7000D49AF3 /* Definition.swift in Sources */,
 				E4B6D2F820E50B6800354CC3 /* Asset.swift in Sources */,
@@ -719,7 +697,6 @@
 				DB395C982103684A009C1BD1 /* MessageView.swift in Sources */,
 				E423A29120F399D200008B39 /* TransferringRepository.swift in Sources */,
 				DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */,
-				E453425920F70DCE00EFA9A0 /* GameTransferSelectViewController.swift in Sources */,
 				E492776120F5C59B007F6460 /* UILayoutViewController.swift in Sources */,
 				DB73176220AB1DAB00D49AF3 /* Codable+App.swift in Sources */,
 				DBD3342220E944B7002128FF /* Notification.swift in Sources */,
@@ -735,7 +712,6 @@
 				DB73175C20AB1DAB00D49AF3 /* UIViewController+App.swift in Sources */,
 				E423A29220F399D200008B39 /* RailwayRepository.swift in Sources */,
 				E4733D3A20F4FB86000F77CD /* GameStationsView.swift in Sources */,
-				E453425A20F70DCE00EFA9A0 /* GameTransferSelectPresenter.swift in Sources */,
 				E492776320F6D30A007F6460 /* Company.swift in Sources */,
 				DB73510D20E21E8B00A04ACC /* Railway.swift in Sources */,
 				DB05539E20B1E6270008DAD5 /* File.swift in Sources */,
