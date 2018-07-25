@@ -17,15 +17,21 @@ class MessageView: UIView {
     
     @IBOutlet weak var delegate: MessageViewDelegate?
     
-    var font = UIFont(name: "HiraMaruProN-W4", size: 18)!
+    @IBInspectable var textColor: UIColor = .white
     
-    var textColor = UIColor.white
+    @IBInspectable var padding: CGFloat = 16
+    
+    @IBInspectable var shouldForwardOnTap: Bool = false
+    
+    @IBInspectable var fontSize: CGFloat = 18
+    
+    @IBInspectable var duration: Double = 0.01
     
     var lineBreakMode = NSLineBreakMode.byCharWrapping
     
-    var duration: TimeInterval = 0.01
-    
-    var padding: CGFloat = 16
+    var font: UIFont {
+        return UIFont(name: "HiraMaruProN-W4", size: fontSize)!
+    }
     
     private var storedTexts = [String]()
     private var arrayIndex = 0
@@ -34,13 +40,19 @@ class MessageView: UIView {
     private var textIndex = 0
     private var shown = false
     private var animating = true
-    private var gesture: UITapGestureRecognizer!
+    private var gesture: UITapGestureRecognizer?
     
     private var mainLabel: UILabel!
     private var mainTimer: Timer!
     
     private var nextLabel: UILabel!
     private var nextTimer: Timer!
+    
+    private var forwardable = false {
+        didSet {
+            gesture?.isEnabled = forwardable
+        }
+    }
     
     // MARK: - Show Text
     
@@ -53,11 +65,32 @@ class MessageView: UIView {
         
         arrayIndex = 0
         animating = animate
-        gesture.isEnabled = true
+        forwardable = true
+        //gesture?.isEnabled = true
         setText(storedTexts[arrayIndex])
     }
     
-   private func setText(_ text: String) {
+    @objc func forward() {
+        if !forwardable { return }
+        
+        invalidateTimers()
+        
+        if shown {
+            showNextLabelIfNeeded()
+            if existsNext {
+                arrayIndex += 1
+                setText(storedTexts[arrayIndex])
+            } else {
+                delegate?.messageViewDidShowAllText?(in: self)
+                forwardable = false
+                //gesture?.isEnabled = false
+            }
+        } else {
+            showStoredText()
+        }
+    }
+    
+    private func setText(_ text: String) {
         storedText = text
         
         if animating {
@@ -82,7 +115,8 @@ class MessageView: UIView {
         delegate?.messageView?(self, didShowTextAt: arrayIndex)
         if !existsNext {
             delegate?.messageViewDidShowAllText?(in: self)
-            gesture.isEnabled = false
+            forwardable = false
+            //gesture?.isEnabled = false
         }
     }
     
@@ -169,24 +203,9 @@ class MessageView: UIView {
     // MARK: - Self Tap GestureRecognizer
     
     private func makeTapGestureRecognizer() {
-        gesture = UITapGestureRecognizer(target: self, action: #selector(didTapSelf))
-        addGestureRecognizer(gesture)
-    }
-    
-    @objc private func didTapSelf() {
-        invalidateMainTimer()
-        
-        if shown {
-            showNextLabelIfNeeded()
-            if existsNext {
-                arrayIndex += 1
-                setText(storedTexts[arrayIndex])
-            } else {
-                delegate?.messageViewDidShowAllText?(in: self)
-                gesture.isEnabled = false
-            }
-        } else {
-            showStoredText()
+        if shouldForwardOnTap {
+            gesture = UITapGestureRecognizer(target: self, action: #selector(forward))
+            addGestureRecognizer(gesture!)
         }
     }
     
@@ -244,14 +263,14 @@ class MessageView: UIView {
         let attributes: [NSAttributedStringKey : Any] = [
             .font: font,
             .paragraphStyle: paragraphStyle,
-            ]
+        ]
         
         frame.size = NSString(string: text).boundingRect(
             with: frame.size,
             options: .usesLineFragmentOrigin,
             attributes: attributes,
             context: nil
-            ).size
+        ).size
         
         return frame
     }

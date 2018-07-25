@@ -44,7 +44,7 @@ class GameMessageViewController: MainContentsViewController {
     }
     
     @IBAction private func didTapNextButton() {
-        
+        messageView.forward()
     }
     
     @IBAction private func didTapCancelButton() {

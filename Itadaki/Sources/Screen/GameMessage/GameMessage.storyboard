@@ -137,6 +137,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldForwardOnTap" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="zNM-R7-ofK" id="Ukb-qm-qTa"/>
