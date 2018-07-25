@@ -4,19 +4,19 @@
 // =============================================================================
 import UIKit
 
-protocol GameRoulettePresentable: class {
+protocol GameMessagePresentable: class {
     
 }
 
-protocol GameRouletteViewable: class {
+protocol GameMessageViewable: class {
     
 }
 
-class GameRoulettePresenter: GameRoulettePresentable {
+class GameMessagePresenter: GameMessagePresentable {
     
-    weak var view: GameRouletteViewable!
+    weak var view: GameMessageViewable!
     
-    init(view: GameRouletteViewable) {
+    init(view: GameMessageViewable) {
         self.view = view
     }
 }

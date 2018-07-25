@@ -4,22 +4,23 @@
 // =============================================================================
 import UIKit
 
-class GameRouletteViewController: MainContentsViewController, Notificatable {
+class GameMessageViewController: MainContentsViewController {
     
-    private var presenter: GameRoulettePresentable!
-
+    private var presenter: GameMessagePresentable!
+    
     @IBOutlet private weak var stopButton: UIButton!
+    @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet private weak var cancelButton: UIButton!
     @IBOutlet private weak var messageView: MessageView!
-    
+
     class func create() -> MainContentsViewController {
         let vc = instantiate(self)
-        vc.presenter = GameRoulettePresenter(view: vc)
+        vc.presenter = GameMessagePresenter(view: vc)
         return vc
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageView.delegate = self
     }
     
     override func viewDidLayout() {
@@ -39,25 +40,22 @@ class GameRouletteViewController: MainContentsViewController, Notificatable {
     }
     
     @IBAction private func didTapStopButton() {
+        
+    }
+    
+    @IBAction private func didTapNextButton() {
+        messageView.forward()
+    }
+    
+    @IBAction private func didTapCancelButton() {
         main.popContents()
     }
 }
 
-extension GameRouletteViewController: GameRouletteViewable {
+extension GameMessageViewController: GameMessageViewable {
     
 }
 
-extension GameRouletteViewController: MessageViewDelegate {
-
-    func messageViewDidShowAllText(in messageView: MessageView) {
-        print("messageViewDidShowAllText")
-    }
+extension GameMessageViewController: MessageViewDelegate {
     
-    func messageView(_ messageView: MessageView, didShowTextAt arrayIndex: Int) {
-        print("didShowTextAt(\(arrayIndex))")
-    }
-    
-    func messageView(_ messageView: MessageView, didAnimating textIndex: Int, arrayIndex: Int) {
-        print("didAnimating(\(textIndex)/\(arrayIndex))")
-    }
 }

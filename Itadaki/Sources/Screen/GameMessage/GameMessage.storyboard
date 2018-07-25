@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zNM-R7-ofK">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="Puc-rP-U1B">
+            <objects>
+                <viewController id="zNM-R7-ofK" customClass="GameMessageViewController" customModule="Itadaki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8dL-s5-t7B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDg-DV-R6j">
+                                <rect key="frame" x="0.0" y="486" width="320" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxx-pd-Cu7">
+                                        <rect key="frame" x="246" y="8" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gxx-pd-Cu7" secondAttribute="height" multiplier="1:1" id="WMm-pv-6BW"/>
+                                        </constraints>
+                                        <state key="normal" title="STOP"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapStopButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="ZDV-vv-pgH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHc-I6-WFF">
+                                        <rect key="frame" x="8" y="8" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OHc-I6-WFF" secondAttribute="height" multiplier="1:1" id="1Qu-Dy-sHw"/>
+                                        </constraints>
+                                        <state key="normal" title="✗"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapCancelButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="jwb-1u-P9W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0U-2R-dXc">
+                                        <rect key="frame" x="246" y="8" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="D0U-2R-dXc" secondAttribute="height" multiplier="1:1" id="720-TL-nFH"/>
+                                        </constraints>
+                                        <state key="normal" title="NEXT"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapNextButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="ZbA-ey-1xX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="OHc-I6-WFF" firstAttribute="leading" secondItem="bDg-DV-R6j" secondAttribute="leading" constant="8" id="07M-yD-Wae"/>
+                                    <constraint firstAttribute="bottom" secondItem="OHc-I6-WFF" secondAttribute="bottom" constant="8" id="1pH-JP-5bd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="82" id="7jL-M3-LDv"/>
+                                    <constraint firstAttribute="trailing" secondItem="D0U-2R-dXc" secondAttribute="trailing" constant="8" id="AqV-Y9-aYR"/>
+                                    <constraint firstAttribute="bottom" secondItem="D0U-2R-dXc" secondAttribute="bottom" constant="8" id="E8D-9H-H9Y"/>
+                                    <constraint firstItem="OHc-I6-WFF" firstAttribute="top" secondItem="bDg-DV-R6j" secondAttribute="top" constant="8" id="Jdu-EC-Xhj"/>
+                                    <constraint firstAttribute="trailing" secondItem="gxx-pd-Cu7" secondAttribute="trailing" constant="8" id="NNj-ca-fwj"/>
+                                    <constraint firstItem="D0U-2R-dXc" firstAttribute="top" secondItem="bDg-DV-R6j" secondAttribute="top" constant="8" id="Puf-es-QDb"/>
+                                    <constraint firstAttribute="height" constant="82" id="bOh-Gk-OZ6"/>
+                                    <constraint firstAttribute="bottom" secondItem="gxx-pd-Cu7" secondAttribute="bottom" constant="8" id="n5j-fL-hVf"/>
+                                    <constraint firstItem="gxx-pd-Cu7" firstAttribute="top" secondItem="bDg-DV-R6j" secondAttribute="top" constant="8" id="rTV-gQ-ECw"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ud-HR-HM5">
+                                <rect key="frame" x="0.0" y="20" width="320" height="330"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Fc-rf-Zbo">
+                                <rect key="frame" x="16" y="41" width="288" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Fc-rf-Zbo" secondAttribute="height" multiplier="1:1" id="tzn-5s-aD9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5g2-Bc-cdG" customClass="MessageView" customModule="Itadaki" customModuleProvider="target">
+                                <rect key="frame" x="4" y="354" width="312" height="128"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.25882352939999997" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="wRC-kc-kgK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldForwardOnTap" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="zNM-R7-ofK" id="Ukb-qm-qTa"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bDg-DV-R6j" firstAttribute="top" secondItem="5g2-Bc-cdG" secondAttribute="bottom" constant="4" id="1da-aY-iA6"/>
+                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="5Fc-rf-Zbo" secondAttribute="trailing" constant="16" id="5nc-pK-TQy"/>
+                            <constraint firstItem="5g2-Bc-cdG" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" constant="4" id="7Z8-oU-n3h"/>
+                            <constraint firstItem="bDg-DV-R6j" firstAttribute="trailing" secondItem="oGJ-hR-QhP" secondAttribute="trailing" id="9eO-j6-Hol"/>
+                            <constraint firstItem="8ud-HR-HM5" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" id="Dv0-SX-XJi"/>
+                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="5g2-Bc-cdG" secondAttribute="trailing" constant="4" id="I9z-ec-Iai"/>
+                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="8ud-HR-HM5" secondAttribute="trailing" id="IuD-EN-erO"/>
+                            <constraint firstItem="bDg-DV-R6j" firstAttribute="bottom" secondItem="oGJ-hR-QhP" secondAttribute="bottom" id="MGh-e9-te3"/>
+                            <constraint firstItem="8ud-HR-HM5" firstAttribute="top" secondItem="oGJ-hR-QhP" secondAttribute="top" id="Phi-yW-jpY"/>
+                            <constraint firstItem="5Fc-rf-Zbo" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" constant="16" id="bNT-oG-Rw3"/>
+                            <constraint firstItem="5Fc-rf-Zbo" firstAttribute="centerY" secondItem="8ud-HR-HM5" secondAttribute="centerY" id="dfn-jE-a5d"/>
+                            <constraint firstItem="5g2-Bc-cdG" firstAttribute="top" secondItem="8ud-HR-HM5" secondAttribute="bottom" constant="4" id="eDo-Ec-Hmr"/>
+                            <constraint firstItem="bDg-DV-R6j" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" id="jI7-1m-YMc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oGJ-hR-QhP"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="OHc-I6-WFF" id="awC-aX-7Lz"/>
+                        <outlet property="messageView" destination="5g2-Bc-cdG" id="V4T-lt-eqk"/>
+                        <outlet property="nextButton" destination="D0U-2R-dXc" id="G2O-hL-UqL"/>
+                        <outlet property="stopButton" destination="gxx-pd-Cu7" id="A4b-k1-5Rx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ic7-TX-6P6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1256" y="87"/>
+        </scene>
+    </scenes>
+</document>

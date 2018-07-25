@@ -47,8 +47,8 @@ class GameMainViewController: MainContentsViewController, Notificatable {
     }
     
     @IBAction private func didTapTransferButton() {
-        main.push(contents: GameTransferringSelectViewController.create(station: currentStation))
-//        main.push(contents: GameRouletteViewController.create())
+//        main.push(contents: GameTransferringSelectViewController.create(station: currentStation))
+        main.push(contents: GameMessageViewController.create())
     }
     
     @objc private func didSelectTransferredStation(_ notify: Notification) {
