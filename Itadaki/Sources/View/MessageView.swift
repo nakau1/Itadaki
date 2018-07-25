@@ -15,7 +15,7 @@ import UIKit
 
 class MessageView: UIView {
     
-    weak var delegate: MessageViewDelegate?
+    @IBOutlet weak var delegate: MessageViewDelegate?
     
     var font = UIFont(name: "HiraMaruProN-W4", size: 18)!
     
