@@ -86,6 +86,7 @@
 		E4B73C1F20AEFCCA00A301FB /* UIButton+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */; };
 		E4B73C2120B25EE100A301FB /* ColorExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B73C2020B25EE100A301FB /* ColorExtensionTest.swift */; };
 		E4DE8E0B20E38C390049B7ED /* Array+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE8E0A20E38C380049B7ED /* Array+App.swift */; };
+		E4FDC4E72109794A00E7E9BD /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FDC4E62109794900E7E9BD /* Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +186,7 @@
 		E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+App.swift"; sourceTree = "<group>"; };
 		E4B73C2020B25EE100A301FB /* ColorExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensionTest.swift; sourceTree = "<group>"; };
 		E4DE8E0A20E38C380049B7ED /* Array+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+App.swift"; sourceTree = "<group>"; };
+		E4FDC4E62109794900E7E9BD /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		FECF8CCD3CFCFD6CA2C6822E /* Pods-ItadakiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItadakiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ItadakiTests/Pods-ItadakiTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -339,6 +341,7 @@
 				DB05539120B1E6270008DAD5 /* File.swift */,
 				DB0D4B5320F75C24003A278F /* NumberingImage.swift */,
 				DB73510E20E2238200A04ACC /* Migration.swift */,
+				E4FDC4E62109794900E7E9BD /* Random.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				E4B73C1D20AEF95600A301FB /* UIView+App.swift in Sources */,
 				DB73175F20AB1DAB00D49AF3 /* DialogBehavior+App.swift in Sources */,
 				E443947220EF8441008018BF /* DecodedRailway.swift in Sources */,
+				E4FDC4E72109794A00E7E9BD /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

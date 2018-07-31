@@ -20,6 +20,28 @@ class BootstrapViewController: UITableViewController {
                 vc.present(crossDissolve: LaunchViewController.create())
             }),
             ]),
+        (section: "乱数テスト",
+         rows: [
+            (title: "乱数テスト", handler: { vc in
+                Random().test_value(11...100)
+                Random().test_value(11..<100)
+            }),
+            (title: "確率テスト", handler: { vc in
+                Random().test_choose(probabilities: [29, 11])
+            }),
+            (title: "1/2確率テスト", handler: { vc in
+                Random().test_bool(percentage: 21)
+                Random().test_bool(percentage: 50)
+                Random().test_bool(percentage: 89)
+            }),
+            (title: "ランダム選択1", handler: { vc in
+                Random().test_selectItem(from: UIFont.familyNames)
+            }),
+            (title: "ランダム選択2", handler: { vc in
+                Random().test_selectItems(from: ["春","夏","秋","冬"], number: 3, duplicatable: true)
+                Random().test_selectItems(from: ["春","夏","秋","冬"], number: 3, duplicatable: false)
+            }),
+            ]),
         (section: "ゲームデータ作成",
          rows: [
             (title: "テスト", handler: { vc in
