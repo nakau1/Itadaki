@@ -86,6 +86,8 @@
 		E4B73C1F20AEFCCA00A301FB /* UIButton+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */; };
 		E4B73C2120B25EE100A301FB /* ColorExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B73C2020B25EE100A301FB /* ColorExtensionTest.swift */; };
 		E4DE8E0B20E38C390049B7ED /* Array+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE8E0A20E38C380049B7ED /* Array+App.swift */; };
+		E4F119EA21135C8B00FD46D9 /* RouletteImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F119E921135C8B00FD46D9 /* RouletteImageGenerator.swift */; };
+		E4F119EC21135CB100FD46D9 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F119EB21135CB100FD46D9 /* ImageGenerator.swift */; };
 		E4FDC4E72109794A00E7E9BD /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FDC4E62109794900E7E9BD /* Random.swift */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +188,8 @@
 		E4B73C1E20AEFCC900A301FB /* UIButton+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+App.swift"; sourceTree = "<group>"; };
 		E4B73C2020B25EE100A301FB /* ColorExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensionTest.swift; sourceTree = "<group>"; };
 		E4DE8E0A20E38C380049B7ED /* Array+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+App.swift"; sourceTree = "<group>"; };
+		E4F119E921135C8B00FD46D9 /* RouletteImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouletteImageGenerator.swift; sourceTree = "<group>"; };
+		E4F119EB21135CB100FD46D9 /* ImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
 		E4FDC4E62109794900E7E9BD /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		FECF8CCD3CFCFD6CA2C6822E /* Pods-ItadakiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItadakiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ItadakiTests/Pods-ItadakiTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,6 +298,7 @@
 			children = (
 				DB73177420AB255C00D49AF3 /* Notificatable.swift */,
 				E4B6D2FF20E5F8B700354CC3 /* CoderProtocol.swift */,
+				E4F119EB21135CB100FD46D9 /* ImageGenerator.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				E423A28D20F399D200008B39 /* Repository */,
 				DB05538220B1E6260008DAD5 /* Enum */,
 				E443946E20EF8441008018BF /* DecodedEntity */,
+				E4F119E821135C8B00FD46D9 /* ImageGenerator */,
 				DB05539120B1E6270008DAD5 /* File.swift */,
 				DB0D4B5320F75C24003A278F /* NumberingImage.swift */,
 				DB73510E20E2238200A04ACC /* Migration.swift */,
@@ -503,6 +509,14 @@
 				E423A28420F3952F00008B39 /* RealmSwift+App.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		E4F119E821135C8B00FD46D9 /* ImageGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				E4F119E921135C8B00FD46D9 /* RouletteImageGenerator.swift */,
+			);
+			path = ImageGenerator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -699,6 +713,7 @@
 				DB73173E20AB192900D49AF3 /* AppDelegate.swift in Sources */,
 				E4428AC720B647D300704862 /* UIImage+App.swift in Sources */,
 				DBD3343520E964EA002128FF /* GameStationView.swift in Sources */,
+				E4F119EA21135C8B00FD46D9 /* RouletteImageGenerator.swift in Sources */,
 				E426B6E320BBA96900F54FF9 /* DestinationDirection.swift in Sources */,
 				DB73175220AB1D9B00D49AF3 /* DialogRightDrawBehavior.swift in Sources */,
 				DB73175C20AB1DAB00D49AF3 /* UIViewController+App.swift in Sources */,
@@ -728,6 +743,7 @@
 				DB7317A220AB2CE600D49AF3 /* LaunchViewController.swift in Sources */,
 				DB7317A320AB2CE600D49AF3 /* BootstrapViewController.swift in Sources */,
 				E492776520F6DCF8007F6460 /* GameMainRailwayView.swift in Sources */,
+				E4F119EC21135CB100FD46D9 /* ImageGenerator.swift in Sources */,
 				E424EE5F20F7680600FB44E9 /* MainControlViewController.swift in Sources */,
 				DBD3340320E7E5C8002128FF /* GameMainViewController.swift in Sources */,
 				DB73175320AB1D9B00D49AF3 /* DialogRiseupBehavior.swift in Sources */,

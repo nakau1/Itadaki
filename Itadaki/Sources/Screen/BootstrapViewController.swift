@@ -20,6 +20,15 @@ class BootstrapViewController: UITableViewController {
                 vc.present(crossDissolve: LaunchViewController.create())
             }),
             ]),
+        (section: "画像生成",
+         rows: [
+            (title: "ルーレット画像", handler: { vc in
+                print("open " + Path.documentDirectory)
+                let image = RouletteImageGenerator().generate()
+                let path = Path.documentDirectory.path("test.png")
+                image.write(to: path)
+            }),
+            ]),
         (section: "乱数テスト",
          rows: [
             (title: "乱数テスト", handler: { vc in
