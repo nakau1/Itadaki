@@ -6,6 +6,8 @@ import UIKit
 
 protocol ImageGenerator {
     
+    var imageSize: CGSize { get }
+    
     func generate() -> UIImage
 }
 

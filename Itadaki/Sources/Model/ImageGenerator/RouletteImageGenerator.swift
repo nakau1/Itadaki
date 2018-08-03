@@ -6,11 +6,11 @@ import UIKit
 
 class RouletteImageGenerator: ImageGenerator {
     
-    let baseSize = CGSize(300, 300)
+    let imageSize: CGSize = CGSize(300, 300)
     
     func generate() -> UIImage {
-        return imageFromContext(baseSize) { cxt in
-            let rect = CGRect(baseSize)
+        return imageFromContext(imageSize) { cxt in
+            let rect = CGRect(imageSize)
             addGradient(to: cxt, rect: rect, gradient: .plus)
         }
     }
