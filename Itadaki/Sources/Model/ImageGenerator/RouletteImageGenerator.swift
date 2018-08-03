@@ -6,7 +6,7 @@ import UIKit
 
 class RouletteImageGenerator: ImageGenerator {
     
-    let imageSize: CGSize = CGSize(300, 300)
+    let imageSize: CGSize = CGSize(500, 500)
     
     func generate() -> UIImage {
         return imageFromContext(imageSize) { cxt in
@@ -14,8 +14,16 @@ class RouletteImageGenerator: ImageGenerator {
             addGradient(to: cxt, rect: rect, gradient: .plus)
             
             
-            let opt = ImageText("1", color: .white, font: .default(100))
-            addText(to: cxt, rect: rect, text: opt)
+            addText(to: cxt, rect: rect, text: .stepCount(4))
         }
+    }
+}
+
+private extension ImageText {
+    
+    static func stepCount(_ count: Int) -> ImageText {
+        return ImageText("\(count)", color: .white, font: .default(250), pointing: { rect, size in
+            return CGPoint(24, 24)
+        })
     }
 }

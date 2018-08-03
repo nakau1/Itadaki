@@ -20,4 +20,10 @@ extension ImageGenerator {
         UIGraphicsEndImageContext()
         return ret!
     }
+    
+    func state(_ context: CGContext, _ block: () -> Void) {
+        context.saveGState()
+        block()
+        context.restoreGState()
+    }
 }

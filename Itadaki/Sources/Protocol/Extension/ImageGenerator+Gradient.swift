@@ -33,14 +33,14 @@ extension Gradient {
 extension ImageGenerator {
     
     func addGradient(to context: CGContext, rect: CGRect, gradient: Gradient) {
-        context.saveGState()
-        context.drawLinearGradient(
-            generateGradient(gradient),
-            start: gradient.start(rect),
-            end: gradient.end(rect),
-            options: []
-        )
-        context.restoreGState()
+        state(context) {
+            context.drawLinearGradient(
+                generateGradient(gradient),
+                start: gradient.start(rect),
+                end: gradient.end(rect),
+                options: []
+            )
+        }
     }
     
     func generateGradient(_ gradient: Gradient) -> CGGradient {
