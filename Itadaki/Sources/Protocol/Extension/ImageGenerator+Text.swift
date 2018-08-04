@@ -13,9 +13,9 @@ struct ImageText {
     
     struct Shadow {
         var color: UIColor = .black
-        var offsetX: CGFloat = 10
-        var offsetY: CGFloat = 10
-        var blur: CGFloat = 1.5
+        var offsetX: CGFloat = 0
+        var offsetY: CGFloat = 8
+        var blur: CGFloat = 10
     }
     
     typealias Pointing = (CGRect, CGSize) -> CGPoint
@@ -51,6 +51,7 @@ extension ImageGenerator {
             let ns = imageText.text as NSString
             let size = ns.size(withAttributes: imageText.attributes)
             textRect = CGRect(imageText.pointing(rect, size), size)
+            addShadowIfNeeded(to: context, imageText: imageText)
             ns.draw(in: textRect, withAttributes: imageText.attributes)
         }
         addBorderdTextIfNeeded(to: context, rect: rect, text: imageText)
@@ -70,5 +71,15 @@ extension ImageGenerator {
             let textRect = CGRect(imageText.pointing(rect, size), size)
             ns.draw(in: textRect, withAttributes: attributes)
         }
+    }
+    
+    private func addShadowIfNeeded(to context: CGContext, imageText: ImageText) {
+        guard let shadow = imageText.shadow else { return }
+        
+        context.setShadow(
+            offset: CGSize(shadow.offsetX, shadow.offsetY),
+            blur: shadow.blur,
+            color: shadow.color.cgColor
+        )
     }
 }
