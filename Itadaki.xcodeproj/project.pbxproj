@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		82EF94CEB7ABBA29451FFA96 /* Pods_ItadakiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94EBD6B9ACA52BC2DB6135F3 /* Pods_ItadakiTests.framework */; };
 		DB05539E20B1E6270008DAD5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05539120B1E6270008DAD5 /* File.swift */; };
+		DB05ACB221162B0900E913A7 /* Roulette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05ACB121162B0900E913A7 /* Roulette.swift */; };
 		DB0D4B5420F75C24003A278F /* NumberingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D4B5320F75C24003A278F /* NumberingImage.swift */; };
 		DB395C952103658F009C1BD1 /* roulette_events.json in Resources */ = {isa = PBXBuildFile; fileRef = DB395C942103658F009C1BD1 /* roulette_events.json */; };
 		DB73173D20AB192900D49AF3 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73173720AB192900D49AF3 /* Dialog.swift */; };
@@ -111,6 +112,7 @@
 		94EBD6B9ACA52BC2DB6135F3 /* Pods_ItadakiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ItadakiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91675FE35FA4DFA2258BDA8 /* Pods-Itadaki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itadaki.release.xcconfig"; path = "Pods/Target Support Files/Pods-Itadaki/Pods-Itadaki.release.xcconfig"; sourceTree = "<group>"; };
 		DB05539120B1E6270008DAD5 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		DB05ACB121162B0900E913A7 /* Roulette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roulette.swift; sourceTree = "<group>"; };
 		DB0D4B5320F75C24003A278F /* NumberingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberingImage.swift; sourceTree = "<group>"; };
 		DB395C942103658F009C1BD1 /* roulette_events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roulette_events.json; sourceTree = "<group>"; };
 		DB73173720AB192900D49AF3 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 				DBEE759F2107A8C7006CB2CB /* GameMessage.storyboard */,
 				DBEE759D2107A8C7006CB2CB /* GameMessagePresenter.swift */,
 				DBEE759E2107A8C7006CB2CB /* GameMessageViewController.swift */,
+				DB05ACB121162B0900E913A7 /* Roulette.swift */,
 			);
 			path = GameMessage;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				DBEE75AD210874C0006CB2CB /* MessageView.swift in Sources */,
 				DBD3342220E944B7002128FF /* Notification.swift in Sources */,
 				E4B6D30720E9EB4600354CC3 /* RealmIdentifiedObject.swift in Sources */,
+				DB05ACB221162B0900E913A7 /* Roulette.swift in Sources */,
 				DB73176120AB1DAB00D49AF3 /* String+App.swift in Sources */,
 				E4DE8E0B20E38C390049B7ED /* Array+App.swift in Sources */,
 				DBEE75AC210874C0006CB2CB /* ListView.swift in Sources */,
